@@ -6,7 +6,7 @@ const ButtonCont = styled.span``
 ;
 const ButtonInput = styled.button`
 background-color: ${props=>props.bgcolor};
-color: #656565;
+color: #E79A74;
 border: ${props => props.border};
 border-radius: 15px;
 width: 144px;
