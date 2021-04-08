@@ -8,7 +8,7 @@ export default {
 
 export const DefaultButton = () => <Button/>
 
-export const ButtonWithTexxtProp = () => <Button txt="Normal" />
+export const ButtonNormal = () => <Button txt="Normal" />
 
 export const ButtonWithProp = () => (
     <Button
@@ -17,3 +17,5 @@ export const ButtonWithProp = () => (
     border="none"
     />
 )
+
+export const ButtonNumber = () => <Button txt="2" />
