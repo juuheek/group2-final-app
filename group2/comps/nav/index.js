@@ -1,6 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
+import Arrow from '../../images/BackArrow.svg';
+
+const BackCont = styled.div`
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 50px;
+    right: 150px;
+`;
+const BackImg = styled.image`
+display: inline-block;
+width: 24px;
+height: 24px;
+`;
+
+const Text = styled.h2`
+font-family: DIN alternate;
+font-size: 18px;
+color:#8A8A8A;
+margin: 0;
+position: relative;
+bottom: 3px;
+`;
+
 const NavCont = styled.div`
     display:inline-flex;
     justify-content: center;
@@ -17,7 +41,7 @@ const Title = styled.h2`
     color: #26325B;
     font-family: DIN alternate;
     font-size: 30px;
-    margin-top: 64px
+    margin-top: 44px
 `;
 const Row = styled.div`
     display:flex;
@@ -49,6 +73,13 @@ const Nav = ({
         width: 414,
         height: 194,
     }}>
+        <BackCont>
+        <BackImg>
+            <img src={Arrow} alt="Arrow Icon"/>
+        </BackImg>
+        <Text>BACK</Text>
+    </BackCont>
+
         <Title >
             {title}
         </Title>

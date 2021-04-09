@@ -5,6 +5,10 @@ import Nav from '../comps/nav';
 import Back from '../comps/back';
 import styled from 'styled-components';
 
+const HomeCont = styled.div`
+
+`;
+
 export default function Home() {
   return (
     <div>
