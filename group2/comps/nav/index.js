@@ -56,7 +56,7 @@ const Menus = styled.p`
     color: #26325B;
     font-family: DIN alternate;
     font-size: 14px;
-    margin:20px;
+    margin:${props => props.margin};
     margin-top: 30px;
 `;
 
@@ -66,6 +66,7 @@ const Nav = ({
     txt2="Binge",
     txt3="Orthorexia",
     txt4="Excessive Exercise",
+    margin="15px",
 }) => {
 
     return <NavCont style={{
@@ -84,10 +85,10 @@ const Nav = ({
             {title}
         </Title>
         <Row>
-            <Menus>{txt1}</Menus>
-            <Menus>{txt2}</Menus>
-            <Menus>{txt3}</Menus>
-            <Menus>{txt4}</Menus>
+            <Menus margin = {margin}>{txt1}</Menus>
+            <Menus margin = {margin}>{txt2}</Menus>
+            <Menus margin = {margin}>{txt3}</Menus>
+            <Menus margin = {margin}>{txt4}</Menus>
         </Row>
     </NavCont>
 }
