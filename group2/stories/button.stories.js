@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../comps/button";
+import Nav from "../comps/nav";
 
 export default {
     title:"Example/Button",
@@ -14,3 +15,5 @@ export const ButtonWithProp = () => (
     bgcolor="E0E0E0"
     />
 )
+
+export const DefaultNav = () => <Nav />
