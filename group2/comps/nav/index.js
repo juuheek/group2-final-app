@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Arrow from '../../images/BackArrow.svg';
+import Arrow from '../../public/BackArrow.svg';
 
 const BackCont = styled.div`
     display: flex;
