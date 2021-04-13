@@ -12,9 +12,9 @@ const HomeCont = styled.div`
 export default function Home() {
   return (
     <div>
-      <Button/>
-      <Nav />
-      <Back />
+      <Button></Button>
+      <Nav></Nav>
+      <Back> </Back>
     </div>
 
 
