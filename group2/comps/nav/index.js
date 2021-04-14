@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Arrow from '../../images/BackArrow.svg';
+import Back from '../back';
 
 const BackCont = styled.div`
     display: flex;
@@ -74,12 +75,13 @@ const Nav = ({
         width: 414,
         height: 194,
     }}>
-        <BackCont>
+        {/* <BackCont>
         <BackImg>
             <img src={Arrow} alt="Arrow Icon"/>
         </BackImg>
         <Text>BACK</Text>
-    </BackCont>
+    </BackCont> */}
+    <Back></Back>
 
         <Title >
             {title}
