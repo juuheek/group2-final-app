@@ -1,9 +1,9 @@
 import React from 'react';
-import Textbox from '../Sofia_comps/textbox';
+import Textbox from '../comps/textbox/';
 
 export default {
     title: "Textbox",
-    component: <Textbox/>
+    component: <Textbox/>,
 }
 
-export const myTextbox = () => <div>text</div>
+export const myTextbox = () => <Textbox />

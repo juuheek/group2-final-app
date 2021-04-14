@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-cosnt TextboxInput = styled.div`
+const TextboxInput = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,9 +12,11 @@ cosnt TextboxInput = styled.div`
 `;
 
 const Textbox = () => {
-    return
-    <div>
+    return <div>
+        
         <TextboxInput/>
-    </div>
+        </div>
 
+
+}
 export default Textbox;
