@@ -7,16 +7,16 @@ import Greybg from '../comps/JuheeGreybg'
 import CauseCard from '../comps/JuheeCauseCard'
 
 const JuheeComps = styled.div`
-  .whole{
+  
     background-color:#E8ECF0;
     padding:20px;
    
-  }
+  
 `;
 export default function Home() {
   return (
-    <JuheeComps>
-    <div className="whole">
+    <JuheeComps >
+    
 
      <NavyButton text="Let's get started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
       <NavyButton text="Agree and Continue"bgcolor="transparent" color="#26325B" border="1px #26325B solid" /> 
@@ -34,7 +34,7 @@ export default function Home() {
    
       <Greybg/>
       <CauseCard/>
-    </div>
+    
 
         
     </JuheeComps>

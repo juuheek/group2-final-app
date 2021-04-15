@@ -6,32 +6,29 @@ import Whitebg from '../comps/JuheeWhitebg'
 import Greybg from '../comps/JuheeGreybg'
 import CauseCard from '../comps/JuheeCauseCard'
 
-const cont = styled.div`
- .boxcontainer{
-   width:300px;
-   height:600px;
-   background-color:#000;
- }
+const JuheeCont = styled.div`
+
+   width:414px;
+   height:1169px;
+   background-color:#E8ECF0;
    
-   
-  
 `;
 export default function Home() {
   return (
-    <cont>
+    <JuheeCont>
     
-    <div className="boxcontainer">
+    
 
       <Greybg />
  
      
    
       
-    </div>
+
   
     
 
         
-    </cont>
+    </JuheeCont>
   )
 }
