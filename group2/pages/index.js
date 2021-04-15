@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 // import styles from '../styles/global.css'
 import styled from 'styled-components';
 import NavyButton from '../comps/NavyButton'
@@ -38,5 +39,13 @@ export default function Home() {
 
         
     </JuheeComps>
+
+
+
+export default function Home() {
+  return (
+    <div>
+    </div>
+
   )
 }
