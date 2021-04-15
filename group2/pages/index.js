@@ -1,4 +1,13 @@
 import Head from 'next/head'
+// import styles from '../styles/global.css'
+import Button from '../comps/Quesbutton';
+import Nav from '../comps/nav';
+import Back from '../comps/back';
+import styled from 'styled-components';
+
+const HomeCont = styled.div`
+
+`;
 
 // import styles from '../styles/global.css'
 import styled from 'styled-components';
@@ -42,10 +51,15 @@ export default function Home() {
 
 
 
+
 export default function Home() {
   return (
     <div>
+      <Button></Button>
+      <Nav></Nav>
+      <Back> </Back>
     </div>
+
 
   )
 }
