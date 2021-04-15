@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const Circle = stylled.span`
+const Circle = styled.span`
 height: 100px;
 width: 100px;
 background-color: #bbb;
