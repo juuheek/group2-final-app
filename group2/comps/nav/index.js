@@ -4,26 +4,10 @@ import styled from "styled-components";
 import Arrow from '../../images/BackArrow.svg';
 import Back from '../back';
 
-const BackCont = styled.div`
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 50px;
-    right: 150px;
-`;
-const BackImg = styled.image`
-display: inline-block;
-width: 24px;
-height: 24px;
-`;
-
-const Text = styled.h2`
-font-family: DIN alternate;
-font-size: 18px;
-color:#8A8A8A;
-margin: 0;
+const BackDiv = styled.div`
 position: relative;
-bottom: 3px;
+right: 150px;
+top: 35px
 `;
 
 const NavCont = styled.div`
@@ -75,13 +59,9 @@ const Nav = ({
         width: 414,
         height: 194,
     }}>
-        {/* <BackCont>
-        <BackImg>
-            <img src={Arrow} alt="Arrow Icon"/>
-        </BackImg>
-        <Text>BACK</Text>
-    </BackCont> */}
-    <Back></Back>
+        <BackDiv>
+    <Back ></Back>
+    </BackDiv>
 
         <Title >
             {title}
