@@ -1,17 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
-import Arrow from '../../images/BackArrow.svg';
+import { BsArrowLeftShort } from 'react-icons/bs';
+
 
 const BackCont = styled.div`
     display: flex;
     flex-direction: row;
 `;
-const BackImg = styled.image`
-display: inline-block;
-width: 24px;
-height: 24px;
-`;
+// const BackImg = styled.image`
+// display: inline-block;
+// width: 24px;
+// height: 24px;
+// `;
 
 const Text = styled.h2`
 font-family: DIN alternate;
@@ -25,11 +26,9 @@ bottom: 3px;
 const Back = ({
 
 }) => {
-
+    const [open, setOpen] = useState(false);
     return <BackCont>
-        <BackImg>
-            <img src={Arrow} alt="Arrow Icon"/>
-        </BackImg>
+        <BsArrowLeftShort />
         <Text>BACK</Text>
     </BackCont>
 }
