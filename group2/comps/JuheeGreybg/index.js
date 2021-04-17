@@ -9,7 +9,7 @@ const GreybgCont = styled.div`
   flex-direction:column;
   justify-content: space-between;
   align-items:center;
-  background-color:#EAEAEA;
+  background-color:${props =>props.bgcolor};
   border-radius: 10px 10px 0px 0px;
 `;
 
@@ -25,9 +25,10 @@ padding:50px;
 `;
 const Greybg = ({
   bold="Anorexia Nervosa",
-  text=" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type."
+  text=" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
+  bgcolor="#EAEAEA"
 }) =>{
-  return <GreybgCont> 
+  return <GreybgCont bgcolor={bgcolor}> 
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
     <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
   </GreybgCont>

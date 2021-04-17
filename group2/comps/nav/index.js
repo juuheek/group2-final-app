@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Arrow from '../../images/BackArrow.svg';
-import Back from '../back';
+// import Arrow from '../../images/BackArrow.svg';
+// import Back from '../back';
 
 const BackCont = styled.div`
     display: flex;
@@ -32,7 +32,7 @@ const NavCont = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: white;
-    border: 1px solid black;
+    ${'' /* border: 1px solid black; */}
     width: 414px:
     height: 194px;
     border-radius: 0 0 15px 15px;
@@ -81,7 +81,7 @@ const Nav = ({
         </BackImg>
         <Text>BACK</Text>
     </BackCont> */}
-    <Back></Back>
+    {/* <Back></Back> */}
 
         <Title >
             {title}

@@ -34,6 +34,7 @@ export default function Home() {
       <Whitebg bold ="Excessive Exercise" text="Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders."/>
    
       <Greybg/>
+      <Greybg bgcolor="#FFF"/>
       <CauseCard/>
       <PieChart />
     
