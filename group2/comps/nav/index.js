@@ -15,7 +15,7 @@ const NavCont = styled.div`
    flex-direction: column;
    align-items: center;
    background-color: white;
-   border: 1px solid black;
+   ${'' /* border: 1px solid black; */}
    width: 414px:
    height: 194px;
    border-radius: 0 0 15px 15px;

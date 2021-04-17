@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const CauseCardCont = styled.div`
   max-width:315px;
   height:158px;
