@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
 const ButtonCont = styled.span`
-  margin:20px;
+  margin:10px;
 `;
 const ButtonInput = styled.button`
       background-color:${props=>props.bg};

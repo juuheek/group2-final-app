@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import Button from '../comps/NavyButton';
 import MinWhitebg from '../comps/WhiteBG';
 import Textbox from '../comps/textbox';
+import Back from '../comps/back';
 import NavyButton from '../comps/NavyButton';
+import CircleImg from '../comps/circleimg';
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 
@@ -15,24 +17,22 @@ const MinChunCont = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content:space-between;
     
   
 `;
 
-    const WhitebgHeader = styled.p`
-      color:#8A8A8A;
-      font-size: 25px;
-      text-align: center;
 
-    `;
+const Mindiv = styled.div`
+    margin-right: 300px;
+    margin-top: 30px;
+`;
 
-    const WhitebgBody = styled.p`
-      color:#8A8A8A;
-      font-size: 25px;
-      text-align: center;
+const Mindiv2 = styled.div`
+`;
 
-    `;
+
+
 
 export default function Result({
   bgcolor = "#FF9090"
@@ -41,9 +41,12 @@ export default function Result({
 }) {
   return (
     <MinChunCont background={bgcolor}>
-
-          <MinWhitebg>
-
+      <Mindiv>
+          <Back />
+        </Mindiv>
+        <CircleImg />
+          <MinWhitebg >
+            
           </MinWhitebg>
             
 

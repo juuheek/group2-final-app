@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Arrow from '../../images/BackArrow.svg';
-
- 
 import {BiArrowBack} from 'react-icons/bi';
  
 const BackCont = styled.div`
