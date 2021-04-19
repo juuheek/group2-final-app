@@ -1,12 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import MinWhitebg from '../comps/WhiteBG';
+import Whitebg from '../comps/JuheeGreybg';
 import Textbox from '../comps/textbox';
-import Start from '../comps/NavyButton';
-
-
-
-
 
 const GlianCont = styled.div`
   display: flex;
@@ -14,20 +9,10 @@ const GlianCont = styled.div`
   width:414px;
   height:896px;
   background-color: #E8ECF0;
-
-
-  
+  justify-content: center;
+  align-items: center;
 `;
 
-const TopRight = styled.img`
-margin-top: -25px;
-margin-left: -100px;
-
-`;
-
-const BottomRight = styled.img`
-margin-top: -150px;
-`;
 
 const Welcome = styled.p`
 
@@ -38,11 +23,11 @@ font-size: 36px;
 font-style: italic;
 margin-top:0px;
 `;  
+
 const Move = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
-
 `;
 
 const Logo = styled.img`
@@ -61,18 +46,12 @@ export default function Glian(){
 
   return (
     <GlianCont>
-        <TopRight src="/Group147.svg"/>
-        <Welcome>Welcome To</Welcome>
-        <Logo src="/logo1.svg"/>
-        <Awareness>“raising awareness about
-eating disorders”</Awareness>
-    <Move>
-    <Start text="Get Started" bgcolor="transparent" color="#26325B" border="2px #26325B solid" >
-        </Start>
-      </Move>
+        <Whitebg bgcolor="white" bold="DISCLAIMER" text="Our app is to inform our users about various eating disorders
+
+Some of our content might be sensitive to some of our users">
 
 
-        <BottomRight src="/Group146.svg"/>
+        </Whitebg>
     </GlianCont>
   )
 }

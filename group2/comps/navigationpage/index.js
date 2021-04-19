@@ -10,7 +10,7 @@ const NavPageCont = styled.div`
   font-weight: bold;
   font-size: 18px;
   color: #26325B;
-
+  margin-top: 30px;
 
 
 `;

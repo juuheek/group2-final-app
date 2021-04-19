@@ -6,6 +6,8 @@ import {BiArrowBack} from 'react-icons/bi';
 const BackCont = styled.div`
     display: flex;
     flex-direction: row;
+    margin-top: 42px;
+    margin-left: -300px;
 `;
 const BackImg = styled.div`
 display: inline-block;
