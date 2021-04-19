@@ -31,6 +31,12 @@ const Mindiv = styled.div`
 const Mindiv2 = styled.div`
 `;
 
+const WhitebgBody = styled.p`
+  color:${props=>props.color}px;
+  font-size: 25px;
+  text-align: center;
+
+`;
 
 
 
@@ -46,9 +52,8 @@ export default function Result({
         </Mindiv>
         <CircleImg />
           <MinWhitebg >
-            
+
           </MinWhitebg>
-            
 
     </MinChunCont>
   )

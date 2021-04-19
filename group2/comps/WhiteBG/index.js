@@ -43,15 +43,14 @@ const MinWhitebg = ({
   yourresult="Your Result:",
   flagcolor="Red Flag",
   color= "#E67571",
+  children,
   
 })=>{ 
   return <MinWhitebgCont height={height} >
 
     <WhitebgHeader>{yourresult}</WhitebgHeader>
     <WhitebgBody color={color}>{flagcolor}</WhitebgBody>
-    <Textbox>
-      
-    </Textbox>
+    <Textbox/>
     
     <NavyButton text="Get Help" />
     <NavyButton text="Get Information" />

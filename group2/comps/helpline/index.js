@@ -37,9 +37,9 @@ const ClinicAddress = styled.div`
 
 const Helpline = () => {
     return <div>
-            <HelplineInput size={100}>
+            <HelplineInput >
             <div>
-                <FaHandsHelping color="white" />
+                <FaHandsHelping color="white" size={100} />
                 <ClinicName> Richmond Eating Disorders</ClinicName>
                 <ClinicAddress>8100 Granville Ave, Rchmond, BC V6Y 3T6</ClinicAddress>
                 </div>
