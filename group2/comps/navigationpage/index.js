@@ -22,7 +22,7 @@ const NavPage = ({
 
 }) => {
   return <NavPageCont>
-    <IoMdArrowDropleftCircle color="#E67571"/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571"/>
+    <IoMdArrowDropleftCircle  color="#E67571"/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571"/>
   </NavPageCont>
 }
 

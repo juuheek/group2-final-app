@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import Whitebg from '../comps/JuheeGreybg';
+import Whitebg from '../comps/Disclaimer';
 import Textbox from '../comps/textbox';
 
 const GlianCont = styled.div`
@@ -46,7 +46,7 @@ export default function Glian(){
 
   return (
     <GlianCont>
-        <Whitebg bgcolor="white" bold="DISCLAIMER" text="Our app is to inform our users about various eating disorders
+        <Whitebg bgcolor="white" bold="DISCLAIMER" text="Our app is to inform our users about various eating disorders.
 
 Some of our content might be sensitive to some of our users">
 

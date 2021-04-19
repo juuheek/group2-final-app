@@ -4,6 +4,9 @@ import Whitebg from '../comps/JuheeGreybg';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import Resources from '../comps/navigationpage';
+import Cards from '../comps/card';
+import Dots from '../comps/imgcarousel';
+import Greybg from '../comps/JuheeGreybg';
 
 
 const GlianCont = styled.div`
@@ -11,7 +14,7 @@ const GlianCont = styled.div`
   flex-direction: column;
   width:414px;
   height:896px;
-  background-color: #E8ECF0;
+  background-color: white;
   align-items: center;
 `;
 
@@ -22,6 +25,11 @@ export default function Glian(){
     <GlianCont>
         <Back></Back>
         <Resources></Resources>
+        <Cards></Cards>
+        <Dots></Dots>
+        <Greybg></Greybg>
+
+
 
 
 
