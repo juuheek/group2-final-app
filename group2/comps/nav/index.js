@@ -39,7 +39,7 @@ const Row = styled.div`
 `;
  
 const Button = styled.button`
-   color: #26325B;
+   color:${props=>props.color};
    font-family: DIN alternate;
    font-size: 14px;
    margin: 4px;
@@ -50,6 +50,7 @@ const Button = styled.button`
 `;
  
 const Nav = ({
+   color="#26325B",
    onTxt1Click = () => {},
    onTxt2Click= () => {},
    onTxt3Click= () => {},
@@ -71,11 +72,11 @@ const Nav = ({
 
        </Title>
        <Row>
-           <Button onClick = {onTxt1Click}> Anorexia</Button>
-           <Button onClick = {onTxt2Click}>Bulimia</Button>
-           <Button onClick = {onTxt3Click}>Orthorexia</Button>
-           <Button  onClick = {onTxt4Click}>Binge</Button>
-           <Button  onClick = {onTxt5Click}>Excessive Exercise</Button>
+           <Button onClick = {onTxt1Click} color={color}> Anorexia</Button>
+           <Button onClick = {onTxt2Click} color={color}>Bulimia</Button>
+           <Button onClick = {onTxt3Click} color={color}>Orthorexia</Button>
+           <Button  onClick = {onTxt4Click} color={color}>Binge</Button>
+           <Button  onClick = {onTxt5Click} color={color}>Excessive Exercise</Button>
        </Row>
    </NavCont>
 }
