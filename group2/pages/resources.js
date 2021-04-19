@@ -31,7 +31,7 @@ const JuheeDiv =styled.div`
 const JuheeDiv2 = styled.div`
   margin:15px;
 `;
-export default function EatingDisorders () {
+export default function Resources () {
 
   const [causetext, bottomcausetext] = useState ("Thinness culture in media");
   const HandleCauseLeft = () => {
