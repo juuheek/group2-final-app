@@ -53,32 +53,38 @@ export default function EatingDisorders () {
 
 const [explanation, explanationbold] = useState ("Anorexia");
 const [explanationtext, explanationregular] = useState ("a psychological and potentially life-threatening eating disorder. Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type. ");
-const [color, textcolor] = useState ("#26325B");
+const [cause, defaultcause] =useState("Thinness culture in media");
+const [symptom, defaultsymptom] =useState("Extremely restrictive eating");
+
 const HandleExplanation = (
   title="Anorexia",
   text="a psychological and potentially life-threatening eating disorder. Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
-  navycolor="#26325B"
+  bottomtxt="Thinness culture in media",
+  bottomtxt2 = "Extremely restrictive eating "
+  
 ) =>{
   explanationbold(title)
   explanationregular(text)
-  textcolor(navycolor)
+  defaultcause(bottomtxt)
+  defaultsymptom(bottomtxt2)
   console.log("click")
 }
+
 
   return (
     <JuheeComps >
     
     <JuheeCont>
-      <NavBar color={color} onTxt2Click={()=>HandleExplanation("Bulimia Nervosa", "a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.", "#E67571") } onTxt1Click={()=>HandleExplanation("Anorexia")} onTxt3Click={()=>HandleExplanation("Orthorexia","a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject.")} onTxt4Click={()=>HandleExplanation("Binge Eating (BED)","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months.")} onTxt5Click={()=>HandleExplanation("Excessive Exercise","Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders.")}    />
+      <NavBar onTxt2Click={()=>HandleExplanation("Bulimia Nervosa", "a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.","Stressful transitions or life ","Chronically inflamed and sore throat ")} onTxt1Click={()=>HandleExplanation("Anorexia")} onTxt3Click={()=>HandleExplanation("Orthorexia","a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject.","Past history of trauma","An increase in concern about the health of ingredients")} onTxt4Click={()=>HandleExplanation("Binge Eating (BED)","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months.","Depression","Feeling that your eating behavior is out of control")} onTxt5Click={()=>HandleExplanation("Excessive Exercise","Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders.","Physical 'burnout","Feeling sore muscles or heavy limbs.")}  />
       <JuheeDiv>
         <Whitebg  bold={explanation} text={explanationtext}/>
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>
-      <CauseCard onLeftClick ={HandleCauseLeft} onRightClick ={HandleCauseRight} toptext="Potential Causes" bottomcausetext={causetext}/>
+      <CauseCard onLeftClick ={HandleCauseLeft} onRightClick ={HandleCauseRight} toptext="Potential Causes" bottomcausetext={causetext} bottomcausetext={cause}/>
       </JuheeDiv2>
       <JuheeDiv2>
-      <SymptomCard onLeftClick ={HandleSymptomLeft} onRightClick ={HandleSymptomRight} toptext="Symptoms" bottomsymptomtext={symptomtext} symptomiconimg={symptomimg}/>
+      <SymptomCard onLeftClick ={HandleSymptomLeft} onRightClick ={HandleSymptomRight} toptext="Symptoms" bottomsymptomtext={symptomtext} symptomiconimg={symptomimg} bottomsymptomtext={symptom}/>
       </JuheeDiv2>
       </JuheeDiv>
       <JuheeDiv>
