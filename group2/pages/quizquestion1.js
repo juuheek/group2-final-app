@@ -4,7 +4,8 @@ import styled from 'styled-components';
 //import comps
 import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
-import QuizNav from '../comps/QuizNav'
+import QuizNav from '../comps/QuizNav';
+import BulletPoints from '../comps/bullet';
 
 const QuizPage = styled.div `
     width: 414px;
@@ -17,7 +18,7 @@ const QuizPage = styled.div `
     align-items: center;
  `;
 
-const QuestionTxt = styled.p`
+ const QuestionTxt = styled.p`
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -30,7 +31,7 @@ const QuestionTxt = styled.p`
 
  const Divider = styled.hr`
     border: 0.5px solid #000000;
-    margin: 50px;
+    margin: 30px;
     width: 298px;
  `;
 const ButtonStyle = styled.div `
@@ -46,24 +47,18 @@ const ButtonStyle = styled.div `
 export default function Quiz (){
     return <QuizPage>
 
-        <QuizNav Title="BMI"></QuizNav>
+        <QuizNav Title="Meals"></QuizNav>
 
-        <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
-        <NavyButton text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
-        
+        <QuestionTxt>Do you engage in any of the following behaviours?  </QuestionTxt>
+        <BulletPoints></BulletPoints>
+
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button txt="Underweight"></Button>
+        <Button txt="YES"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="Normal"></Button>
-        </ButtonStyle>
-        <ButtonStyle>
-        <Button txt="Overweight"></Button>
-        </ButtonStyle>
-        <ButtonStyle>
-        <Button txt="Obesity"></Button>
+        <Button txt="NO"></Button>
         </ButtonStyle>
 
         <ButtonStyle><NavyButton></NavyButton></ButtonStyle>

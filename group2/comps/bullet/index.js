@@ -28,7 +28,7 @@ flex-direction: row;
 align-items:center;
 `;
 
-const bullet = ({
+const BulletPoints = ({
     text="Skipping Breakfast",
     text2="Emotional eating",
     text3="Distracted eating",
@@ -61,4 +61,4 @@ const bullet = ({
     </BulletCont>
 }
 
-export default bullet;
+export default BulletPoints;

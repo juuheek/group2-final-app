@@ -17,7 +17,7 @@ const QuizPage = styled.div `
     align-items: center;
  `;
 
-const QuestionTxt = styled.p`
+ const QuestionTxt = styled.p`
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -30,7 +30,7 @@ const QuestionTxt = styled.p`
 
  const Divider = styled.hr`
     border: 0.5px solid #000000;
-    margin: 50px;
+    margin: 30px;
     width: 298px;
  `;
 const ButtonStyle = styled.div `
@@ -46,24 +46,22 @@ const ButtonStyle = styled.div `
 export default function Quiz (){
     return <QuizPage>
 
-        <QuizNav Title="BMI"></QuizNav>
-
-        <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
-        <NavyButton text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
+        <QuizNav Title="Meals"></QuizNav>
+        <QuestionTxt>How many meals do you eat in a day?</QuestionTxt>
         
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button txt="Underweight"></Button>
+        <Button txt="1"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="Normal"></Button>
+        <Button txt="2"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="Overweight"></Button>
+        <Button txt="3"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="Obesity"></Button>
+        <Button txt="4"></Button>
         </ButtonStyle>
 
         <ButtonStyle><NavyButton></NavyButton></ButtonStyle>
