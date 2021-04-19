@@ -51,21 +51,18 @@ export default function Anorexia () {
     bottomsymptomtext("Extreme thinness");
   }
 
-  const [navbartitletext, navbartitle] = useState("bold");
-  const [navbartxt1text, navbartxt1] = useState("text");
-  const HandleTxt1Text = () => {
-    navbartitle(" Bulimia");
-    navbartxt1("Anorexia");
-  }
-
+const [explanation, explanationbold] = useState ("nothing text");
+const HandleExplanation = () =>{
+  explanationtext("Bulimia Nervosa")
+}
 
   return (
     <JuheeComps >
     
     <JuheeCont>
-      <NavBar onTxt1Click={HandleTxt1Text} navbartitle={navbartitletext} navbartxt1={navbartxt1text} />
+      <NavBar  />
       <JuheeDiv>
-        <Whitebg/>
+        <Whitebg onTxt2Click={HandleExplanation} explanationbold={explanation}/>
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>

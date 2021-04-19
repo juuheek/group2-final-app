@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
+import {FaHandsHelping} from 'react-icons/fa';
 
 const ButtonCont = styled.span`
-  margin:20px;
+  ${'' /* margin:20px; */}
 `;
 const ButtonInput = styled.button`
       background-color:${props=>props.bg};
@@ -20,7 +21,8 @@ const NavyButton = ({
   text="Next",
   bgcolor="#26325B", 
   color = "#FFF",
-  border = "none"
+  border = "none",
+  icon = <FaHandsHelping/>
 
 }) => {
   const router =useRouter(); 
@@ -28,7 +30,7 @@ const NavyButton = ({
     {/* <ButtonImg src="/vercel.svg"/> */}
 
     <ButtonInput bg={bgcolor} textcolor={color} navyborder={border}>
-      {text}
+    {icon} {text}
     </ButtonInput>
   </ButtonCont>
 }
