@@ -18,7 +18,7 @@ const NavCont = styled.div`
    background-color: white;
    ${'' /* border: 1px solid black; */}
    width: 414px:
-   height: 60px;
+   height: 117px;
    border-radius: 0 0 15px 15px;
 `;
  
@@ -32,7 +32,7 @@ const Row = styled.div`
    display:flex;
    flex-direction: row;
    width: 100%;
-   height:100%;
+   height:50px;
    padding:5px;
    justify-content: center;
    // background-color:black;
@@ -49,35 +49,25 @@ const Button = styled.button`
   
 `;
  
-const Nav = ({
-   onTxt1Click = () => {},
-   onTxt2Click= () => {},
-   onTxt3Click= () => {},
-   onTxt4Click= () => {},
-   onTxt5Click= () => {}
+const QuizNav = ({
+  Title="HEllO"
 
 }) => {
  
    return <NavCont style={{
        display: "inline-flex",
        width: 414,
-     
+       height:117
    }}>
        <BackDiv>
    <Back ></Back>
    </BackDiv>
  
        <Title>
-
+          {Title}
        </Title>
-       <Row>
-           <Button onClick = {onTxt1Click}> Anorexia</Button>
-           <Button onClick = {onTxt2Click}>Bulimia</Button>
-           <Button onClick = {onTxt3Click}>Orthorexia</Button>
-           <Button  onClick = {onTxt4Click}>Binge</Button>
-           <Button  onClick = {onTxt5Click}>Excessive Exercise</Button>
-       </Row>
+      <Row></Row>
    </NavCont>
 }
  
-export default Nav;
+export default QuizNav;
