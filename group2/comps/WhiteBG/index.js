@@ -25,7 +25,7 @@ const WhitebgHeader = styled.p`
 `;
 
 const WhitebgBody = styled.p`
-  color:#8A8A8A;
+  color:#E67571;
   font-size: 25px;
   text-align: center;
 
@@ -42,8 +42,8 @@ const MinWhitebg = ({
   return <MinWhitebgCont height={height} >
     <WhitebgHeader>{yourresult}</WhitebgHeader>
     <WhitebgBody>{flagcolor}</WhitebgBody>
-    <Textbox>
-        
+    <Textbox >
+      
     </Textbox>
     <NavyButton text="Get Help" />
     <NavyButton text="Get Information" />
