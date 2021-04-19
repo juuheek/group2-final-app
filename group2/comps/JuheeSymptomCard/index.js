@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {RiMentalHealthFill} from 'react-icons/ri'
 
 
 const CauseCardCont = styled.div`
   max-width:315px;
   height:158px;
+  display:flex;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -36,22 +37,25 @@ const CauseCardImg = styled.img`
 padding:0 30px 0 30px;
 `;
 
-const CauseCard = ({
+
+
+const SymptomCard = ({
   onLeftClick =()=>{},
   onRightClick=()=>{},
   toptext="Potential Causes",
-  bottomcausetext="Stressful transitions or life"
+  bottomsymptomtext="Stressful transitions or life",
+  src="/food.svg"
 }) => {
  
   return <CauseCardCont> 
     <TopText>{toptext}</TopText>
     <MiddleIcons>
       <CauseCardImg src="/navyleftarrow.svg" onClick={onLeftClick}/>
-      <CauseCardImg src="/causeicon.svg" />
+      <CauseCardImg src={src} onClick = {onLeftClick} onClick={onRightClick}/>
       <CauseCardImg src="/navyrightarrow.svg" onClick={onRightClick} />
     </MiddleIcons>
-    <BottomText>{bottomcausetext}</BottomText>
+    <BottomText>{bottomsymptomtext}</BottomText>
   </CauseCardCont>  
 }
 
-export default CauseCard;
+export default SymptomCard;

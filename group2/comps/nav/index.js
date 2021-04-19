@@ -51,6 +51,12 @@ const Nav = ({
    txt3="Orthorexia",
    txt4="Excessive Exercise",
    margin="15px",
+   onTitleClick= () => {},
+   onTxt1Click = () => {},
+   onTxt2Click= () => {},
+   onTxt3Click= () => {},
+   onTxt4Click= () => {}
+
 }) => {
  
    return <NavCont style={{
@@ -62,14 +68,14 @@ const Nav = ({
    <Back ></Back>
    </BackDiv>
  
-       <Title >
+       <Title onClick = {onTitleClick} >
            {title}
        </Title>
        <Row>
-           <Menus margin = {margin}>{txt1}</Menus>
-           <Menus margin = {margin}>{txt2}</Menus>
-           <Menus margin = {margin}>{txt3}</Menus>
-           <Menus margin = {margin}>{txt4}</Menus>
+           <Menus margin = {margin} onClick = {onTxt1Click}>{txt1}</Menus>
+           <Menus margin = {margin} onClick = {onTxt2Click}>{txt2}</Menus>
+           <Menus margin = {margin} onClick = {onTxt3Click}>{txt3}</Menus>
+           <Menus margin = {margin} onClick = {onTxt4Click}>{txt4}</Menus>
        </Row>
    </NavCont>
 }
