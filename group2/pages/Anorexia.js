@@ -51,18 +51,24 @@ export default function Anorexia () {
     bottomsymptomtext("Extreme thinness");
   }
 
-const [explanation, explanationbold] = useState ("nothing text");
-const HandleExplanation = () =>{
-  explanationtext("Bulimia Nervosa")
+const [explanation, explanationbold] = useState ("Anorexia");
+const [explanationtext, explanationregular] = useState ("a psychological and potentially life-threatening eating disorder. Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type. ");
+const HandleExplanation = (
+  title="Anorexia",
+  text="a psychological and potentially life-threatening eating disorder. Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type."
+) =>{
+  explanationbold(title)
+  explanationregular(text)
+  console.log("click")
 }
 
   return (
     <JuheeComps >
     
     <JuheeCont>
-      <NavBar  />
+      <NavBar onTxt2Click={()=>HandleExplanation("Bulimia Nervosa", "a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.") } onTxt1Click={()=>HandleExplanation("Anorexia")} onTxt3Click={()=>HandleExplanation("Orthorexia","a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject.")} onTxt4Click={()=>HandleExplanation("Binge Eating (BED)","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months.")} onTxt5Click={()=>HandleExplanation("Excessive Exercise","Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders.")}   />
       <JuheeDiv>
-        <Whitebg onTxt2Click={HandleExplanation} explanationbold={explanation}/>
+        <Whitebg  bold={explanation} text={explanationtext}/>
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>
