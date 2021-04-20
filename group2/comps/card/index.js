@@ -95,8 +95,8 @@ const Card = () => {
     return <div>
             <CardContainer>
             <FirstCard>
-                <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
-                <Text>Anorexia</Text>
+                {/* <RiStethoscopeLine color="#E67571"></RiStethoscopeLine> */}
+                <Text></Text>
             </FirstCard>
             <SecondCard></SecondCard>
             <FourthCard></FourthCard>
