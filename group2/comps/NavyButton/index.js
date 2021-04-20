@@ -6,7 +6,11 @@ import {FaHandsHelping} from 'react-icons/fa';
 
 
 const ButtonCont = styled.span`
+
+  margin:10px;
+
   ${'' /* margin:20px; */}
+
 `;
 
 const ButtonInput = styled.button`

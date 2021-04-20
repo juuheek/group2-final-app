@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../../comps/NavyButton';
+import Back from '../../comps/back';
 import Textbox from '../../comps/textbox';
 import NavyButton from '../../comps/NavyButton';
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
+import CircleImg from '../circleimg';
+
+
 
 
 const WhiteCont = styled.div`
@@ -21,7 +25,8 @@ const MinWhitebgCont = styled.div`
   height: ${props=>props.height}px;
   border-radius: 5px;
   background-color: #FFF;
-  
+
+
 `;
 
 const WhitebgHeader = styled.p`
@@ -33,7 +38,7 @@ const WhitebgHeader = styled.p`
 `;
 
 const WhitebgBody = styled.p`
-  color:#E67571;
+  color:${props=>props.color}px;
   font-size: 25px;
   text-align: center;
 
@@ -58,14 +63,16 @@ const MinWhitebg = ({
   height= 500,
   yourresult="Your Result:",
   flagcolor="Red Flag",
+  color= "#E67571",
+
   
 })=>{ 
   return <MinWhitebgCont height={height} >
+
     <WhitebgHeader>{yourresult}</WhitebgHeader>
-    <WhitebgBody>{flagcolor}</WhitebgBody>
-    <Textbox >
-      
-    </Textbox>
+    <WhitebgBody color={color}>{flagcolor}</WhitebgBody>
+    <Textbox/>
+    
     <NavyButton text="Get Help" />
     <NavyButton text="Get Information" />
   </MinWhitebgCont>

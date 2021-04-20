@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import {FaHandsHelping} from 'react-icons/Fa'
+
 
 const HelplineInput = styled.div`
     display: flex;
@@ -35,9 +37,9 @@ const ClinicAddress = styled.div`
 
 const Helpline = () => {
     return <div>
-            <HelplineInput>
+            <HelplineInput >
             <div>
-                <img src="../../public/Vector.svg"/> 
+                <FaHandsHelping color="white" size={100} />
                 <ClinicName> Richmond Eating Disorders</ClinicName>
                 <ClinicAddress>8100 Granville Ave, Rchmond, BC V6Y 3T6</ClinicAddress>
                 </div>
