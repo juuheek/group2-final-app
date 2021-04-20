@@ -31,14 +31,19 @@ right:150px;
 top:20px;
 `;
 export default function Glian(){
-
+  const [textbold, toptextbold] = useState ("Eating Emotional");
+  const HandleText = (
+    boldtxt="Good Eating Habits",
+  ) => {
+    toptextbold(boldtxt)
+  }
   return (
     <GlianCont>
         <BackDiv>
         <Back routeTo="/disclaimer"></Back>
     </BackDiv>
         
-        <Resources navpageheader="Good Eating Habits"></Resources>
+        <Resources onLeftClick={()=>HandleText("Good Eating Habits")} onRightClick={()=>HandleText("Bad Eating Habits")} navpageheader="Good Eating Habits"></Resources>
         <Cards></Cards>
         <Row>
 
