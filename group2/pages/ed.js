@@ -32,14 +32,22 @@ top:20px;
 
 
 export default function Glian(){
-
+  const [textbold, toptextbold] = useState ("Anorexia Nervosa");
+  const [textregular, bottomtextregular] = useState ("is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.");
+  const HandleText = (
+    boldtxt="Anorexia Nervosa",
+    regulartxt="is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type."
+  ) => {
+    toptextbold(boldtxt)
+    bottomtextregular(regulartxt)
+  }
   return (
     <GlianCont>
     <BackDiv>
     <Back routeTo="/disclaimer"/>
     </BackDiv>
   
-        <Resources></Resources>
+        <Resources onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.")} onRightClick={()=>HandleText("")}></Resources>
         <Cards></Cards>
         <Row>
 
@@ -50,7 +58,7 @@ export default function Glian(){
         <Dots></Dots>
 
         </Row>
-        <Greybg></Greybg>
+        <Greybg bold={textbold} text={textregular}></Greybg>
 
     </GlianCont>
   )
