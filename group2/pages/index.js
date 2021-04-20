@@ -6,6 +6,7 @@ import Whitebg from '../comps/JuheeWhitebg'
 import Greybg from '../comps/JuheeGreybg'
 import CauseCard from '../comps/JuheeCauseCard'
 import PieChart from '../comps/pie-chart'
+import QuizNav from '../comps/QuizNav'
 
 const JuheeComps = styled.div`
   
@@ -19,14 +20,14 @@ export default function Home() {
     <JuheeComps >
     
 
-     <NavyButton text="Let's get started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
-      <NavyButton text="Agree and Continue"bgcolor="transparent" color="#26325B" border="1px #26325B solid" /> 
-      <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
+     <NavyButton text="Let's get started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" />
+      <NavyButton text="Agree and Continue"bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" /> 
+      <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid"icon="" />
       <NavyButton text="Get Help" bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
       <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
-      <NavyButton text="Next" />
-      <NavyButton text="Get Help" />
-      <NavyButton text="Get Information" />
+      <NavyButton text="Next" icon="" />
+      <NavyButton text="Get Help" icon="" />
+      <NavyButton text="Get Information"  icon=""/>
       <Whitebg />
       <Whitebg bold ="Bulimia Nervosa" text="a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed."/>
       <Whitebg bold ="Binge Eating Disorder (BED)" text="commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months." height="300"/>
@@ -36,6 +37,7 @@ export default function Home() {
       <Greybg/>
       <CauseCard/>
       <PieChart />
+      <QuizNav/>
     
 
         
@@ -48,3 +50,4 @@ export default function Home() {
 
   )
 }
+
