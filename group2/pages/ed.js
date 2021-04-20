@@ -9,6 +9,7 @@ import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/JuheeGreybg';
 
 
+
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
