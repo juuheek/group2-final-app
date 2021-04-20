@@ -9,6 +9,7 @@ import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/JuheeGreybg';
 
 
+
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,7 +48,7 @@ export default function Glian(){
     <Back routeTo="/disclaimer"/>
     </BackDiv>
   
-        <Resources onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.")} onRightClick={()=>HandleText("")}></Resources>
+        <Resources onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.")}></Resources>
         <Cards></Cards>
         <Row>
 

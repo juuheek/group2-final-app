@@ -33,7 +33,7 @@ const Greybg = ({
 }) =>{
   return <GreybgCont color={bgcolor} > 
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
-    <NavyButton text="Agree & Continue " bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/ed" />
+    <NavyButton text="Agree & Continue " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/ed" />
   </GreybgCont>
 }
 
