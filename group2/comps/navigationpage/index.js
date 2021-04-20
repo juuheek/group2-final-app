@@ -18,11 +18,13 @@ const NavPageCont = styled.div`
 
 
 const NavPage = ({
+  onLeftClick = () => {},
+  onRightClick = () => {},
   navpageheader="Resources"
 
 }) => {
   return <NavPageCont>
-    <IoMdArrowDropleftCircle  color="#E67571"/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571"/>
+    <IoMdArrowDropleftCircle  color="#E67571" onClick={onLeftClick}/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571" onClick={onRightClick}/>
   </NavPageCont>
 }
 

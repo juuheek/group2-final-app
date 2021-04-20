@@ -39,7 +39,7 @@ const Greybg = ({
   return <GreybgCont color={bgcolor} > 
 
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
-    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/start" />
+    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/resources" />
   </GreybgCont>
 }
 
