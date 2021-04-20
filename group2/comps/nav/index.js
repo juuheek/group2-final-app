@@ -1,7 +1,7 @@
 import React from "react";
 import { RiHealthBookLine } from "react-icons/ri";
 import styled from "styled-components";
-
+import Back from '../../comps/back';
 
 // import Arrow from '../../images/BackArrow.svg';
 // import Back from '../back';
@@ -26,7 +26,7 @@ color:#8A8A8A;
 margin: 0;
 `;
  
-import Back from '../back';
+
 
  
 const BackDiv = styled.div`
@@ -86,6 +86,7 @@ const Button = styled.button`
 
   
 `;
+
  
 const Nav = ({
    color="#26325B",
@@ -96,42 +97,7 @@ const Nav = ({
    onTxt5Click= () => {}
 
 }) => {
-
-    return <NavCont style={{
-        display: "inline-flex",
-        width: 414,
-        height: 194,
-    }}>
-        {/* <BackCont>
-        <BackImg>
-            <img src={Arrow} alt="Arrow Icon"/>
-        </BackImg>
-        <Text>BACK</Text>
-    </BackCont> */}
-    {/* <Back></Back> */}
-
-        <Title >
-            {title}
-        </Title>
-        <Row>
-            <Menus margin = {margin}>{txt1}</Menus>
-            <Menus margin = {margin}>{txt2}</Menus>
-            <Menus margin = {margin}>{txt3}</Menus>
-            <Menus margin = {margin}>{txt4}</Menus>
-        </Row>
-    </NavCont>
-
  
-   return <NavCont style={{
-       display: "inline-flex",
-       width: 414,
-     
-   }}>
-       <BackDiv>
-   <Back ></Back>
-   </BackDiv>
- 
-       <Title>
 
     return <NavCont style={{
         display: "inline-flex",
@@ -139,28 +105,21 @@ const Nav = ({
         height: 194,
     }}>
         <BackDiv>
-    <Back ></Back>
+    <Back  ></Back>
     </BackDiv>
 
         <Title >
-            {title}
+           
         </Title>
         <Row>
-            <Menus margin = {margin}>{txt1}</Menus>
-            <Menus margin = {margin}>{txt2}</Menus>
-            <Menus margin = {margin}>{txt3}</Menus>
-            <Menus margin = {margin}>{txt4}</Menus>
-        </Row>
-    </NavCont>
-       </Title>
-       <Row>
            <Button onClick = {onTxt1Click} color={color}> Anorexia</Button>
            <Button onClick = {onTxt2Click} color={color}>Bulimia</Button>
            <Button onClick = {onTxt3Click} color={color}>Orthorexia</Button>
            <Button  onClick = {onTxt4Click} color={color}>Binge</Button>
            <Button  onClick = {onTxt5Click} color={color}>Excessive Exercise</Button>
        </Row>
-   </NavCont>
+    </NavCont>
+
 
 }
  

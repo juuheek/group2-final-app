@@ -41,9 +41,8 @@ const Piechart = ({
     text1="Eating Disorders mortality rate is ",
     percentage="10-15%",
 
-    text2="which is the highest mortality rate of any mental illess",
+    text2="which is the highest mortality rate of any mental illess"
 
-    text2="which is the highest mortality rate of any mental illess",
 
 }) => {
 
