@@ -19,6 +19,7 @@ const GlianCont = styled.div`
 `;
 
 
+
 export default function Glian(){
 
   return (

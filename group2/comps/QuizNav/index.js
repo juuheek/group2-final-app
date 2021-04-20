@@ -1,5 +1,6 @@
 import React from "react";
 import { RiHealthBookLine } from "react-icons/ri";
+import {BiArrowBack} from 'react-icons/bi';
 import styled from "styled-components";
  
 import Back from '../back';
@@ -7,9 +8,9 @@ import Back from '../back';
 const BackDiv = styled.div`
 position: relative;
 right: 150px;
-top: 35px
+top: 35px;
+color:#8A8A8A
 `;
- 
 const NavCont = styled.div`
    display:inline-flex;
    justify-content: center;
@@ -60,8 +61,10 @@ const QuizNav = ({
        height:117
    }}>
        <BackDiv>
-   <Back ></Back>
-   </BackDiv>
+    
+    <div><BiArrowBack color="#8A8A8A" /> BACK</div> 
+
+ </BackDiv>
  
        <Title>
           {Title}

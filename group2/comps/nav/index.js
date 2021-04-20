@@ -1,53 +1,17 @@
 import React from "react";
 import { RiHealthBookLine } from "react-icons/ri";
 import styled from "styled-components";
-import Back from '../../comps/back';
-
-// import Arrow from '../../images/BackArrow.svg';
-// import Back from '../back';
-
-const BackCont = styled.div`
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 50px;
-    right: 150px;
-`;
-const BackImg = styled.image`
-display: inline-block;
-width: 24px;
-height: 24px;
-`;
-
-const Text = styled.h2`
-font-family: DIN alternate;
-font-size: 18px;
-color:#8A8A8A;
-margin: 0;
-`;
- 
-
-
+import Back from '../back';
+import {BiArrowBack} from 'react-icons/bi';
  
 const BackDiv = styled.div`
-
 position: relative;
 right: 150px;
-top: 35px
+top: 35px;
+color:#8A8A8A
 `;
  
 const NavCont = styled.div`
-
-    display:inline-flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    ${'' /* border: 1px solid black; */}
-    width: 414px:
-    height: 194px;
-    border-radius: 0 0 15px 15px;
-
    display:inline-flex;
    justify-content: center;
    flex-direction: column;
@@ -57,7 +21,6 @@ const NavCont = styled.div`
    width: 414px:
    height: 60px;
    border-radius: 0 0 15px 15px;
-
 `;
  
 const Title = styled.h2`
@@ -83,11 +46,10 @@ const Button = styled.button`
    margin: 4px;
    border:none;
    background-color:white;
-
   
 `;
 
- 
+
 const Nav = ({
    color="#26325B",
    onTxt1Click = () => {},
@@ -98,29 +60,28 @@ const Nav = ({
 
 }) => {
  
+   return <NavCont style={{
+       display: "inline-flex",
+       width: 414,
+     
+   }}>
+      <BackDiv>
+    
+      <div><BiArrowBack color="#8A8A8A" /> BACK</div> 
+  
+   </BackDiv>
+ 
+       <Title>
 
-    return <NavCont style={{
-        display: "inline-flex",
-        width: 414,
-        height: 194,
-    }}>
-        <BackDiv>
-    <Back  ></Back>
-    </BackDiv>
-
-        <Title >
-           
-        </Title>
-        <Row>
+       </Title>
+       <Row>
            <Button onClick = {onTxt1Click} color={color}> Anorexia</Button>
            <Button onClick = {onTxt2Click} color={color}>Bulimia</Button>
            <Button onClick = {onTxt3Click} color={color}>Orthorexia</Button>
            <Button  onClick = {onTxt4Click} color={color}>Binge</Button>
            <Button  onClick = {onTxt5Click} color={color}>Excessive Exercise</Button>
        </Row>
-    </NavCont>
-
-
+   </NavCont>
 }
  
 export default Nav;
