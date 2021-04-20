@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import MinWhitebg from '../comps/WhiteBG';
 import Textbox from '../comps/textbox';
 import Start from '../comps/NavyButton';
-
-
+import NavyButton from '../comps/NavyButton'
 
 
 
@@ -67,12 +66,13 @@ export default function Glian(){
         <Awareness>“raising awareness about
 eating disorders”</Awareness>
     <Move>
-    <Start text="Get Started" bgcolor="transparent" color="#26325B" border="2px #26325B solid" icon="" >
-        </Start>
+    <NavyButton text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
+      
       </Move>
 
 
         <BottomRight src="/Group146.svg"/>
     </GlianCont>
   )
+
 }

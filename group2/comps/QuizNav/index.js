@@ -54,7 +54,7 @@ const QuizNav = ({
   route="/resources"
 
 }) => {
- 
+   
    return <NavCont style={{
        display: "inline-flex",
        width: 414,
