@@ -50,7 +50,7 @@ const MinWhitebg = ({
     <Textbox/>
 
     <NavyButton text="Get Help" routeTo="/helpline" />
-    <NavyButton text="Get Information" routeTo="/resources"/>
+    <NavyButton text="Get Information" routeTo="/ed"/>
   </MinWhitebgCont>
 }
 export default MinWhitebg;
