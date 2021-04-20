@@ -43,7 +43,7 @@ const MinWhitebg = ({
   yourresult="Your Result:",
   flagcolor="Red Flag",
   color= "#E67571",
-  children,
+
   
 })=>{ 
   return <MinWhitebgCont height={height} >
