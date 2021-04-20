@@ -10,7 +10,7 @@ const NavPageCont = styled.div`
   font-weight: bold;
   font-size: 18px;
   color: #26325B;
-
+  margin-top: 30px;
 
 
 `;
@@ -22,7 +22,7 @@ const NavPage = ({
 
 }) => {
   return <NavPageCont>
-    <IoMdArrowDropleftCircle color="#E67571"/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571"/>
+    <IoMdArrowDropleftCircle  color="#E67571"/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571"/>
   </NavPageCont>
 }
 

@@ -8,7 +8,8 @@ export default {
 
 export const DefaultNav = () => 
 <Nav 
-
+title=""
+maring="10px"
 />
 
 export const BullimiaNav = () => 
