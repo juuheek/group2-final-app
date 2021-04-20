@@ -10,10 +10,9 @@ margin-top: 17px;
 
 const ImgCarousel = ({
 
-
 }) => {
   return <CarouselCont>
-    <GiPlainCircle color="#E3E3E3"/><GiPlainCircle color="#E3E3E3 " /><GiPlainCircle color="#646464 "/><GiPlainCircle color="#E3E3E3 "/><GiPlainCircle color="#E3E3E3 "/>
+    <GiPlainCircle color="#E3E3E3"/>
   </CarouselCont>
 }
 

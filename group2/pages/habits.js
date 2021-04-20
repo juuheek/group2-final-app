@@ -18,6 +18,12 @@ const GlianCont = styled.div`
   align-items: center;
 `;
 
+const Row = styled.div`
+display: flex;
+flex-direction: row;
+
+`;
+
 
 export default function Glian(){
 
@@ -36,6 +42,11 @@ export default function Glian(){
 
         </Row>
         <Greybg></Greybg>
+
+
+
+
+
 
     </GlianCont>
   )
