@@ -4,7 +4,8 @@ import styled from 'styled-components';
 //import comps
 import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
-import QuizNav from '../comps/QuizNav'
+import QuizNav from '../comps/QuizNav';
+import React, {userstate} from 'react';
 
 const QuizPage = styled.div `
     width: 414px;
@@ -44,6 +45,7 @@ const ButtonStyle = styled.div `
 
 //building page
 export default function Quiz (){
+    // const [sub, setSub] = useState("nothing sub")
     return <QuizPage>
 
         <QuizNav Title="BMI"></QuizNav>
@@ -70,3 +72,4 @@ export default function Quiz (){
 
     </QuizPage>
 }
+/*2 states, conntect them to the card prop to tell react to redraw it when the state changes it*/
