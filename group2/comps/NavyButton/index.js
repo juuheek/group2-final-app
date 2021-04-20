@@ -22,11 +22,12 @@ const NavyButton = ({
   bgcolor="#26325B", 
   color = "#FFF",
   border = "none",
-  icon = <FaHandsHelping/>
+  icon = <FaHandsHelping/>,
+  routeTo='/index'
 
 }) => {
   const router =useRouter(); 
-  return <ButtonCont>
+  return <ButtonCont onClick={()=>router.push(routeTo)}>
     {/* <ButtonImg src="/vercel.svg"/> */}
 
     <ButtonInput bg={bgcolor} textcolor={color} navyborder={border}>
