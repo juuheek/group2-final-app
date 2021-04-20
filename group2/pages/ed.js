@@ -36,7 +36,7 @@ export default function Glian(){
   return (
     <GlianCont>
     <BackDiv>
-    <Back/>
+    <Back routeTo="/disclaimer"/>
     </BackDiv>
   
         <Resources></Resources>
