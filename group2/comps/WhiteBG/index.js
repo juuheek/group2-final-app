@@ -6,6 +6,13 @@ import NavyButton from '../../comps/NavyButton';
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 
+
+const WhiteCont = styled.div`
+width: ${props=>props.width};
+height: ${props=>props.height};
+border-radius: ${props=>props.borderradius};
+background-color: ${props=>props.backgroundcolor};
+
 const MinWhitebgCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,6 +29,7 @@ const WhitebgHeader = styled.p`
   font-size: 25px;
   text-align: center;
 
+
 `;
 
 const WhitebgBody = styled.p`
@@ -30,6 +38,19 @@ const WhitebgBody = styled.p`
   text-align: center;
 
 `;
+
+
+const WhiteBG = ({
+  wid= "388px",
+  height= "579px",
+  borderradius= "5px",
+  bbgcolor= "white"
+  
+
+}) => {
+  return <WhiteCont width={wid} height={height} borderradius={borderradius} backgroundcolor={bbgcolor}  >
+      <WhiteContSub></WhiteContSub>
+  </WhiteCont>
 
 
 
@@ -48,5 +69,6 @@ const MinWhitebg = ({
     <NavyButton text="Get Help" />
     <NavyButton text="Get Information" />
   </MinWhitebgCont>
+
 }
 export default MinWhitebg;
