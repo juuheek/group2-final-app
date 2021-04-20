@@ -1,7 +1,13 @@
 
 import React from "react";
 import styled from "styled-components";
+
 import {useRouter} from 'next/router';
+
+import Arrow from '../../images/BackArrow.svg';
+
+ 
+
 import {BiArrowBack} from 'react-icons/bi';
 import { route } from "next/dist/next-server/server/router";
  
