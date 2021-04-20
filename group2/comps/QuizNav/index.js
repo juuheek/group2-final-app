@@ -50,7 +50,8 @@ const Button = styled.button`
 `;
  
 const QuizNav = ({
-  Title="HEllO"
+  Title="HEllO",
+  route="/resources"
 
 }) => {
  
@@ -60,7 +61,7 @@ const QuizNav = ({
        height:117
    }}>
        <BackDiv>
-   <Back ></Back>
+   <Back routeTo={route} ></Back>
    </BackDiv>
  
        <Title>

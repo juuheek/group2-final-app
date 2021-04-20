@@ -48,7 +48,7 @@ export default function Quiz (){
     // const [sub, setSub] = useState("nothing sub")
     return <QuizPage>
 
-        <QuizNav Title="BMI" routeTo="/resources"></QuizNav>
+        <QuizNav Title="BMI"></QuizNav>
 
         <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
         <NavyButton text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
