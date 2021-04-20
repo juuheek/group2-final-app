@@ -67,7 +67,7 @@ export default function Result({
   return (
     <MinChunCont background={bgcolor}>
       <Mindiv>
-          <Back />
+          <Back routeTo="/redresult" />
         </Mindiv>
         <Mindiv2>
         <CircleImg />
