@@ -67,7 +67,7 @@ export default function Glian(){
         <Awareness>“raising awareness about
 eating disorders”</Awareness>
     <Move>
-    <Start text="Get Started" bgcolor="transparent" color="#26325B" border="2px #26325B solid" >
+    <Start text="Get Started" bgcolor="transparent" color="#26325B" border="2px #26325B solid" icon="" >
         </Start>
       </Move>
 

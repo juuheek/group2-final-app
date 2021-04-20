@@ -107,10 +107,10 @@ const HandleExplanation = (
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>
-      <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/resources" />
+      <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/quiz1" />
       </JuheeDiv2>
       <JuheeDiv2>
-      <NavyButton text="Get Help" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/index"/>
+      <NavyButton text="Get Help" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/helpline"/>
       </JuheeDiv2>
       </JuheeDiv>
       

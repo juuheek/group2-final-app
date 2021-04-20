@@ -34,11 +34,10 @@ const NavyButton = ({
   routeTo='/index'
 
 }) => {
-
-  return <ButtonCont>
-
   const router =useRouter(); 
   return <ButtonCont onClick={()=>router.push(routeTo)}>
+
+
     {/* <ButtonImg src="/vercel.svg"/> */}
 
 

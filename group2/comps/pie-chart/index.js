@@ -43,7 +43,6 @@ const Piechart = ({
 
     text2="which is the highest mortality rate of any mental illess"
 
-    text2="which is the highest mortality rate of any mental illess",
 
 }) => {
 

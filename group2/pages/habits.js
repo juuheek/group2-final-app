@@ -4,7 +4,7 @@ import Whitebg from '../comps/JuheeGreybg';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import Resources from '../comps/navigationpage';
-import Cards from '../comps/card';
+import Cards from '../comps/GoodHabits';
 import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/Habits';
 
@@ -30,7 +30,7 @@ export default function Glian(){
   return (
     <GlianCont>
         <Back></Back>
-        <Resources></Resources>
+        <Resources navpageheader="Good Eating Habits"></Resources>
         <Cards></Cards>
         <Row>
 

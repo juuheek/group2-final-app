@@ -18,12 +18,27 @@ const GlianCont = styled.div`
   align-items: center;
 `;
 
+const Row = styled.div`
+display: flex;
+flex-direction:row;
+`;
+
+const BackDiv = styled.div`
+display:flex;
+position:relative;
+right:150px;
+top:20px;
+`;
+
 
 export default function Glian(){
 
   return (
     <GlianCont>
-        <Back></Back>
+    <BackDiv>
+    <Back/>
+    </BackDiv>
+  
         <Resources></Resources>
         <Cards></Cards>
         <Row>

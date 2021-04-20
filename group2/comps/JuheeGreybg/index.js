@@ -10,7 +10,9 @@ margin-top: 31px;
   flex-direction:column;
   justify-content: space-between;
   align-items:center;
+
   background-color:${props=>props.color};
+
   border-radius: 10px 10px 0px 0px;
 
 `;
@@ -28,13 +30,16 @@ padding:50px;
 
 `;
 const Greybg = ({
-  bgcolor="#EAEAEA",
+
   bold="Anorexia Nervosa",
-  text=" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type."
+  text=" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
+  bgcolor="#EAEAEA"
 }) =>{
+
   return <GreybgCont color={bgcolor} > 
+
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
-    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
+    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/start" />
   </GreybgCont>
 }
 

@@ -2,23 +2,12 @@
 import React from "react";
 import styled from "styled-components";
 
-
-import {BiArrowBack} from 'react-icons/bi';
-
 import {useRouter} from 'next/router';
-
-import Arrow from '../../images/BackArrow.svg';
-
  
 import {BiArrowBack} from 'react-icons/bi';
 import { route } from "next/dist/next-server/server/router";
  
 const BackCont = styled.div`
-
-    display: flex;
-    flex-direction: row;
-    margin-top: 42px;
-    margin-left: -300px;
    display: flex;
    flex-direction: row;
 `;
@@ -38,15 +27,6 @@ bottom: 3px;
 `;
  
 const Back = ({
-width=24
-}) => {
-
-    return <BackCont>
-        <BackImg>
-        <BiArrowBack color="#8A8A8A" />
-        </BackImg>
-        <Text>BACK</Text>
-    </BackCont>
 width=24,
 routeTo='/index'
 }) => {

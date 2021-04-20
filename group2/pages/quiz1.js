@@ -5,20 +5,20 @@ import styled from 'styled-components';
 import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
-import BulletPoints from '../comps/bullet';
+import React, {userstate} from 'react';
 
 const QuizPage = styled.div `
     width: 414px;
     height: 887px;
-    padding: 30px;
+
     background-color:#E8ECF0;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
  `;
 
- const QuestionTxt = styled.p`
+const QuestionTxt = styled.p`
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -31,12 +31,12 @@ const QuizPage = styled.div `
 
  const Divider = styled.hr`
     border: 0.5px solid #000000;
-    margin: 30px;
+    margin:30px;
     width: 298px;
  `;
 const ButtonStyle = styled.div `
     width:144px;
-    padding:20px;
+    padding:15px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -45,23 +45,31 @@ const ButtonStyle = styled.div `
 
 //building page
 export default function Quiz (){
+    // const [sub, setSub] = useState("nothing sub")
     return <QuizPage>
 
-        <QuizNav Title="Meals"></QuizNav>
+        <QuizNav Title="BMI" routeTo="/resources"></QuizNav>
 
-        <QuestionTxt>Do you engage in any of the following behaviours?  </QuestionTxt>
-        <BulletPoints></BulletPoints>
-
+        <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
+        <NavyButton text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
+        
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button txt="YES"></Button>
+        <Button txt="Underweight"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="NO"></Button>
+        <Button txt="Normal"></Button>
+        </ButtonStyle>
+        <ButtonStyle>
+        <Button txt="Overweight"></Button>
+        </ButtonStyle>
+        <ButtonStyle>
+        <Button txt="Obesity"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton></NavyButton></ButtonStyle>
+        <ButtonStyle><NavyButton routeTo="/quiz2"></NavyButton></ButtonStyle>
 
     </QuizPage>
 }
+/*2 states, conntect them to the card prop to tell react to redraw it when the state changes it*/

@@ -3,7 +3,6 @@ import { RiHealthBookLine } from "react-icons/ri";
 import styled from "styled-components";
  
 import Back from '../back';
-
  
 const BackDiv = styled.div`
 position: relative;
@@ -46,7 +45,6 @@ const Button = styled.button`
    margin: 4px;
    border:none;
    background-color:white;
-
   
 `;
  
@@ -71,25 +69,6 @@ const Nav = ({
  
        <Title>
 
-    return <NavCont style={{
-        display: "inline-flex",
-        width: 414,
-        height: 194,
-    }}>
-        <BackDiv>
-    <Back ></Back>
-    </BackDiv>
-
-        <Title >
-            {title}
-        </Title>
-        <Row>
-            <Menus margin = {margin}>{txt1}</Menus>
-            <Menus margin = {margin}>{txt2}</Menus>
-            <Menus margin = {margin}>{txt3}</Menus>
-            <Menus margin = {margin}>{txt4}</Menus>
-        </Row>
-    </NavCont>
        </Title>
        <Row>
            <Button onClick = {onTxt1Click} color={color}> Anorexia</Button>
