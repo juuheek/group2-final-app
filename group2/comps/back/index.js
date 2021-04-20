@@ -1,9 +1,6 @@
-
 import React from "react";
 import styled from "styled-components";
-
 import {useRouter} from 'next/router';
- 
 import {BiArrowBack} from 'react-icons/bi';
 import { route } from "next/dist/next-server/server/router";
  
@@ -11,6 +8,7 @@ const BackCont = styled.div`
    display: flex;
    flex-direction: row;
 `;
+
 const BackImg = styled.div`
 display: inline-block;
 width: 24px;

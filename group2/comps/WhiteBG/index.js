@@ -49,8 +49,8 @@ const MinWhitebg = ({
     <WhitebgBody color={color}>{flagcolor}</WhitebgBody>
     <Textbox/>
 
-    <NavyButton text="Get Help" />
-    <NavyButton text="Get Information" />
+    <NavyButton text="Get Help" routeTo="/helpline" />
+    <NavyButton text="Get Information" routeTo="/resources"/>
   </MinWhitebgCont>
 }
 export default MinWhitebg;
