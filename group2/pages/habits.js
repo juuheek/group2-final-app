@@ -24,12 +24,20 @@ flex-direction: row;
 
 `;
 
-
+const BackDiv = styled.div`
+display:flex;
+position:relative;
+right:150px;
+top:20px;
+`;
 export default function Glian(){
 
   return (
     <GlianCont>
-        <Back></Back>
+        <BackDiv>
+        <Back routeTo="/disclaimer"></Back>
+    </BackDiv>
+        
         <Resources navpageheader="Good Eating Habits"></Resources>
         <Cards></Cards>
         <Row>
