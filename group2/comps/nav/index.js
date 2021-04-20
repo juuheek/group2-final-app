@@ -1,4 +1,5 @@
 import React from "react";
+import { RiHealthBookLine } from "react-icons/ri";
 import styled from "styled-components";
  
 import Back from '../back';
@@ -15,9 +16,9 @@ const NavCont = styled.div`
    flex-direction: column;
    align-items: center;
    background-color: white;
-   border: 1px solid black;
+   ${'' /* border: 1px solid black; */}
    width: 414px:
-   height: 194px;
+   height: 60px;
    border-radius: 0 0 15px 15px;
 `;
  
@@ -32,44 +33,49 @@ const Row = styled.div`
    flex-direction: row;
    width: 100%;
    height:100%;
+   padding:5px;
    justify-content: center;
    // background-color:black;
 `;
  
-const Menus = styled.p`
+const Button = styled.button`
    color: #26325B;
    font-family: DIN alternate;
    font-size: 14px;
-   margin:${props => props.margin};
-   margin-top: 30px;
+   margin: 4px;
+   border:none;
+   background-color:white;
+
+  
 `;
  
 const Nav = ({
-   title="Anorexia",
-   txt1="Bulimia",
-   txt2="Binge",
-   txt3="Orthorexia",
-   txt4="Excessive Exercise",
-   margin="15px",
+   onTxt1Click = () => {},
+   onTxt2Click= () => {},
+   onTxt3Click= () => {},
+   onTxt4Click= () => {},
+   onTxt5Click= () => {}
+
 }) => {
  
    return <NavCont style={{
        display: "inline-flex",
        width: 414,
-       height: 194,
+     
    }}>
        <BackDiv>
    <Back ></Back>
    </BackDiv>
  
-       <Title >
-           {title}
+       <Title>
+
        </Title>
        <Row>
-           <Menus margin = {margin}>{txt1}</Menus>
-           <Menus margin = {margin}>{txt2}</Menus>
-           <Menus margin = {margin}>{txt3}</Menus>
-           <Menus margin = {margin}>{txt4}</Menus>
+           <Button onClick = {onTxt1Click}> Anorexia</Button>
+           <Button onClick = {onTxt2Click}>Bulimia</Button>
+           <Button onClick = {onTxt3Click}>Orthorexia</Button>
+           <Button  onClick = {onTxt4Click}>Binge</Button>
+           <Button  onClick = {onTxt5Click}>Excessive Exercise</Button>
        </Row>
    </NavCont>
 }
