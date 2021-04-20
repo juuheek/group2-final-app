@@ -1,8 +1,11 @@
 
 import React from 'react'
 import styled from 'styled-components';
-import {RiStethoscopeLine} from 'react-icons/ri';
 import {BsEggFried} from 'react-icons/bs';
+import {GiWaterDrop} from 'react-icons/gi';
+import {GiMeat} from 'react-icons/gi';
+import {GiForkKnifeSpoon} from 'react-icons/gi';
+import {GiFruitBowl} from 'react-icons/gi';
 
 const CardContainer = styled.div`
 margin-top: 17px;
@@ -99,10 +102,18 @@ const Card = () => {
             <FirstCard>
                 <BsEggFried size="100" color="#26325B"/>
             </FirstCard>
-            <SecondCard></SecondCard>
-            <FourthCard></FourthCard>
-            <ThirdCard></ThirdCard>
-            <FifthCard></FifthCard>
+            <SecondCard>
+                <GiWaterDrop size="100" color="#26325B"/>
+            </SecondCard>
+            <FourthCard>
+                <GiMeat size="100" color="#26325B" />
+            </FourthCard>
+            <ThirdCard>
+                <GiForkKnifeSpoon size="100" color="#26235B" />
+            </ThirdCard>
+            <FifthCard>
+                <GiFruitBowl size="100" color="#26325B" />
+            </FifthCard>
             </CardContainer>
     </div>
 }
