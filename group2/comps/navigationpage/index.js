@@ -6,7 +6,7 @@ const NavPageCont = styled.div`
   display:flex;
   flex-direciton: column;
   justify-content: space-between;
-  max-width: 200px;
+  max-width: 300px;
   font-weight: bold;
   font-size: 18px;
   color: #26325B;
