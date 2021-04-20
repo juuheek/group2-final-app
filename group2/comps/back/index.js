@@ -1,8 +1,9 @@
 
 import React from "react";
 import styled from "styled-components";
- 
+import {useRouter} from 'next/router';
 import {BiArrowBack} from 'react-icons/bi';
+import { route } from "next/dist/next-server/server/router";
  
 const BackCont = styled.div`
    display: flex;
@@ -24,10 +25,11 @@ bottom: 3px;
 `;
  
 const Back = ({
-width=24
+width=24,
+routeTo='/index'
 }) => {
- 
-   return <BackCont>
+   const router =useRouter(); 
+   return <BackCont onClick={()=>route.push(routeTo)}>
        <BackImg>
        <BiArrowBack color="#8A8A8A" />
        </BackImg>
