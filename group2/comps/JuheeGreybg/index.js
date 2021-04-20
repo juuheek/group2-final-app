@@ -12,7 +12,7 @@ margin-top: 31px;
   align-items:center;
 
   background-color:${props=>props.color};
->>>>>>> 24bb117164a6b07a4e206d127756559fe99adcdc
+
   border-radius: 10px 10px 0px 0px;
 
 `;
@@ -39,7 +39,7 @@ const Greybg = ({
   return <GreybgCont color={bgcolor} > 
 
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
-    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
+    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/start" />
   </GreybgCont>
 }
 

@@ -71,7 +71,7 @@ export default function Quiz (){
         <Button txt="4"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton></NavyButton></ButtonStyle>
+        <ButtonStyle><NavyButton routeTo="/quiz3"></NavyButton></ButtonStyle>
         </BigDiv>
   
 

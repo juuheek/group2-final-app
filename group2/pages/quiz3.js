@@ -55,7 +55,7 @@ flex-direction:column;
 export default function Quiz (){
     return <QuizPage>
 
-        <QuizNav Title="Meals"></QuizNav>
+        <QuizNav Title="Question"></QuizNav>
         <BigDiv>
 
         <QuestionTxt>Do you engage in any of the following behaviours?  </QuestionTxt>
@@ -73,7 +73,7 @@ export default function Quiz (){
         <Button txt="NO"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton></NavyButton></ButtonStyle>
+        <ButtonStyle><NavyButton routeTo="/redresult"></NavyButton></ButtonStyle>
         </BigDiv>
 
     </QuizPage>
