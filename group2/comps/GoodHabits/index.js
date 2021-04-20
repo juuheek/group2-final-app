@@ -1,8 +1,8 @@
 
 import React from 'react'
 import styled from 'styled-components';
-import {RiStethoscopeLine} from 'react-icons/ri';
 import {BsEggFried} from 'react-icons/bs';
+import {IoWaterSharp} from 'react-icons/io';
 
 const CardContainer = styled.div`
 margin-top: 17px;
@@ -99,10 +99,18 @@ const Card = () => {
             <FirstCard>
                 <BsEggFried size="100" color="#26325B"/>
             </FirstCard>
-            <SecondCard></SecondCard>
-            <FourthCard></FourthCard>
-            <ThirdCard></ThirdCard>
-            <FifthCard></FifthCard>
+            <SecondCard>
+                <IoWaterSharp size="100" color="#26325B"/>
+            </SecondCard>
+            <FourthCard>
+
+            </FourthCard>
+            <ThirdCard>
+
+            </ThirdCard>
+            <FifthCard>
+
+            </FifthCard>
             </CardContainer>
     </div>
 }

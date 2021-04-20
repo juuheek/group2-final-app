@@ -6,7 +6,7 @@ import Back from '../comps/back';
 import Resources from '../comps/navigationpage';
 import Cards from '../comps/card';
 import Dots from '../comps/imgcarousel';
-import Greybg from '../comps/Habits';
+import Greybg from '../comps/JuheeGreybg';
 
 
 const GlianCont = styled.div`

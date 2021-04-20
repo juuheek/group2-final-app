@@ -64,7 +64,7 @@ const Nav = ({
      
    }}>
        <BackDiv>
-   <Back ></Back>
+   <Back routeTo="/ed" ></Back>
    </BackDiv>
  
        <Title>
