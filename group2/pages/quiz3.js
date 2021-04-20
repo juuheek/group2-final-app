@@ -4,16 +4,17 @@ import styled from 'styled-components';
 //import comps
 import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
-import QuizNav from '../comps/QuizNav'
+import QuizNav from '../comps/QuizNav';
+import BulletPoints from '../comps/bullet';
 
 const QuizPage = styled.div `
     width: 414px;
     height: 887px;
-    padding: 30px;
+ 
     background-color:#E8ECF0;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
  `;
 
@@ -41,30 +42,39 @@ const ButtonStyle = styled.div `
     align-items: center;
     margin:0;
 `;
+const BigDiv = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+        margin-top:100px;
+`;
+
 
 //building page
 export default function Quiz (){
     return <QuizPage>
 
         <QuizNav Title="Meals"></QuizNav>
-        <QuestionTxt>How many meals do you eat in a day?</QuestionTxt>
-        
+        <BigDiv>
+
+        <QuestionTxt>Do you engage in any of the following behaviours?  </QuestionTxt>
+        <br></br>
+        <br></br>
+        <BulletPoints></BulletPoints>
+        <br></br>
+
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button txt="1"></Button>
+        <Button txt="YES"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="2"></Button>
-        </ButtonStyle>
-        <ButtonStyle>
-        <Button txt="3"></Button>
-        </ButtonStyle>
-        <ButtonStyle>
-        <Button txt="4"></Button>
+        <Button txt="NO"></Button>
         </ButtonStyle>
 
         <ButtonStyle><NavyButton></NavyButton></ButtonStyle>
+        </BigDiv>
 
     </QuizPage>
 }

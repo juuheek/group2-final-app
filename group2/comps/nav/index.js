@@ -1,14 +1,13 @@
 import React from "react";
 import { RiHealthBookLine } from "react-icons/ri";
 import styled from "styled-components";
+ 
 import Back from '../back';
-import {BiArrowBack} from 'react-icons/bi';
  
 const BackDiv = styled.div`
 position: relative;
 right: 150px;
-top: 35px;
-color:#8A8A8A
+top: 35px
 `;
  
 const NavCont = styled.div`
@@ -48,8 +47,7 @@ const Button = styled.button`
    background-color:white;
   
 `;
-
-
+ 
 const Nav = ({
    color="#26325B",
    onTxt1Click = () => {},
@@ -65,10 +63,8 @@ const Nav = ({
        width: 414,
      
    }}>
-      <BackDiv>
-    
-      <div><BiArrowBack color="#8A8A8A" /> BACK</div> 
-  
+       <BackDiv>
+   <Back ></Back>
    </BackDiv>
  
        <Title>
