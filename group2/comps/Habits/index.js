@@ -16,8 +16,9 @@ margin-top: 31px;
 
 const Greybgbold = styled.p`
   font-weight: bold;
-  font-size:18px;
+  font-size:30px;
   color:#26325B;
+  text-align:center;
 
 `;
 const GreybgText = styled.p`
