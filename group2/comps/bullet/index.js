@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 const BulletCont = styled.div`
     display: flex;
+    ${'' /* width:160px;
+    height:126px; */}
     flex-direction: column;
 `;
 
