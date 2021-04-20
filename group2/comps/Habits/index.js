@@ -32,8 +32,8 @@ const Greybg = ({
 }) =>{
   return <GreybgCont color={bgcolor} > 
     <Greybgbold>{bold}</Greybgbold>
-    <NavyButton text="Get Help " bgcolor="transparent" color="#26325B" border="3px #26325B solid" />
-    <NavyButton text="Self Diagnose " bgcolor="transparent" color="#26325B" border="3px #26325B solid" />
+    <NavyButton text="Get Help " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/helpline"/>
+    <NavyButton text="Self Diagnose " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/quiz1" />
   </GreybgCont>
 }
 

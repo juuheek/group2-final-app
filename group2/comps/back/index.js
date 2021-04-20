@@ -29,7 +29,7 @@ width=24,
 routeTo='/index'
 }) => {
    const router =useRouter(); 
-   return <BackCont onClick={()=>route.push(routeTo)}>
+   return <BackCont onClick={()=>router.push(routeTo)}>
        <BackImg>
        <BiArrowBack color="#8A8A8A" />
        </BackImg>
