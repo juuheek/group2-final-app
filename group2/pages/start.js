@@ -64,13 +64,12 @@ export default function Glian(){
         <TopRight src="/Group147.svg"/>
         <Welcome>Welcome To</Welcome>
         <Logo src="/logo1.svg"/>
-        <Awareness>“raising awareness about
-eating disorders”</Awareness>
+        <Awareness>“raising awareness about eating disorders”
+</Awareness>
     <Move>
-<<<<<<< HEAD
+
     <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
-=======
- 
+
 
       
       </Move>
