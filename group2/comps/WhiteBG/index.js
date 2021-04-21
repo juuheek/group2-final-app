@@ -5,8 +5,8 @@ import Back from '../../comps/back';
 import Textbox from '../../comps/textbox';
 import NavyButton from '../../comps/NavyButton';
 import {RiStethoscopeLine} from 'react-icons/ri'
-import {useRouter} from 'next/router';
 import CircleImg from '../circleimg';
+import {useRouter} from 'next/router';
 
 
 
@@ -50,7 +50,7 @@ const MinWhitebg = ({
     <Textbox/>
 
     <NavyButton text="Get Help" routeTo="/helpline" />
-    <NavyButton text="Get Information" routeTo="/resources" />
+    <NavyButton text="Get Information" routeTo="/ed"/>
   </MinWhitebgCont>
 }
 export default MinWhitebg;
