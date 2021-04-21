@@ -67,7 +67,11 @@ export default function Glian(){
         <Awareness>“raising awareness about
 eating disorders”</Awareness>
     <Move>
+<<<<<<< HEAD
     <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
+=======
+ 
+
       
       </Move>
 

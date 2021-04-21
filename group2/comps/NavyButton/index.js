@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import {useRouter} from 'next/router';
 import {FaHandsHelping} from 'react-icons/fa';
 import { route } from 'next/dist/next-server/server/router';

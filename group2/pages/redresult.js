@@ -48,7 +48,7 @@ export default function Result({
   return (
     <MinChunCont background={bgcolor}>
       <Mindiv>
-          <Back />
+          <Back routeTo="/quiz3"/>
         </Mindiv>
         <CircleImg />
           <MinWhitebg >
