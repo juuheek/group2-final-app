@@ -26,6 +26,7 @@ margin-left: -100px;
 
 const BottomRight = styled.img`
 margin-top: -150px;
+z-index:-100;
 `;
 
 const Welcome = styled.p`
@@ -66,7 +67,7 @@ export default function Glian(){
         <Awareness>“raising awareness about
 eating disorders”</Awareness>
     <Move>
-    <NavyButton text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
+    <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
       
       </Move>
 

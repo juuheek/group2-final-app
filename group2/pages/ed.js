@@ -51,7 +51,7 @@ export default function Glian(){
     <Back routeTo="/disclaimer"/>
     </BackDiv>
   
-        <Resources onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources")} navpageheader={title}></Resources>
+        <Resources onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources",)} navpageheader={title}></Resources>
         <Cards></Cards>
         <Row>
 
@@ -62,7 +62,7 @@ export default function Glian(){
         <Dots></Dots>
 
         </Row>
-        <Greybg bold={textbold} text={textregular}></Greybg>
+        <Greybg bold={textbold} text={textregular} routeTo="/resources" ></Greybg>
 
     </GlianCont>
   )

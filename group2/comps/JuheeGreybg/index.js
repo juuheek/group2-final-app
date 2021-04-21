@@ -33,13 +33,14 @@ const Greybg = ({
 
   bold="Anorexia Nervosa",
   text=" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
-  bgcolor="#EAEAEA"
+  bgcolor="#EAEAEA",
+  routeTo="/resources"
 }) =>{
 
   return <GreybgCont color={bgcolor} > 
 
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
-    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/resources" />
+    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo={routeTo} bold={bold} />
   </GreybgCont>
 }
 
