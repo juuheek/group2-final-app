@@ -22,3 +22,9 @@ const CircleImg = ({
 
 
 }) => {
+  return <CircleImgCont>
+    <CircleImgSource src="/result1.png"/>
+  </CircleImgCont>
+}
+
+export default CircleImg;
