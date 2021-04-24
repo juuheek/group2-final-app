@@ -7,6 +7,7 @@ import NavBar from '../comps/nav'
 import CauseCard from '../comps/JuheeCauseCard'
 import PieChart from '../comps/pie-chart'
 import SymptomCard from '../comps/JuheeSymptomCard'
+import BottomMenu from '../comps/BottomMenu'
 
 import React, {useState} from 'react';
 
@@ -113,10 +114,11 @@ const HandleExplanation = (
       <NavyButton text="Get Help" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/helpline"/>
       </JuheeDiv2>
       </JuheeDiv>
+      <BottomMenu/>
       
     </JuheeCont>
   
-  
+    
         
     </JuheeComps>
 
