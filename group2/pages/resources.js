@@ -12,19 +12,15 @@ import BottomMenu from '../comps/BottomMenu'
 import React, {useState} from 'react';
 
 const JuheeComps = styled.div`
-  
-    ${'' /* background-color:#E8ECF0;
-    padding:20px; */}
+
    
 `;
 const JuheeCont = styled.div`
     width:414px;
     max-height:1483px;
-    ${'' /* background-color:#E8ECF0; */}
     background-color:${props=>props.bgcolor};
     display:flex;
     flex-direction:column;
-    ${'' /* justify-content:center; */}
     align-items:center;
 `;
 const JuheeDiv =styled.div`
@@ -46,7 +42,6 @@ padding:0 20px 0 20px;
 const MiddleIcons = styled.div`
 display:flex;
   flex-direction:row;
-  ${'' /* align-items:center; */}
   &* > {
     padding:5px;
   }
@@ -123,17 +118,17 @@ const HandleExplanation = (
       <JuheeDiv2>
       <JuheeH3>Potential Causes</JuheeH3>
       <MiddleIcons>
-      <CauseCardImg src="/navyleftarrow.svg" />
-      <CauseCard onLeftClick ={HandleCauseLeft} onRightClick ={HandleCauseRight} toptext="Potential Causes" bottomcausetext={causetext} bottomcausetext={cause}/>
-      <CauseCardImg src="/navyrightarrow.svg"  />
+      <CauseCardImg onLeftClick ={HandleCauseLeft}  src="/navyleftarrow.svg" />
+      <CauseCard  bottomcausetext={cause}/>
+      <CauseCardImg src="/navyrightarrow.svg" onRightClick ={HandleCauseRight}  />
       </MiddleIcons>
       </JuheeDiv2>
       <JuheeDiv2>
       <JuheeH3>Symptoms</JuheeH3>
       <MiddleIcons>
-      <CauseCardImg src="/navyleftarrow.svg" />
-      <SymptomCard onLeftClick ={HandleSymptomLeft} onRightClick ={HandleSymptomRight} toptext="Symptoms" bottomsymptomtext={symptomtext} symptomiconimg={symptomimg} bottomsymptomtext={symptom}/>
-      <CauseCardImg src="/navyrightarrow.svg"  />
+      <CauseCardImg onLeftClick ={HandleCauseLeft} src="/navyleftarrow.svg" />
+      <SymptomCard bottomsymptomtext={symptom}/>
+      <CauseCardImg src="/navyrightarrow.svg" onRightClick ={HandleCauseRight} />
       </MiddleIcons>
       </JuheeDiv2>
       </JuheeDiv>
