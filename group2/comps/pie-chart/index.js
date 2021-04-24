@@ -40,8 +40,8 @@ const Piechart = ({
     degree="conic-gradient(#26325B 40deg, #E67571 0 235deg, #E67571 0);",
     text1="Eating Disorders mortality rate is ",
     percentage="10-15%",
-
     text2="which is the highest mortality rate of any mental illess"
+
 
 
 }) => {
