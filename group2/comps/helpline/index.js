@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {FaHandsHelping} from 'react-icons/Fa'
+import {FaHandsHelping} from 'react-icons/fa'
 
 
 const HelplineInput = styled.div`
