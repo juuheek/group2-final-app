@@ -5,11 +5,13 @@ const TextboxInput = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: #ebebebc2;
     border-radius: 10px;
     width: 315px;
     height: 128px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 `;
 
 const Textbox = ({

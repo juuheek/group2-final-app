@@ -45,7 +45,6 @@ const Button = styled.button`
    margin: 4px;
    border:none;
    background-color:white;
-
   
 `;
  
@@ -65,7 +64,7 @@ const Nav = ({
      
    }}>
        <BackDiv>
-   <Back ></Back>
+   <Back routeTo="/ed" ></Back>
    </BackDiv>
  
        <Title>

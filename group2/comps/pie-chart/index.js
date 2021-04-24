@@ -15,7 +15,7 @@ background-image: ${props => props.degree};
 `;
 
 const Percentage = styled.p`
-font-family: Roboto;
+font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
 font-size: 25px;
@@ -25,7 +25,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 `;
 
 const Fact = styled.p`
-font-family: Roboto;
+font-family: Arial;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -41,6 +41,8 @@ const Piechart = ({
     text1="Eating Disorders mortality rate is ",
     percentage="10-15%",
     text2="which is the highest mortality rate of any mental illess"
+
+
 
 }) => {
 

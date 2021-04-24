@@ -1,3 +1,4 @@
+
 import React from "react";
 import { RiHealthBookLine } from "react-icons/ri";
 import styled from "styled-components";
@@ -45,22 +46,22 @@ const Button = styled.button`
    margin: 4px;
    border:none;
    background-color:white;
-
   
 `;
  
 const QuizNav = ({
-  Title="HEllO"
+  Title="HEllO",
+  route="/resources"
 
 }) => {
- 
+   
    return <NavCont style={{
        display: "inline-flex",
        width: 414,
        height:117
    }}>
        <BackDiv>
-   <Back ></Back>
+   <Back routeTo={route} ></Back>
    </BackDiv>
  
        <Title>

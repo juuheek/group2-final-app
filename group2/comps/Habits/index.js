@@ -4,43 +4,36 @@ import NavyButton from '../NavyButton'
 
 const GreybgCont = styled.div`
 margin-top: 31px;
-  max-width:388px;
+  width:388px;
   height:466px;
   display:flex;
   flex-direction:column;
-  justify-content: space-between;
+  justify-content: center;
   align-items:center;
-
   background-color:${props=>props.color};
-
   border-radius: 10px 10px 0px 0px;
-
 `;
 
 const Greybgbold = styled.p`
   font-weight: bold;
-  font-size:18px;
-  color:#000;
+  font-size:30px;
+  color:#26325B;
+  text-align:center;
 
 `;
 const GreybgText = styled.p`
 font-size:18px;
 color:#8A8A8A;
 padding:50px;
-
 `;
 const Greybg = ({
-
-  bold="Anorexia Nervosa",
-  text=" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
   bgcolor="#EAEAEA",
-  routeTo="/resources"
+  bold="Maintaining a Balanced Diet",
 }) =>{
-
   return <GreybgCont color={bgcolor} > 
-
-    <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
-    <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo={routeTo} bold={bold} />
+    <Greybgbold>{bold}</Greybgbold>
+    <NavyButton text="Get Help " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/helpline"/>
+    <NavyButton text="Self Diagnose " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/quiz1" />
   </GreybgCont>
 }
 

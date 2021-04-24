@@ -9,11 +9,9 @@ import QuizNav from '../comps/QuizNav'
 const QuizPage = styled.div `
     width: 414px;
     height: 887px;
-    padding: 30px;
     background-color:#E8ECF0;
     display:flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
  `;
 
@@ -21,7 +19,7 @@ const QuizPage = styled.div `
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
     text-align: center;
     color: #000000;
@@ -35,11 +33,18 @@ const QuizPage = styled.div `
  `;
 const ButtonStyle = styled.div `
     width:144px;
-    padding:20px;
+    padding:15px;
     display:flex;
     justify-content: center;
     align-items: center;
     margin:0;
+`;
+const BigDiv = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+        margin-top:100px;
 `;
 
 //building page
@@ -47,6 +52,8 @@ export default function Quiz (){
     return <QuizPage>
 
         <QuizNav Title="Meals"></QuizNav>
+        <br></br>
+        <BigDiv>
         <QuestionTxt>How many meals do you eat in a day?</QuestionTxt>
         
         <Divider></Divider>
@@ -64,7 +71,9 @@ export default function Quiz (){
         <Button txt="4"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton></NavyButton></ButtonStyle>
+        <ButtonStyle><NavyButton routeTo="/quiz3"></NavyButton></ButtonStyle>
+        </BigDiv>
+  
 
     </QuizPage>
 }

@@ -10,11 +10,11 @@ import React, {userstate} from 'react';
 const QuizPage = styled.div `
     width: 414px;
     height: 887px;
-    padding: 30px;
+
     background-color:#E8ECF0;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
  `;
 
@@ -31,12 +31,12 @@ const QuestionTxt = styled.p`
 
  const Divider = styled.hr`
     border: 0.5px solid #000000;
-    margin: 50px;
+    margin:30px;
     width: 298px;
  `;
 const ButtonStyle = styled.div `
     width:144px;
-    padding:20px;
+    padding:15px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ export default function Quiz (){
         <Button txt="Obesity"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton></NavyButton></ButtonStyle>
+        <ButtonStyle><NavyButton routeTo="/quiz2"></NavyButton></ButtonStyle>
 
     </QuizPage>
 }

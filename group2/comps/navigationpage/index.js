@@ -6,11 +6,11 @@ const NavPageCont = styled.div`
   display:flex;
   flex-direciton: column;
   justify-content: space-between;
-  max-width: 200px;
+  max-width: 300px;
   font-weight: bold;
   font-size: 18px;
   color: #26325B;
-
+  margin-top: 30px;
 
 
 `;
@@ -18,11 +18,13 @@ const NavPageCont = styled.div`
 
 
 const NavPage = ({
+  onLeftClick = () => {},
+  onRightClick = () => {},
   navpageheader="Resources"
 
 }) => {
   return <NavPageCont>
-    <IoMdArrowDropleftCircle color="#E67571"/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571"/>
+    <IoMdArrowDropleftCircle  color="#E67571" onClick={onLeftClick}/>{navpageheader}<IoMdArrowDroprightCircle color="#E67571" onClick={onRightClick}/>
   </NavPageCont>
 }
 
