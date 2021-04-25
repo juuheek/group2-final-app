@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 import {RiStethoscopeLine} from 'react-icons/ri';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
 
 const CardContainer = styled.div`
 margin-top: 17px;
+margin-left: 20px;
 min-width: 318px;
 display: flex;
 flex-direction:row;
@@ -36,7 +38,7 @@ width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left: 50px;
+left: 30px;
 `;
 
 const FourthCard = styled.div`
@@ -49,7 +51,7 @@ width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left:50px;
+left:40px;
 
 `;
 
@@ -63,7 +65,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 230px
+right: 250px
 `;
 
 const FifthCard = styled.div`
@@ -76,7 +78,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 250px
+right: 270px
 
 `;
 
@@ -86,6 +88,12 @@ font-size: 18px;
 font-weight: bold;
 color: #26325B;
 margin-left:10px;
+`;
+
+const Margin = styled.div`
+    display:flex;
+    position: relative;
+    right: 80px;
 `;
 
 
@@ -98,9 +106,13 @@ const Card = () => {
                 {/* <RiStethoscopeLine color="#E67571"></RiStethoscopeLine> */}
                 <Text></Text>
             </FirstCard>
+            <IoMdArrowDropleftCircle />
             <SecondCard></SecondCard>
             <FourthCard></FourthCard>
             <ThirdCard></ThirdCard>
+            <Margin>
+            <IoMdArrowDroprightCircle />
+            </Margin>
             <FifthCard></FifthCard>
             </CardContainer>
     </div>

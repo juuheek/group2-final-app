@@ -7,6 +7,7 @@ import Resources from '../comps/navigationpage';
 import Cards from '../comps/card';
 import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/JuheeGreybg';
+import Titles from '../comps/Titles';
 
 
 
@@ -45,13 +46,14 @@ export default function Glian(){
     bottomtextregular(regulartxt)
     setTitle(titletxt)
   }
+  
   return (
     <GlianCont>
     <BackDiv>
     <Back routeTo="/disclaimer"/>
     </BackDiv>
-  
-        <Resources onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources",)} navpageheader={title}></Resources>
+        <Titles onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources",)} navpageheader={title}></Titles>
+        
         <Cards></Cards>
         <Row>
 
