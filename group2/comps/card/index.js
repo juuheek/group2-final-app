@@ -106,12 +106,12 @@ const Card = () => {
                 {/* <RiStethoscopeLine color="#E67571"></RiStethoscopeLine> */}
                 <Text></Text>
             </FirstCard>
-            <IoMdArrowDropleftCircle />
+            <IoMdArrowDropleftCircle color="#E67571" />
             <SecondCard></SecondCard>
             <FourthCard></FourthCard>
             <ThirdCard></ThirdCard>
             <Margin>
-            <IoMdArrowDroprightCircle />
+            <IoMdArrowDroprightCircle color="#E67571" />
             </Margin>
             <FifthCard></FifthCard>
             </CardContainer>

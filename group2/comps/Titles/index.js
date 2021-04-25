@@ -12,7 +12,7 @@ const EatingDisorder = styled.div`
     font-size: 18px;
     font-weight: bold;
     margin: 20px;
-    color: #E67571;
+    color: ${props => props.edcolor};
 `;
 
 const EatingHabits = styled.div`
@@ -20,21 +20,25 @@ const EatingHabits = styled.div`
     font-size: 18px;
     font-weight: bold;
     margin: 20px;
-    color: #26325B;
+    color: ${props=> props.ehcolor};
 `;
 
 const Titles = ({
 
     onLeftClick = () => {},
     onRightClick = () => {},
+    txt1="Eating Disorder",
+    txt2="Eating Habits",
+    edcolor="#E67571",
+    ehcolor="#E67571"
 
 }) => {
 
     return <TitleCont>
 
-        <EatingDisorder onClick={onLeftClick}>Eating Disorder</EatingDisorder>
+        <EatingDisorder edcolor={edcolor} onClick={onLeftClick}>{txt1}</EatingDisorder>
 
-        <EatingHabits onClick={onRightClick}>Eating Habits</EatingHabits>
+        <EatingHabits ehcolor={ehcolor} onClick={onRightClick}>{txt2}</EatingHabits>
 
     </TitleCont>
 
