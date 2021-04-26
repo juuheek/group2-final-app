@@ -10,11 +10,9 @@ import React, {userstate} from 'react';
 const QuizPage = styled.div `
     width: 414px;
     height: 887px;
-
-    background-color:#E8ECF0;
+    background-color:#96ABB8;
     display:flex;
     flex-direction: column;
-
     align-items: center;
  `;
 
@@ -25,12 +23,12 @@ const QuestionTxt = styled.p`
     font-size: 16px;
     line-height: 22px;
     text-align: center;
-    color: #000000;
+    color: #FFFFFF;
     padding: 20px;
 `;
 
  const Divider = styled.hr`
-    border: 0.5px solid #000000;
+    border: 0.5px solid #FFFFFF;
     margin:30px;
     width: 298px;
  `;
@@ -51,25 +49,24 @@ export default function Quiz (){
         <QuizNav Title="BMI"></QuizNav>
 
         <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
-        <NavyButton text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
+        <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
         
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button txt="Underweight"></Button>
+        <Button txt1="Underweight" txt2="less than 18"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="Normal"></Button>
+        <Button txt1="Normal" txt2="18-24"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="Overweight"></Button>
+        <Button txt1="Overweight" txt2="25-29"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="Obesity"></Button>
+        <Button txt1="Obesity" txt2="30 or greater"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton routeTo="/quiz2"></NavyButton></ButtonStyle>
+        {/* <ButtonStyle><NavyButton routeTo="/quiz2"></NavyButton></ButtonStyle> */}
 
     </QuizPage>
 }
-/*2 states, conntect them to the card prop to tell react to redraw it when the state changes it*/
