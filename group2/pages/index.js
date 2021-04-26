@@ -1,54 +1,82 @@
-
-// import styles from '../styles/global.css'
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import MinWhitebg from '../comps/WhiteBG';
+import Textbox from '../comps/textbox';
+import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
-import Whitebg from '../comps/JuheeWhitebg'
-import Greybg from '../comps/JuheeGreybg'
-import CauseCard from '../comps/JuheeCauseCard'
-import PieChart from '../comps/pie-chart'
-import QuizNav from '../comps/QuizNav'
 
-const JuheeComps = styled.div`
-  
-    background-color:#E8ECF0;
-    padding:20px;
-   
+
+
+const GlianCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  width:414px;
+  height:896px;
+  background-color: #E8ECF0;
+
+
   
 `;
-export default function Home() {
+
+const TopRight = styled.img`
+margin-top: -25px;
+margin-left: -100px;
+
+`;
+
+const BottomRight = styled.img`
+margin-top: -150px;
+z-index:-100;
+`;
+
+const Welcome = styled.p`
+
+position:relative;
+text-align:center;
+Font-family: Montserrat;
+font-size: 36px;
+font-style: italic;
+margin-top:0px;
+`;  
+const Move = styled.div`
+display:flex;
+justify-content: center;
+align-items: center;
+
+`;
+
+const Logo = styled.img`
+
+`;
+
+const Awareness = styled.p`
+
+Font-family: Montserrat;
+font-size: 23px;
+font-style: italic;
+text-align: center;
+`;
+
+export default function Glian(){
+
   return (
-    <JuheeComps >
-    
+    <GlianCont>
+        <TopRight src="/Group147.svg"/>
+        <Welcome>Welcome To</Welcome>
+        <Logo src="/logo1.svg"/>
+        <Awareness>“raising awareness about eating disorders”
+</Awareness>
+    <Move>
 
-     <NavyButton text="Let's get started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" />
-      <NavyButton text="Agree and Continue"bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" /> 
-      <NavyButton text="See All " bgcolor="transparent" color="#26325B" border="1px #26325B solid"icon="" />
-      <NavyButton text="Get Help" bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
-      <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" />
-      <NavyButton text="Next" icon="" />
-      <NavyButton text="Get Help" icon="" />
-      <NavyButton text="Get Information"  icon=""/>
-      <Whitebg />
-      <Whitebg bold ="Bulimia Nervosa" text="a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed."/>
-      <Whitebg bold ="Binge Eating Disorder (BED)" text="commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months." height="300"/>
-      <Whitebg bold ="Orthorexia" text="a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject." height="371"/>
-      <Whitebg bold ="Excessive Exercise" text="Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders."/>
-   
-      <Greybg/>
-      <Greybg bgcolor="#FFF"/>
-      <CauseCard/>
-      <PieChart />
-      <QuizNav/>
-    
-
-        
-    </JuheeComps>
+    <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
 
 
+      
+      </Move>
 
 
-
-
+        <BottomRight src="/Group146.svg"/>
+    </GlianCont>
   )
-}
 
+}

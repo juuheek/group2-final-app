@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import {FaHandsHelping} from 'react-icons/fa';
+import { route } from 'next/dist/next-server/server/router';
 
 
 const ButtonCont = styled.span`
@@ -21,6 +22,7 @@ const ButtonInput = styled.button`
       border-radius: 10px;
       border:${props => props.navyborder};
       font-size:18px;
+      z-index:1000;
 `;
 
 const NavyButton = ({
@@ -30,11 +32,23 @@ const NavyButton = ({
   color = "#FFF",
   border = "none",
   icon = <FaHandsHelping/>,
-  routeTo='/index'
+  routeTo='/index',
+  bold
 
 }) => {
   const router =useRouter(); 
-  return <ButtonCont onClick={()=>router.push(routeTo)}>
+  const HandleClick = () => {
+
+    if(bold=="Good Eating Habits"){
+      router.push("/habits")
+    }else if (bold=="Anorexia Nervosa"){
+      router.push("/resources")
+    } else {
+      router.push(routeTo)
+    }
+    console.log(bold)
+  };
+  return <ButtonCont onClick={HandleClick}>
 
 
     {/* <ButtonImg src="/vercel.svg"/> */}
