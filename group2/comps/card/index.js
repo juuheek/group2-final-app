@@ -88,6 +88,7 @@ font-size: 18px;
 font-weight: bold;
 color: #26325B;
 margin-left:10px;
+text-align: center;
 `;
 
 const Margin = styled.div`
@@ -100,22 +101,32 @@ const Margin = styled.div`
 
 const Card = () => {
 
-    return <div>
-            <CardContainer>
+    return  <CardContainer>
             <FirstCard>
-                {/* <RiStethoscopeLine color="#E67571"></RiStethoscopeLine> */}
-                <Text></Text>
+                <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Anorexia</Text>
             </FirstCard>
             <IoMdArrowDropleftCircle color="#E67571" />
-            <SecondCard></SecondCard>
-            <FourthCard></FourthCard>
-            <ThirdCard></ThirdCard>
+            <SecondCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Orthorexia</Text>
+            </SecondCard>
+            <FourthCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Bulimia</Text>
+            </FourthCard>
+            <ThirdCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Binge</Text>
+            </ThirdCard>
             <Margin>
             <IoMdArrowDroprightCircle color="#E67571" />
             </Margin>
-            <FifthCard></FifthCard>
+            <FifthCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Excessive Exercise</Text>
+            </FifthCard>
             </CardContainer>
-    </div>
 }
 
 export default Card;
