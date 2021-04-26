@@ -8,6 +8,7 @@ const TitleCont = styled.div`
 `;
 
 const EatingDisorder = styled.div`
+    text-align: center;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: bold;
@@ -16,6 +17,7 @@ const EatingDisorder = styled.div`
 `;
 
 const EatingHabits = styled.div`
+    text-align: center;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: bold;

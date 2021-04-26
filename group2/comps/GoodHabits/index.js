@@ -6,9 +6,11 @@ import {GiWaterDrop} from 'react-icons/gi';
 import {GiMeat} from 'react-icons/gi';
 import {GiForkKnifeSpoon} from 'react-icons/gi';
 import {GiFruitBowl} from 'react-icons/gi';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
 
 const CardContainer = styled.div`
 margin-top: 17px;
+margin-left: 20px;
 min-width: 318px;
 display: flex;
 flex-direction:row;
@@ -41,7 +43,7 @@ width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left: 50px;
+left: 30px;
 `;
 
 const FourthCard = styled.div`
@@ -54,7 +56,7 @@ width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left:50px;
+left:40px;
 
 `;
 
@@ -68,7 +70,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 230px
+right: 250px
 `;
 
 const FifthCard = styled.div`
@@ -81,7 +83,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 250px
+right: 270px
 
 `;
 
@@ -93,15 +95,21 @@ color: #26325B;
 margin-left:10px;
 `;
 
+const Margin = styled.div`
+    display:flex;
+    position: relative;
+    right: 80px;
+`;
+
 
 
 const Card = () => {
 
-    return <div>
-            <CardContainer>
+    return <CardContainer>
             <FirstCard>
                 <BsEggFried size="100" color="#26325B"/>
             </FirstCard>
+            <IoMdArrowDropleftCircle color="#E67571" />
             <SecondCard>
                 <GiWaterDrop size="100" color="#26325B"/>
             </SecondCard>
@@ -111,11 +119,13 @@ const Card = () => {
             <ThirdCard>
                 <GiForkKnifeSpoon size="100" color="#26235B" />
             </ThirdCard>
+            <Margin>
+            <IoMdArrowDroprightCircle color="#E67571" />
+            </Margin>
             <FifthCard>
                 <GiFruitBowl size="100" color="#26325B" />
             </FifthCard>
             </CardContainer>
-    </div>
 }
 
 export default Card;
