@@ -18,9 +18,8 @@ margin-right:5px
 `;
 
 const Desc = styled.p`
-font-family: DIN alternate;
-color: #26325B;
-margin:0;
+color: #FFFFFF;
+margin:5px;
 `;
 
 const Row = styled.div`
@@ -31,7 +30,7 @@ align-items:center;
 `;
 
 const BulletPoints = ({
-    text="Skipping Breakfast",
+    text1="Skipping Breakfast",
     text2="Emotional eating",
     text3="Distracted eating",
     text4="Extreme concern about body shape",
@@ -41,7 +40,7 @@ const BulletPoints = ({
         
         <Row>
         <Bullet></Bullet>
-        <Desc>{text}</Desc>
+        <Desc>{text1}</Desc>
         </Row>
 
         <Row>
