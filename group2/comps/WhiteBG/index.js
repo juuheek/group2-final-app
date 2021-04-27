@@ -22,7 +22,7 @@ const MinWhitebgCont = styled.div`
 `;
 
 const WhitebgHeader = styled.p`
-  color:#8A8A8A;
+  color:#7B7B7B;
   font-size: 25px;
   text-align: center;
 `;
@@ -39,7 +39,7 @@ const MinWhitebg = ({
   height= 500,
   yourresult="Your Result:",
   flagcolor="Red Flag",
-  color= "#E67571",
+  color= "#F19A97",
 
 
 })=>{ 
