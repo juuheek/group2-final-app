@@ -48,7 +48,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-margin-top:50px 0 20px 0;
+margin:50px 0 50px 0;
 `;
 
 
