@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import MinWhitebg from '../comps/WhiteBG';
 import Textbox from '../comps/textbox';
@@ -7,7 +7,9 @@ import Helpline from '../comps/helpline';
 import NavyButton from '../comps/NavyButton';
 import BottomMenu from '../comps/BottomMenu'
 import ImgCarousel from '../comps/imgcarousel'
-
+import Card from '../comps/card'
+import Helplinev2 from '../comps/Helplinev2'
+import {FaHandsHelping} from 'react-icons/fa';
 import {useRouter} from 'next/router';
 import { motion } from "framer-motion"
 
@@ -23,75 +25,83 @@ const MinChunCont = styled.div`
   
 `;
 
+const HelplineHeader = styled.p`
+    font-size: 30px;
+    color: #26325B;
+    font-weight: bold;
+`;
+
+const Helplinebody = styled.p`
+    font-size: 16px;
+    color: #26325B;
+`;
 
 const Mindiv = styled.div`
     margin-right: 300px;
     margin-top: 30px;
+    
+    
 `;
 
-const Mindiv2 = styled.div`
-  height: 201px;
-  width: 388px;
-  background-color: white;
-  border-radius: 15px;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  display:flex;
-  justify-content:center;
-  flex-direction: column;
-  padding: 30px;
+const Mindiv3 = styled.div`
 
 `;
 
 const Mindiv4 = styled.div`
-  display:flex;
-`;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 450px;
+    justify-content: center;
 
-const HelplineHeader = styled.p`
-  font-size: 36px;
-  color: #E67571;
-  text-align: center;
-`;
-
-const HelplineBody = styled.p`
-  font-size: 20px;
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  padding-bottom: 30px;
-  
-
+    
 `;
 
 
 
 export default function Result({
-  bgcolor = "#96ABB8"
+  bgcolor = "#FFDCDC"
 
 
 }) {
+  const [cardstate, setCardState] = useState(false);
+
+  const HandleClick = () => {
+    setCardState(!cardstate)
+  }
   return (
     <MinChunCont background={bgcolor}>
       <Mindiv>
           <Back routeTo="/redresult" />
         </Mindiv>
+        <Mindiv3>
+          <HelplineHeader><FaHandsHelping color="#E67571"/>Helpline</HelplineHeader>
 
-          <Mindiv2>
-            <HelplineHeader>Helpline</HelplineHeader>
-            <HelplineBody>Need to reach out to someone? Here are some resources  you can use to ask for help.</HelplineBody>
-          
-          </Mindiv2>
-          <div>   
-               <Helpline />
-         
-          </div>
-              <Mindiv4>
-                <ImgCarousel></ImgCarousel>
-                <ImgCarousel></ImgCarousel>
-                <ImgCarousel></ImgCarousel>
-              </Mindiv4>
-          <BottomMenu />
+        </Mindiv3>
+            
+        <Mindiv4>
+            <Helplinev2 onCardClick = {HandleClick}
+            width={cardstate ? 260 : 174}
+            height={cardstate ? 250 : 133}
+            />
+            <Helplinev2 
+            onCardClick = {HandleClick}
+            width={cardstate ? 260 : 174}
+            height={cardstate ? 250 : 133}
+            doctorname="example2"/>
+            <Helplinev2 
+            onCardClick = {HandleClick}
+            width={cardstate ? 260 : 174}
+            height={cardstate ? 250 : 133}
+            doctorname="example3"/>
+            <Helplinev2 
+            onCardClick = {HandleClick}
+            width={cardstate ? 260 : 174}
+            height={cardstate ? 250 : 133}
+            doctorname="example4"/>
+            
+        </Mindiv4>
+      <BottomMenu />
     </MinChunCont>
     
   )
