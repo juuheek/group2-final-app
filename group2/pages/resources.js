@@ -54,12 +54,26 @@ export default function Resources () {
   const [causetext, bottomcausetext] = useState ("Thinness culture in media");
   const HandleCauseLeft = () => {
     console.log("clicked")
-        
-        bottomcausetext (" Professions and careers that promote being thin") 
+        if(cause === "Thinness culture in media"){
+
+          bottomcausetext (" Professions and careers that promote being thin") 
+        } else if (cause === "Stressful transitions or life"){
+          bottomcausetext (" History of abuse or trauma") 
+        } else if (cause === "Past history of trauma"){
+          bottomcausetext("perfectionism tendencies")
+        }else if (cause === "Depression"){
+          bottomcausetext("The causes are unknown however genetics, biological factrs, long term dieting and psychological issues increase risk")
+        }else if (cause === "burnout"){
+          bottomcausetext("body disphoris/body image disorder ")
+        }
     
   }
   const HandleCauseRight = () => {
-    bottomcausetext(" Family and childhood traumas");
+    if(cause === "Thinness culture in media"){
+
+      bottomcausetext(" Family and childhood traumas");
+    }
+
   }
 
   const [symptomtext, bottomsymptomtext] = useState ("Extremely restrictive eating");
@@ -115,7 +129,16 @@ const HandleExplanation = (
     <JuheeComps >
     
     <JuheeCont bgcolor={bgcolor} >
-      <NavBar onTxt2Click={()=>HandleExplanation("Bulimia Nervosa", "a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.","Stressful transitions or life ","Chronically inflamed and sore throat ","conic-gradient(#26325B 110deg, #E67571 0 250deg, #E67571 0)","Up to","33-70%","of those who have bulimia also have an addictive disorder", "#F8E8AE")} onTxt1Click={()=>HandleExplanation("Anorexia")} onTxt3Click={()=>HandleExplanation("Orthorexia","a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject.","Past history of trauma","An increase in concern about the health of ingredients", "conic-gradient(#26325B 90deg, #E67571 0 270deg, #E67571 0)","a study has found that","25%","of students attending university experience symptoms of orthorexia","#FFC1C2")} onTxt4Click={()=>HandleExplanation("Binge Eating (BED)","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months.","Depression","Feeling that your eating behavior is out of control","conic-gradient(#26325B 108deg, #E67571 0 252deg, #E67571 0)","Up to","30%","of those looking into weight loss treatments likely show symptoms of BED","#FFC1C2")} onTxt5Click={()=>HandleExplanation("Excessive Exercise","Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders.","Physical 'burnout' ","Feeling sore muscles or heavy limbs." ,"conic-gradient(#26325B 144deg, #E67571 0 216deg, #E67571 0)","out of those who suffer from an eating disorder","40%","also suffer from compulsive exercise","#FFC1C2")}  routeTo="/ed"/>
+      <NavBar 
+      onTxt2Click={()=>HandleExplanation("Bulimia Nervosa", "a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.","Stressful transitions or life ","Chronically inflamed and sore throat ","conic-gradient(#26325B 110deg, #E67571 0 250deg, #E67571 0)","Up to","33-70%","of those who have bulimia also have an addictive disorder", "#F8E8AE")} 
+      
+      onTxt1Click={()=>HandleExplanation("Anorexia")} 
+      
+      onTxt3Click={()=>HandleExplanation("Orthorexia","a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject.","Past history of trauma","An increase in concern about the health of ingredients", "conic-gradient(#26325B 90deg, #E67571 0 270deg, #E67571 0)","a study has found that","25%","of students attending university experience symptoms of orthorexia","#FFC1C2")} 
+      
+      onTxt4Click={()=>HandleExplanation("Binge Eating (BED)","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months.","Depression","Feeling that your eating behavior is out of control","conic-gradient(#26325B 108deg, #E67571 0 252deg, #E67571 0)","Up to","30%","of those looking into weight loss treatments likely show symptoms of BED","#FFC1C2")} 
+      
+      onTxt5Click={()=>HandleExplanation("Excessive Exercise","Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders.","Physical 'burnout' ","Feeling sore muscles or heavy limbs." ,"conic-gradient(#26325B 144deg, #E67571 0 216deg, #E67571 0)","out of those who suffer from an eating disorder","40%","also suffer from compulsive exercise","#FFC1C2")}  routeTo="/ed"/>
       <JuheeDiv>
         <Whitebg  bold={explanation} text={explanationtext}/>
       </JuheeDiv>
@@ -124,7 +147,7 @@ const HandleExplanation = (
       <JuheeH3>Potential Causes</JuheeH3>
       <MiddleIcons>
       <LeftArrow onLeftClick ={HandleCauseLeft}   />
-      <CauseCard  bottomcausetext={cause} bottomcausetext={causetext}  />
+      <CauseCard bottomcausetext={causetext} bottomcausetext={cause} />
       <RightArrow  onRightClick ={HandleCauseRight}  />
       </MiddleIcons>
       </JuheeDiv2>
