@@ -6,11 +6,11 @@ import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
 import React, {userstate} from 'react';
-import ButtonMenu from '../comps/BottomMenu'
+import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
     width: 414px;
-    height: 887px;
+    max-height: 887px;
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ const BigDiv = styled.div`
     align-items:center;
     justify-content:center;
     flex-direction:column;
-    margin-top:50px 0 20px 0;
+    margin-top:100px;
 `;
 
 //building page

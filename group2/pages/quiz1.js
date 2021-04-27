@@ -13,7 +13,7 @@ import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
     width: 414px;
-    height: 887px;
+    max-height: 887px;
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;

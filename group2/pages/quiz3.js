@@ -7,11 +7,11 @@ import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
 import BulletPoints from '../comps/bullet';
 import React, {userstate} from 'react';
-import ButtonMenu from '../comps/BottomMenu'
+import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
     width: 414px;
-    height: 887px;
+   max-height: 887px;
  
     background-color:#96ABB8;
     display:flex;
@@ -78,6 +78,6 @@ export default function Quiz (){
         </ButtonStyle>
 
         </BigDiv>
-
+        <BottomMenu/>
     </QuizPage>
 }
