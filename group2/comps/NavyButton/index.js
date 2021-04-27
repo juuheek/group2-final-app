@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const ButtonCont = styled.span`
 
-  margin:10px;
+  ${'' /* margin:10px; */}
 
   ${'' /* margin:20px; */}
 
