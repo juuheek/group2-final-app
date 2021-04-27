@@ -69,6 +69,7 @@ export default function Resources () {
     
   }
   const HandleCauseRight = () => {
+    console.log("clicked")
     if(cause === "Thinness culture in media"){
 
       bottomcausetext(" Family and childhood traumas");
@@ -79,10 +80,12 @@ export default function Resources () {
   const [symptomtext, bottomsymptomtext] = useState ("Extremely restrictive eating");
   const [symptomimg, symptomiconimg] = useState ("/food.svg");
   const HandleSymptomLeft = () => {
+    console.log("clicked")
     bottomsymptomtext(" Intensive/excessive exercise");
     symptomiconimg("/exercise.svg")
   }
   const HandleSymptomRight = () => {
+    console.log("clicked")
     bottomsymptomtext("Extreme thinness");
   }
 

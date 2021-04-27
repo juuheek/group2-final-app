@@ -6,6 +6,7 @@ import Cards from '../comps/card';
 import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/JuheeGreybg';
 import Titles from '../comps/Titles';
+import BottomMenu from '../comps/BottomMenu'
 
 
 
@@ -66,7 +67,7 @@ export default function Glian(){
 
         </Row>
         <Greybg bold={textbold} text={textregular} routeTo="/resources" ></Greybg>
-
+        <BottomMenu/>
     </GlianCont>
   )
 }

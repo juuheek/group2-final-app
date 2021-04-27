@@ -5,11 +5,12 @@ import styled from 'styled-components';
 import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
+import BottomMenu from '../comps/BottomMenu'
 import React, {userstate} from 'react';
 
 const QuizPage = styled.div `
     width: 414px;
-    height: 887px;
+    max-height: 887px;
 
     background-color:#E8ECF0;
     display:flex;
@@ -36,11 +37,18 @@ const QuestionTxt = styled.p`
  `;
 const ButtonStyle = styled.div `
     width:144px;
-    padding:15px;
+    padding:10px;
     display:flex;
     justify-content: center;
     align-items: center;
     margin:0;
+`;
+const BigDiv = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+margin:50px 0 20px 0;
 `;
 
 //building page
@@ -49,7 +57,7 @@ export default function Quiz (){
     return <QuizPage>
 
         <QuizNav Title="BMI"></QuizNav>
-
+        <BigDiv>
         <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
         <NavyButton text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
         
@@ -69,7 +77,8 @@ export default function Quiz (){
         </ButtonStyle>
 
         <ButtonStyle><NavyButton routeTo="/quiz2"></NavyButton></ButtonStyle>
-
+        </BigDiv>
+        <BottomMenu/>
     </QuizPage>
 }
 /*2 states, conntect them to the card prop to tell react to redraw it when the state changes it*/
