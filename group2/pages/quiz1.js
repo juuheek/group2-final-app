@@ -8,7 +8,7 @@ import QuizNav from '../comps/QuizNav';
 import Info from '../comps/info';
 import ButtonMenu from '../comps/BottomMenu'
 import React, {userstate} from 'react';
-import Modal from 'react-awesome-modal';
+
 import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
