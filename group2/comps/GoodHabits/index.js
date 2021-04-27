@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import {BsEggFried} from 'react-icons/bs';
 import {GiWaterDrop} from 'react-icons/gi';
@@ -105,18 +105,20 @@ const Margin = styled.div`
 
 const Card = ({
 
-    onLeftClick = () => {},
-    onRightClick = () => {},
+    // onLeftClick = () => {},
+    // onRightClick = () => {},
     first="#E8ECF0",
     second="#E67571"
 
 }) => {
-
+    // const [color, cardcolor] = useState ("#E8ECF0");
+    // cardcolor(first)
+    
     return <CardContainer>
             <FirstCard first={first}>
                 <BsEggFried size="100" color="#26325B"/>
             </FirstCard>
-            <IoMdArrowDropleftCircle onClick={onLeftClick} onLeftClick={()=>Card()} color="#E67571" />
+            <IoMdArrowDropleftCircle color="#E67571" />
             <SecondCard second={second}>
                 <GiWaterDrop size="100" color="#26325B"/>
             </SecondCard>
@@ -127,7 +129,7 @@ const Card = ({
                 <GiForkKnifeSpoon size="100" color="#26235B" />
             </ThirdCard>
             <Margin>
-            <IoMdArrowDroprightCircle onClick={onRightClick} onLeftClick={()=>Card()} color="#E67571" />
+            <IoMdArrowDroprightCircle color="#E67571" />
             </Margin>
             <FifthCard>
                 <GiFruitBowl size="100" color="#26325B" />
