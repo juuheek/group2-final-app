@@ -50,7 +50,6 @@ const NavyButton = ({
   };
   return <ButtonCont onClick={HandleClick}>
 
-
     {/* <ButtonImg src="/vercel.svg"/> */}
 
 

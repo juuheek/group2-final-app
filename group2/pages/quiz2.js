@@ -13,6 +13,7 @@ const QuizPage = styled.div `
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
+
     align-items: center;
  `;
 
