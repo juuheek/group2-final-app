@@ -32,7 +32,7 @@ const Titles = ({
     txt1="Eating Disorder",
     txt2="Eating Habits",
     edcolor="#E67571",
-    ehcolor="#E67571"
+    ehcolor="#26325B"
 
 }) => {
 
