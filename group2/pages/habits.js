@@ -8,6 +8,7 @@ import Cards from '../comps/GoodHabits';
 import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/Habits';
 import Titles from '../comps/Titles';
+import BottomMenu from '../comps/BottomMenu'
 
 
 const GlianCont = styled.div`
@@ -34,14 +35,20 @@ top:20px;
 export default function Glian(){
   const [textbold, toptextbold] = useState ("Maintaining a Balanced Diet");
   const [title, setTitle] = useState ("Good Eating Habits");
+  const [edcolor, setColor] = useState ("#E67571");
+  const [ehcolor, setColors] = useState ("#26325b");
 
   const HandleText = (
     boldtxt="Maintaining a Balanced Diet",
-    titletxt="Good Eating Habits"
+    titletxt="Good Eating Habits",
+    titlecolor="#E67571",
+    titlecolors="#26325B"
 
   ) => {
     toptextbold(boldtxt)
     setTitle(titletxt)
+    setColor(titlecolor)
+    setColors(titlecolors)
   }
   return (
     <GlianCont>
@@ -49,7 +56,7 @@ export default function Glian(){
         <Back routeTo="/disclaimer"></Back>
     </BackDiv>
 
-        <Titles txt1="Good Eating Habits"  txt2="Bad Eating Habits " onLeftClick={()=>HandleText("Maintaining a Balanced Diet","Good Eating Habits")} onRightClick={()=>HandleText("Emotional Eating","Bad Eating Habits")}>
+        <Titles txt1="Good Eating Habits"  txt2="Bad Eating Habits " onLeftClick={()=>HandleText("Maintaining a Balanced Diet","Good Eating Habits","#E67571","#26325B")} onRightClick={()=>HandleText("Emotional Eating","Bad Eating Habits","#26325B","#E67571")} edcolor={edcolor} ehcolor={ehcolor}>
 
         </Titles>
         
@@ -64,7 +71,7 @@ export default function Glian(){
 
         </Row>
         <Greybg bold={textbold}></Greybg>
-
+        <BottomMenu/>
 
 
 

@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import {FaHandsHelping} from 'react-icons/fa';
 import { route } from 'next/dist/next-server/server/router';
+import { motion } from 'framer-motion';
 
 
 const ButtonCont = styled.span`
 
-  margin:10px;
+  ${'' /* margin:10px; */}
 
   ${'' /* margin:20px; */}
 
@@ -23,6 +24,7 @@ const ButtonInput = styled.button`
       border:${props => props.navyborder};
       font-size:18px;
       z-index:1000;
+      
 `;
 
 const NavyButton = ({
@@ -48,16 +50,22 @@ const NavyButton = ({
     }
     console.log(bold)
   };
-  return <ButtonCont onClick={HandleClick}>
+  /* instead of buttoncont i put motion.div
+  min
+   */
+  return <motion.div 
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}>
 
-    {/* <ButtonImg src="/vercel.svg"/> */}
 
+    <ButtonCont onClick={HandleClick}>
 
     <ButtonInput bg={bgcolor} textcolor={color} navyborder={border}>
     {icon} {text}
     </ButtonInput>
+    </ButtonCont>
     
-  </ButtonCont>
+  </motion.div>
 }
 
 export default NavyButton;

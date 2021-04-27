@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import {BsEggFried} from 'react-icons/bs';
 import {GiWaterDrop} from 'react-icons/gi';
@@ -23,7 +23,7 @@ display:flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-background-color: #E8ECF0;
+background-color: ${props=>props.first};
 height: 247px;
 width: 216px;
 z-index: 4;
@@ -37,7 +37,7 @@ const SecondCard = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
-background-color: #E67571;
+background-color: ${props=>props.second};
 height: 222px;
 width: 131px;
 border-radius: 15px;
@@ -103,14 +103,23 @@ const Margin = styled.div`
 
 
 
-const Card = () => {
+const Card = ({
 
+    // onLeftClick = () => {},
+    // onRightClick = () => {},
+    first="#E8ECF0",
+    second="#E67571"
+
+}) => {
+    // const [color, cardcolor] = useState ("#E8ECF0");
+    // cardcolor(first)
+    
     return <CardContainer>
-            <FirstCard>
+            <FirstCard first={first}>
                 <BsEggFried size="100" color="#26325B"/>
             </FirstCard>
             <IoMdArrowDropleftCircle color="#E67571" />
-            <SecondCard>
+            <SecondCard second={second}>
                 <GiWaterDrop size="100" color="#26325B"/>
             </SecondCard>
             <FourthCard>

@@ -8,7 +8,6 @@ margin-top: 17px;
 `;
 
 
-
 const ImgCarousel = ({
 
 }) => {

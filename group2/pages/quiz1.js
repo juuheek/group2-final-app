@@ -6,13 +6,13 @@ import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
 import Info from '../comps/info';
-
 import React, {userstate} from 'react';
-import Modal from 'react-awesome-modal';
+import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
     width: 414px;
     height: 887px;
+    max-height: 887px;
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
@@ -44,6 +44,13 @@ const ButtonStyle = styled.div `
     align-items: center;
     margin:0;
 `;
+const BigDiv = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+margin:50px 0 50px 0;
+`;
 
 //building page
 
@@ -53,7 +60,7 @@ export default function Quiz (){
     return <QuizPage>
 
         <QuizNav Title="BMI"></QuizNav>
-
+        <BigDiv>
         <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
         <Info></Info>
         <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
@@ -72,6 +79,8 @@ export default function Quiz (){
         <ButtonStyle>
         <Button txt1="Obesity" txt2="30 or greater"></Button>
         </ButtonStyle>
+        </BigDiv>
+        <BottomMenu/>
 
         {/* <ButtonStyle><NavyButton routeTo="/quiz2"></NavyButton></ButtonStyle> */}
 

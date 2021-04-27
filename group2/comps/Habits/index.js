@@ -26,14 +26,23 @@ font-size:18px;
 color:#8A8A8A;
 padding:50px;
 `;
+const GlianDiv = styled.div`
+margin:15px;
+`;
 const Greybg = ({
   bgcolor="#EAEAEA",
   bold="Maintaining a Balanced Diet",
 }) =>{
   return <GreybgCont color={bgcolor} > 
     <Greybgbold>{bold}</Greybgbold>
+    <GlianDiv>
+
     <NavyButton text="Get Help " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/helpline"/>
+    </GlianDiv>
+    <GlianDiv>
+
     <NavyButton text="Self Diagnose " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/quiz1" />
+    </GlianDiv>
   </GreybgCont>
 }
 

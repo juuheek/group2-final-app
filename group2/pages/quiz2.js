@@ -10,6 +10,12 @@ import React, {userstate} from 'react';
 const QuizPage = styled.div `
     width: 414px;
     height: 887px;
+`;
+import BottomMenu from '../comps/BottomMenu';
+
+const QuizPage = styled.div `
+    width: 414px;
+    max-height: 887px;
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
@@ -46,7 +52,7 @@ const BigDiv = styled.div`
     align-items:center;
     justify-content:center;
     flex-direction:column;
-    margin-top:100px;
+    margin:50px 0 50px 0;
 `;
 
 //building page
@@ -74,7 +80,7 @@ export default function Quiz (){
         </ButtonStyle>
 
         </BigDiv>
-  
+        <BottomMenu/>
 
     </QuizPage>
 }
