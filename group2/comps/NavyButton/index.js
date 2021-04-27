@@ -53,15 +53,17 @@ const NavyButton = ({
   /* instead of buttoncont i put motion.div
   min
    */
-  return <motion.div onClick={HandleClick}
+  return <motion.div 
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}>
 
 
+    <ButtonCont onClick={HandleClick}>
 
     <ButtonInput bg={bgcolor} textcolor={color} navyborder={border}>
     {icon} {text}
     </ButtonInput>
+    </ButtonCont>
     
   </motion.div>
 }

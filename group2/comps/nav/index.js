@@ -72,15 +72,15 @@ const Nav = ({
 
        </Title>
        <Row>
-           <motion.div   whileHover={{ scale: 1.1 }}
+           <motion.div   whileHover={{ scale: 0.9 }}
     whileTap={{ scale: 0.9 }}><Button onClick = {onTxt1Click} color={color}> Anorexia</Button></motion.div>
-          <motion.div   whileHover={{ scale: 1.1 }}
+          <motion.div   whileHover={{ scale: 0.9 }}
     whileTap={{ scale: 0.9 }}> <Button onClick = {onTxt2Click} color={color}>Bulimia</Button></motion.div>
-          <motion.div   whileHover={{ scale: 1.1 }}
+          <motion.div   whileHover={{ scale: 0.9 }}
     whileTap={{ scale: 0.9 }}> <Button onClick = {onTxt3Click} color={color}>Orthorexia</Button></motion.div>
-          <motion.div   whileHover={{ scale: 1.1 }}
+          <motion.div   whileHover={{ scale:0.9 }}
     whileTap={{ scale: 0.9 }}> <Button  onClick = {onTxt4Click} color={color}>Binge</Button></motion.div>
-          <motion.div   whileHover={{ scale: 1.1 }}
+          <motion.div   whileHover={{ scale: 0.9 }}
     whileTap={{ scale: 0.9 }}> <Button  onClick = {onTxt5Click} color={color}>Excessive Exercise</Button></motion.div>
     </Row>
    

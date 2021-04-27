@@ -8,6 +8,7 @@ import Cards from '../comps/GoodHabits';
 import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/Habits';
 import Titles from '../comps/Titles';
+import BottomMenu from '../comps/BottomMenu'
 
 
 const GlianCont = styled.div`

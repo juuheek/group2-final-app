@@ -33,7 +33,9 @@ const WhitebgBody = styled.p`
   text-align: center;
 `;
 
-
+const MinDiv = styled.div`
+margin:15px;
+`;
 
 const MinWhitebg = ({
   height= 500,
@@ -48,9 +50,13 @@ const MinWhitebg = ({
     <WhitebgHeader>{yourresult}</WhitebgHeader>
     <WhitebgBody color={color}>{flagcolor}</WhitebgBody>
     <Textbox/>
-
+    <MinDiv>
     <NavyButton text="Get Help" routeTo="/helpline" />
-    <NavyButton text="Get Information" routeTo="/ed"/>
+    </MinDiv>
+   
+    <MinDiv>
+    <NavyButton text="Get Help" routeTo="/helpline" />
+    </MinDiv>
   </MinWhitebgCont>
 }
 export default MinWhitebg;
