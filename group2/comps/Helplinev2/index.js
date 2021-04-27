@@ -17,7 +17,8 @@ const MinHelplineCont = styled.div`
   background-color: ${props=>props.bg};
   margin: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: 0.2s;
+  transition: 0.5s;
+  transition-timing-function: ease;
 
 
 `;
