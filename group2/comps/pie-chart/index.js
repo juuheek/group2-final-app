@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
+import ReactTimeout from 'react-timeout'
 
 const Circle = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-height: 200px;
-width: 200px;
+height: 0px;
+width: 0px;
+transition: width 0.5s, height 0.5s;
 background-color: #E67571;
 border-radius: 50%;
 background-image: ${props => props.degree};
@@ -45,9 +47,17 @@ const Piechart = ({
 
 
 }) => {
+    const HandleClick = () => {
+        console.log("clicked")
+        var height= 0;
+        var width=0;
+        setTimeout(()=>{
+            height=200,
+            width=200
+        },1000)
+    }
 
-    return <motion.div WhileHover={{scale:1.1}} WhileTap={{scale:0.9}}><Circle degree={degree}><Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact> </Circle> </motion.div>
-
+    return <Circle onClick={HandleClick} degree={degree}><Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact> </Circle> 
 }
 
 
