@@ -36,8 +36,8 @@ export default function Glian(){
   const [textbold, toptextbold] = useState ("Anorexia Nervosa");
   const [textregular, bottomtextregular] = useState ("is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.");
   const [title, setTitle] = useState ("Eating Disorder Resources");
-  const [edcolor, setColor] = useState ("#E67571")
-  const [ehcolor, setColors] = useState ("#26325b")
+  const [edcolor, setColor] = useState ("#E67571");
+  const [ehcolor, setColors] = useState ("#26325B");
   const HandleText = (
     boldtxt="Anorexia Nervosa",
     regulartxt="is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
