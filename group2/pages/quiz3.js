@@ -6,10 +6,11 @@ import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
 import BulletPoints from '../comps/bullet';
+import BottomMenu from '../comps/BottomMenu'
 
 const QuizPage = styled.div `
     width: 414px;
-    height: 887px;
+    max-height: 887px;
  
     background-color:#E8ECF0;
     display:flex;
@@ -47,7 +48,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-        margin-top:100px;
+        margin:50px 0 20px 0;
 `;
 
 
@@ -75,6 +76,7 @@ export default function Quiz (){
 
         <ButtonStyle><NavyButton routeTo="/redresult"></NavyButton></ButtonStyle>
         </BigDiv>
+        <BottomMenu/>
 
     </QuizPage>
 }

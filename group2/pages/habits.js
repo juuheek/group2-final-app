@@ -64,7 +64,7 @@ export default function Glian(){
 
         </Row>
         <Greybg bold={textbold}></Greybg>
-
+        <BottomMenu/>
 
 
 
