@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 import {RiStethoscopeLine} from 'react-icons/ri';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
 
 const CardContainer = styled.div`
 margin-top: 17px;
+margin-left: 20px;
 min-width: 318px;
 display: flex;
 flex-direction:row;
@@ -36,7 +38,7 @@ width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left: 50px;
+left: 30px;
 `;
 
 const FourthCard = styled.div`
@@ -49,7 +51,7 @@ width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left:50px;
+left:40px;
 
 `;
 
@@ -63,7 +65,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 230px
+right: 250px
 `;
 
 const FifthCard = styled.div`
@@ -76,7 +78,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 250px
+right: 270px
 
 `;
 
@@ -86,24 +88,45 @@ font-size: 18px;
 font-weight: bold;
 color: #26325B;
 margin-left:10px;
+text-align: center;
+`;
+
+const Margin = styled.div`
+    display:flex;
+    position: relative;
+    right: 80px;
 `;
 
 
 
 const Card = () => {
 
-    return <div>
-            <CardContainer>
+    return  <CardContainer>
             <FirstCard>
-                {/* <RiStethoscopeLine color="#E67571"></RiStethoscopeLine> */}
-                <Text></Text>
+                <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Anorexia</Text>
             </FirstCard>
-            <SecondCard></SecondCard>
-            <FourthCard></FourthCard>
-            <ThirdCard></ThirdCard>
-            <FifthCard></FifthCard>
+            <IoMdArrowDropleftCircle color="#E67571" />
+            <SecondCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Orthorexia</Text>
+            </SecondCard>
+            <FourthCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Bulimia</Text>
+            </FourthCard>
+            <ThirdCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Binge</Text>
+            </ThirdCard>
+            <Margin>
+            <IoMdArrowDroprightCircle color="#E67571" />
+            </Margin>
+            <FifthCard>
+            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
+                <Text>Excessive Exercise</Text>
+            </FifthCard>
             </CardContainer>
-    </div>
 }
 
 export default Card;

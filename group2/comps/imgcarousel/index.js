@@ -4,6 +4,7 @@ import {GiPlainCircle} from 'react-icons/Gi';
 
 const CarouselCont = styled.div`
 margin-top: 17px;
+
 `;
 
 

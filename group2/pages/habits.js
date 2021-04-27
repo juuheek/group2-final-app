@@ -7,6 +7,7 @@ import Resources from '../comps/navigationpage';
 import Cards from '../comps/GoodHabits';
 import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/Habits';
+import Titles from '../comps/Titles';
 
 
 const GlianCont = styled.div`
@@ -47,8 +48,11 @@ export default function Glian(){
         <BackDiv>
         <Back routeTo="/disclaimer"></Back>
     </BackDiv>
+
+        <Titles txt1="Good Eating Habits"  txt2="Bad Eating Habits " onLeftClick={()=>HandleText("Maintaining a Balanced Diet","Good Eating Habits")} onRightClick={()=>HandleText("Emotional Eating","Bad Eating Habits")}>
+
+        </Titles>
         
-        <Resources onLeftClick={()=>HandleText("Maintaining a Balanced Diet","Good Eating Habits")} onRightClick={()=>HandleText("Emotional Eating","Bad Eating Habits")} navpageheader={title} ></Resources>
         <Cards></Cards>
         <Row>
 
