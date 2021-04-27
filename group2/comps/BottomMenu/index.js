@@ -21,6 +21,7 @@ padding:18px;
 `;
 const MenuImg2 = styled.img`
 padding-left: 10px;
+color:"#F19A97";
 `;
 const MenuImg3 = styled.img`
 padding-left 18px;
@@ -36,7 +37,7 @@ const BottomMenu = ({
   <motion.div     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}><MenuImg onClick={()=>router.push("/habits")} src="/menu2.svg" /></motion.div>
   <motion.div     whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}><MenuImg2 onClick={()=>router.push("/ed")} src="/menu3.svg" style="color:#F19A97;"  /></motion.div>
+    whileTap={{ scale: 0.9 }}><MenuImg2 onClick={()=>router.push("/ed")} src="/menu3.svg"  /></motion.div>
   <motion.div     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}><MenuImg3 onClick={()=>router.push("/quiz1")} src="/menu4.svg"/></motion.div>
   <motion.div     whileHover={{ scale: 1.1 }}
