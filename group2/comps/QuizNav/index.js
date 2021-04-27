@@ -23,9 +23,9 @@ const NavCont = styled.div`
    border-radius: 0 0 15px 15px;
 `;
  
-const Title = styled.h2`
+const NavTitle = styled.h2`
    color: #26325B;
-   font-family: DIN alternate;
+   font-family: Montserrat;
    font-size: 30px;
    margin-top: 44px
 `;
@@ -64,9 +64,9 @@ const QuizNav = ({
    <Back routeTo={route} ></Back>
    </BackDiv>
  
-       <Title>
+       <NavTitle>
           {Title}
-       </Title>
+       </NavTitle>
       <Row></Row>
    </NavCont>
 }

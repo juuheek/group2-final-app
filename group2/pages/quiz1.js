@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
+import Info from '../comps/info';
 import React, {userstate} from 'react';
 
 const QuizPage = styled.div `
@@ -25,6 +26,7 @@ const QuestionTxt = styled.p`
     text-align: center;
     color: #FFFFFF;
     padding: 20px;
+    margin-bottom: 0;
 `;
 
  const Divider = styled.hr`
@@ -49,6 +51,7 @@ export default function Quiz (){
         <QuizNav Title="BMI"></QuizNav>
 
         <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
+        <Info></Info>
         <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
         
         <Divider></Divider>

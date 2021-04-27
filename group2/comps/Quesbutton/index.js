@@ -8,6 +8,7 @@ const ButtonCont = styled.span``
 const ButtonInput = styled.button`
 background-color: ${props=>props.bgcolor};
 border: ${props => props.border};
+box-shadow: 0px 4px 4px 0px #00000040; 
 border-radius: 15px;
 width: 144px;
 height: 54px;
@@ -33,7 +34,7 @@ const Button = ({
     txt1="Underweight",
     txt2="  ",
     bgcolor="white",
-    border="1px solid #26325B",
+    border="1px solid #FFFFFF",
     routeTo="/quiz2"
 }) => {
     const router =useRouter(); 

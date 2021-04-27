@@ -67,10 +67,13 @@ export default function Quiz (){
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button routeTo="/redresult" txt1="YES"></Button>
+        <Button routeTo="/redresult" txt1="More than three"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button routeTo="/redresult" txt1="NO"></Button>
+        <Button routeTo="/redresult" txt1="Less than two"></Button>
+        </ButtonStyle>
+        <ButtonStyle>
+        <Button routeTo="/redresult" txt1="None"></Button>
         </ButtonStyle>
 
         </BigDiv>
