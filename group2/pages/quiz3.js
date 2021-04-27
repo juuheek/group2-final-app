@@ -7,6 +7,7 @@ import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
 import BulletPoints from '../comps/bullet';
 import React, {userstate} from 'react';
+import ButtonMenu from '../comps/BottomMenu'
 
 const QuizPage = styled.div `
     width: 414px;
@@ -47,7 +48,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-margin-top:100px;
+margin-top:50px 0 20px 0;
 `;
 
 
