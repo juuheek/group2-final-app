@@ -6,6 +6,7 @@ import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import NavyButton from '../comps/NavyButton';
 import CircleImg from '../comps/circleimg';
+import BottomMenu from '../comps/BottomMenu'
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 
@@ -31,17 +32,17 @@ const Mindiv = styled.div`
 const Mindiv2 = styled.div`
 `;
 
-const WhitebgBody = styled.p`
-  color:${props=>props.color}px;
-  font-size: 25px;
-  text-align: center;
+// const WhitebgBody = styled.p`
+//   color:${props=>props.color}px;
+//   font-size: 25px;
+//   text-align: center;
 
-`;
+// `;
 
 
 
 export default function Result({
-  bgcolor = "#FF9090"
+  bgcolor = "#F19A97"
 
 
 }) {
@@ -54,7 +55,7 @@ export default function Result({
           <MinWhitebg >
 
           </MinWhitebg>
-
+          <BottomMenu/>
     </MinChunCont>
   )
 }
