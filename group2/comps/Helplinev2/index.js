@@ -14,9 +14,11 @@ const MinHelplineCont = styled.div`
   width: ${props=>props.wt}px;
   height: ${props=>props.ht}px;
   border-radius: 15px;
-  background-color: #FFF;
+  background-color: ${props=>props.bg};
   margin: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+
 
 `;
 
@@ -45,10 +47,11 @@ const MinHelpline = ({
   display = "none",
   address="400 Circle Road, Stony Brook, NY, USA",
   phone="778-888-0137",
+  backgroundcolor = "#FFF",
   onCardClick=() => {}
 
 })=>{ 
-  return <MinHelplineCont wt={width} ht={height} onClick={onCardClick}>
+  return <MinHelplineCont bg={backgroundcolor} wt={width} ht={height} onClick={onCardClick}>
     <MinHelplineBody>{doctorname}</MinHelplineBody>
     <MinHelplineAddress displayhide={display}>{address}</MinHelplineAddress>
     <MinHelplinePhone displayhide={display}>{phone}</MinHelplinePhone>

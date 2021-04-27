@@ -22,6 +22,7 @@ const MinChunCont = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    
   
 `;
 
@@ -84,6 +85,7 @@ export default function Result({
             width={cardstate ? 260 : 174}
             height={cardstate ? 250 : 133}
             display={cardstate ? "block" : "none"}
+            backgroundcolor={cardstate ? "#E79B76" : "white"}
             />
             <Helplinev2 
 
