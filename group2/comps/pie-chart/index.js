@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { motion } from "framer-motion"
 
 const Circle = styled.div`
 display:flex;
@@ -9,7 +10,6 @@ height: 200px;
 width: 200px;
 background-color: #E67571;
 border-radius: 50%;
-
 background-image: ${props => props.degree};
 
 `;
@@ -46,8 +46,10 @@ const Piechart = ({
 
 }) => {
 
-    return <Circle degree={degree}> <Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact></Circle>
+    return <motion.div WhileHover={{scale:1.1}} WhileTap={{scale:0.9}}><Circle degree={degree}><Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact> </Circle> </motion.div>
 
 }
+
+
 
 export default Piechart;
