@@ -4,15 +4,17 @@ import styled from 'styled-components';
 //import comps
 import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
-import QuizNav from '../comps/QuizNav'
-import BottomMenu from '../comps/BottomMenu'
+import QuizNav from '../comps/QuizNav';
+import React, {userstate} from 'react';
+import ButtonMenu from '../comps/BottomMenu'
 
 const QuizPage = styled.div `
     width: 414px;
-    max-height: 887px;
-    background-color:#E8ECF0;
+    height: 887px;
+    background-color:#96ABB8;
     display:flex;
     flex-direction: column;
+
     align-items: center;
  `;
 
@@ -23,12 +25,12 @@ const QuizPage = styled.div `
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #000000;
+    color: #FFFFFF;
     padding: 20px;
 `;
 
  const Divider = styled.hr`
-    border: 0.5px solid #000000;
+    border: 0.5px solid #FFFFFF;
     margin: 30px;
     width: 298px;
  `;
@@ -41,11 +43,11 @@ const ButtonStyle = styled.div `
     margin:0;
 `;
 const BigDiv = styled.div`
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-margin:50px 0 20px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    margin-top:50px 0 20px 0;
 `;
 
 //building page
@@ -60,19 +62,18 @@ export default function Quiz (){
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button txt="1"></Button>
+        <Button routeTo="/quiz3" txt1="1"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="2"></Button>
+        <Button routeTo="/quiz3" txt1="2"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="3"></Button>
+        <Button routeTo="/quiz3" txt1="3"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="4"></Button>
+        <Button routeTo="/quiz3" txt1="4"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton routeTo="/quiz3"></NavyButton></ButtonStyle>
         </BigDiv>
         <BottomMenu/>
 
