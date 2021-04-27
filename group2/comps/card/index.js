@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import {RiStethoscopeLine} from 'react-icons/ri';
-import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 const CardContainer = styled.div`
 margin-top: 17px;
