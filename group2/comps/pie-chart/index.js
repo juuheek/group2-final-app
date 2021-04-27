@@ -9,7 +9,8 @@ height: 200px;
 width: 200px;
 background-color: #E67571;
 border-radius: 50%;
-
+animation: spin 3s linear infinite,
+             bg 6s step-end infinite;
 background-image: ${props => props.degree};
 
 `;
