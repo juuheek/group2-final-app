@@ -8,6 +8,8 @@ import CauseCard from '../comps/JuheeCauseCard'
 import PieChart from '../comps/pie-chart'
 import SymptomCard from '../comps/JuheeSymptomCard'
 import BottomMenu from '../comps/BottomMenu'
+import LeftArrow from '../comps/JuheeLeftArrow'
+import RightArrow from '../comps/JuheeRightArrow'
 
 import React, {useState} from 'react';
 
@@ -24,7 +26,7 @@ const JuheeCont = styled.div`
     align-items:center;
 `;
 const JuheeDiv =styled.div`
-    margin:30px;
+    margin:20px;
 `;
 const JuheeDiv2 = styled.div`
   margin:15px;
@@ -51,7 +53,10 @@ export default function Resources () {
 
   const [causetext, bottomcausetext] = useState ("Thinness culture in media");
   const HandleCauseLeft = () => {
-    bottomcausetext(" Professions and careers that promote being thin");
+    console.log("clicked")
+        
+        bottomcausetext (" Professions and careers that promote being thin") 
+    
   }
   const HandleCauseRight = () => {
     bottomcausetext(" Family and childhood traumas");
@@ -118,17 +123,17 @@ const HandleExplanation = (
       <JuheeDiv2>
       <JuheeH3>Potential Causes</JuheeH3>
       <MiddleIcons>
-      <CauseCardImg onLeftClick ={HandleCauseLeft}  src="/navyleftarrow.svg" />
-      <CauseCard  bottomcausetext={cause}/>
-      <CauseCardImg src="/navyrightarrow.svg" onRightClick ={HandleCauseRight}  />
+      <LeftArrow onLeftClick ={HandleCauseLeft}   />
+      <CauseCard  bottomcausetext={cause} bottomcausetext={causetext}  />
+      <RightArrow  onRightClick ={HandleCauseRight}  />
       </MiddleIcons>
       </JuheeDiv2>
       <JuheeDiv2>
       <JuheeH3>Symptoms</JuheeH3>
       <MiddleIcons>
-      <CauseCardImg onLeftClick ={HandleCauseLeft} src="/navyleftarrow.svg" />
+      <LeftArrow onLeftClick ={HandleSymptomLeft}  />
       <SymptomCard bottomsymptomtext={symptom}/>
-      <CauseCardImg src="/navyrightarrow.svg" onRightClick ={HandleCauseRight} />
+      <RightArrow  onRightClick ={HandleSymptomRight} />
       </MiddleIcons>
       </JuheeDiv2>
       </JuheeDiv>

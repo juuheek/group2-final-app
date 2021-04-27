@@ -40,7 +40,7 @@ const SymptomCard = ({
 
 
 
-      <CauseCardImg src={src} onClick = {onLeftClick} onClick={onRightClick}/>
+      <CauseCardImg src={src} />
   
 
     <BottomText>{bottomsymptomtext}</BottomText>
