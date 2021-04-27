@@ -6,7 +6,10 @@ import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
 import Info from '../comps/info';
+
 import React, {userstate} from 'react';
+import React, { Component } from 'react';
+import Modal from 'react-awesome-modal';
 
 const QuizPage = styled.div `
     width: 414px;
@@ -44,6 +47,8 @@ const ButtonStyle = styled.div `
 `;
 
 //building page
+
+
 export default function Quiz (){
     // const [sub, setSub] = useState("nothing sub")
     return <QuizPage>
