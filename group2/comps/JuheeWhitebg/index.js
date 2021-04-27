@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '../../comps/NavyButton';
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
+import { motion } from 'framer-motion';
 
 const WhitebgCont = styled.div`
   max-width: 346px;
@@ -33,10 +34,13 @@ const Whitebg = ({
   text=" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
   height= 350
 })=>{
-  return <WhitebgCont height={height} >
+  return <motion.div   whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.9 }} ><WhitebgCont>
+
     <Whitebgbold> <RiStethoscopeLine color="#E67571"/> {bold}</Whitebgbold>
     <WhitebgText>{text}</WhitebgText>
-    
   </WhitebgCont>
+    
+  </motion.div>
 }
 export default Whitebg;

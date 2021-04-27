@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { RiHealthBookLine } from "react-icons/ri";
 import styled from "styled-components";
@@ -71,12 +72,18 @@ const Nav = ({
 
        </Title>
        <Row>
-           <Button onClick = {onTxt1Click} color={color}> Anorexia</Button>
-           <Button onClick = {onTxt2Click} color={color}>Bulimia</Button>
-           <Button onClick = {onTxt3Click} color={color}>Orthorexia</Button>
-           <Button  onClick = {onTxt4Click} color={color}>Binge</Button>
-           <Button  onClick = {onTxt5Click} color={color}>Excessive Exercise</Button>
-       </Row>
+           <motion.div   whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}><Button onClick = {onTxt1Click} color={color}> Anorexia</Button></motion.div>
+          <motion.div   whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}> <Button onClick = {onTxt2Click} color={color}>Bulimia</Button></motion.div>
+          <motion.div   whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}> <Button onClick = {onTxt3Click} color={color}>Orthorexia</Button></motion.div>
+          <motion.div   whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}> <Button  onClick = {onTxt4Click} color={color}>Binge</Button></motion.div>
+          <motion.div   whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}> <Button  onClick = {onTxt5Click} color={color}>Excessive Exercise</Button></motion.div>
+    </Row>
+   
    </NavCont>
 }
  

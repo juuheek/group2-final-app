@@ -7,8 +7,8 @@ const Circle = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-height: 0px;
-width: 0px;
+height: 200px;
+width: 200px;
 transition: width 0.5s, height 0.5s;
 background-color: #E67571;
 border-radius: 50%;
@@ -37,6 +37,15 @@ color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 padding: 10px;
 `;
+const Pieh3 = styled.h3`
+   font-family: DIN alternate;
+    font-weight:normal;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color:#26325B
+`;
+
 
 const Piechart = ({
     degree="conic-gradient(#26325B 40deg, #E67571 0 235deg, #E67571 0);",
@@ -57,7 +66,11 @@ const Piechart = ({
         },1000)
     }
 
-    return <Circle onClick={HandleClick} degree={degree}><Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact> </Circle> 
+    return <motion.div whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}>
+        <Pieh3 onClick={HandleClick}> Click Me !</Pieh3>
+        <Circle degree={degree}><Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact> </Circle> 
+    </motion.div>
 }
 
 
