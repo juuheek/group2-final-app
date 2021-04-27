@@ -54,8 +54,8 @@ const NavyButton = ({
   min
    */
   return <motion.div onClick={HandleClick}
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.9 }}>
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}>
 
 
 

@@ -83,21 +83,16 @@ export default function Result({
             <Helplinev2 onCardClick = {HandleClick}
             width={cardstate ? 260 : 174}
             height={cardstate ? 250 : 133}
+            display={cardstate ? "block" : "none"}
             />
             <Helplinev2 
-            onCardClick = {HandleClick}
-            width={cardstate ? 260 : 174}
-            height={cardstate ? 250 : 133}
+
             doctorname="example2"/>
             <Helplinev2 
-            onCardClick = {HandleClick}
-            width={cardstate ? 260 : 174}
-            height={cardstate ? 250 : 133}
+
             doctorname="example3"/>
             <Helplinev2 
-            onCardClick = {HandleClick}
-            width={cardstate ? 260 : 174}
-            height={cardstate ? 250 : 133}
+
             doctorname="example4"/>
             
         </Mindiv4>

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import { motion } from "framer-motion"
 import {FaHospitalAlt} from 'react-icons/fa';
+import { BiBorderNone } from 'react-icons/bi';
+import { GiHidden } from 'react-icons/gi';
 
 const MinHelplineCont = styled.div`
   display: flex;
@@ -26,11 +28,13 @@ const MinHelplineBody = styled.p`
 const MinHelplineAddress = styled.p`
   font-size: 18px;
   text-align: center;
+  display: ${props=>props.displayhide}; 
 `;
 
 const MinHelplinePhone = styled.p`
   font-size: 18px;
   text-align: center;
+  display: ${props=>props.displayhide}; 
 `;
 
 
@@ -38,6 +42,7 @@ const MinHelpline = ({
   doctorname= "Kelty Eating Disorders",
   width = 174,
   height = 133,
+  display = "none",
   address="400 Circle Road, Stony Brook, NY, USA",
   phone="778-888-0137",
   onCardClick=() => {}
@@ -45,8 +50,8 @@ const MinHelpline = ({
 })=>{ 
   return <MinHelplineCont wt={width} ht={height} onClick={onCardClick}>
     <MinHelplineBody>{doctorname}</MinHelplineBody>
-    <MinHelplineAddress>{address}</MinHelplineAddress>
-    <MinHelplinePhone>{phone}</MinHelplinePhone>
+    <MinHelplineAddress displayhide={display}>{address}</MinHelplineAddress>
+    <MinHelplinePhone displayhide={display}>{phone}</MinHelplinePhone>
 
   </MinHelplineCont>
 }
