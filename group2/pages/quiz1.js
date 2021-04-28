@@ -8,6 +8,7 @@ import QuizNav from '../comps/QuizNav';
 import Info from '../comps/info';
 import React, {userstate} from 'react';
 import BottomMenu from '../comps/BottomMenu';
+import BMI from '../comps/BMI';
 
 const QuizPage = styled.div `
     width: 414px;
@@ -63,8 +64,8 @@ export default function Quiz (){
         <BigDiv>
         <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
         <Info></Info>
-        <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
-        
+        <BMI></BMI>
+        <NavyButton  onClick={(HandleClick)=>window.open("https://www.calculator.net/bmi-calculator.html")} target="blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
         <Divider></Divider>
 
         <ButtonStyle>
