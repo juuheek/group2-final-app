@@ -36,17 +36,20 @@ export default function Glian(){
   const [textbold, toptextbold] = useState ("Anorexia Nervosa");
   const [textregular, bottomtextregular] = useState ("is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.");
   const [title, setTitle] = useState ("Eating Disorder Resources");
-  const [color, setColor] = useState ("#26325B")
+  const [edcolor, setColor] = useState ("#E67571");
+  const [ehcolor, setColors] = useState ("#26325B");
   const HandleText = (
     boldtxt="Anorexia Nervosa",
     regulartxt="is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
     titletxt="Good Eating Habits",
-    titlecolor="#E67571"
+    titlecolor="#E67571",
+    titlecolors="#26325b"
   ) => {
     toptextbold(boldtxt)
     bottomtextregular(regulartxt)
     setTitle(titletxt)
     setColor(titlecolor)
+    setColors(titlecolors)
   }
   
   return (
@@ -54,7 +57,7 @@ export default function Glian(){
     <BackDiv>
     <Back routeTo="/disclaimer"/>
     </BackDiv>
-        <Titles onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources", "#E67571")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources", "#E67571")} edcolor={color} ehcolor={color}></Titles>
+        <Titles onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources", "#E67571","26325B")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources", "#26325B", "#E67571")} edcolor={edcolor} ehcolor={ehcolor}></Titles>
         
         <Cards></Cards>
         <Row>
