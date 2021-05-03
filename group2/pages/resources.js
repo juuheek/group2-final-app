@@ -11,6 +11,7 @@ import BottomMenu from '../comps/BottomMenu'
 import LeftArrow from '../comps/JuheeLeftArrow'
 import RightArrow from '../comps/JuheeRightArrow'
 import React, {useState} from 'react';
+
 const data = {
   Anorexia:{
     explanation:"Anorexia",
@@ -154,7 +155,6 @@ const HandleSymptomCard = (ind2) => {
     
     <JuheeCont bgcolor={data[key].bgcolor} >
       <NavBar 
-
 
       onTxt2Click={()=>HandleExplanation("Bulimia")} 
       
