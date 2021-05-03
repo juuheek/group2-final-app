@@ -18,7 +18,7 @@ align-items: centre;
 margin: 0;
 `;
 const Input1 = styled.p`
-color: #E79A74;
+color: ${props=>props.txtcolor};
 font-size: 18px;
 font-weight: bold;
 margin: 0;
@@ -35,17 +35,22 @@ const Button = ({
     txt2="  ",
     bgcolor="white",
     border="1px solid #FFFFFF",
-    routeTo="/quiz2"
+    txtcolor="#E79A74",
+    onClick=()=>{},
+    //routeTo="/quiz2"
 }) => {
     const router =useRouter(); 
-    return <ButtonCont onClick={()=>router.push(routeTo)}>
+
+    return <ButtonCont onClick={onClick}>
+    {/*old route: onClick={()=>router.push(routeTo)}*/}
+
         {/* <button style={{
             // backgroundColor: "white",
             // color: "#656565",
             // border: "1px solid #26325B",
         }}>1</button> */}
-        <ButtonInput bgcolor = {bgcolor} border = {border}>
-            <Input1>{txt1} </Input1>
+        <ButtonInput bgcolor={bgcolor} border={border} >
+            <Input1 txtcolor={txtcolor} >{txt1} </Input1>
             <Input2>{txt2}</Input2>
         </ButtonInput>
         
