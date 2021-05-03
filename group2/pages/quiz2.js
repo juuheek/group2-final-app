@@ -13,13 +13,12 @@ const QuizPage = styled.div `
 `;
 import BottomMenu from '../comps/BottomMenu';
 
-const QuizPage = styled.div `
+const QuizPage2 = styled.div`
     width: 414px;
     max-height: 887px;
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
-
     align-items: center;
  `;
 
@@ -57,7 +56,7 @@ const BigDiv = styled.div`
 
 //building page
 export default function Quiz (){
-    return <QuizPage>
+    return <QuizPage2>
 
         <QuizNav Title="Meals"></QuizNav>
         <br></br>
@@ -82,5 +81,5 @@ export default function Quiz (){
         </BigDiv>
         <BottomMenu/>
 
-    </QuizPage>
+    </QuizPage2>
 }

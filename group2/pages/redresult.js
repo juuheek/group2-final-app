@@ -39,7 +39,12 @@ const Mindiv2 = styled.div`
 
 // `;
 
+//Data from quiz1
+var BMIweight = null;
 
+if(process.browser){
+  BMIweight = sessionStorage.getItem("BMI");
+}
 
 export default function Result({
   bgcolor = "#F19A97"
