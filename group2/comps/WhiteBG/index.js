@@ -55,7 +55,7 @@ const MinWhitebg = ({
     </MinDiv>
    
     <MinDiv>
-    <NavyButton text="Get Help" routeTo="/helpline" />
+    <NavyButton text="Go Back to Home" routeTo="/helpline" />
     </MinDiv>
   </MinWhitebgCont>
 }

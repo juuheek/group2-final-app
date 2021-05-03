@@ -65,10 +65,12 @@ export default function Result({
 
 
 }) {
-  const [cardstate, setCardState] = useState(false);
+  const [cardstate, setCardState] = useState(0);
 
-  const HandleClick = () => {
-    setCardState(!cardstate)
+  const HandleClick = (num) => {
+    
+    
+    setCardState(num)
   }
   return (
     <MinChunCont background={bgcolor}>
@@ -81,15 +83,20 @@ export default function Result({
         </Mindiv3>
             
         <Mindiv4>
-            <Helplinev2 onCardClick = {HandleClick}
-            width={cardstate ? 260 : 174}
-            height={cardstate ? 250 : 133}
-            display={cardstate ? "block" : "none"}
-            backgroundcolor={cardstate ? "#E79B76" : "white"}
-            />
             <Helplinev2 
-
-            doctorname="example2"/>
+              onCardClick = {()=>HandleClick(1)}
+              width={cardstate=== 1 ? 260 : 174}
+              height={cardstate=== 1 ? 250 : 133}
+              display={cardstate=== 1 ? "block" : "none"}
+              backgroundcolor={cardstate===1 ? "#E79B76" : "white"}
+            />
+            <Helplinev2
+              onCardClick = {HandleClick }
+              width={cardstate === 2 ? 260 : 174}
+              height={cardstate === 2 ? 250 : 133}
+              display={cardstate === 2 ? "block" : "none"}
+              backgroundcolor={cardstate === 2 ? "#E79B76" : "white"}
+              doctorname="example2"/>
             <Helplinev2 
 
             doctorname="example3"/>
