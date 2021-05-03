@@ -21,7 +21,9 @@ const data = {
     pietext1:"Eating Disorders mortality rate is ",
     piepercent:"10-15%",
     pietext2:"which is the highest mortality rate of any mental illess",
-    bgcolor:"#FFCCB2"
+    bgcolor:"#FFCCB2",
+    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"],
+
 
   },
   Bulimia:{
@@ -33,7 +35,9 @@ const data = {
     pietext1:"Up to",
     piepercent:"33-70%",
     pietext2:"of those who have bulimia also have an addictive disorder",
-    bgcolor:"#F8E8AE"
+    bgcolor:"#F8E8AE",
+    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"],
+
 
   },
   Orthorexia:{
@@ -45,7 +49,8 @@ const data = {
     pietext1:"a study has found that",
     piepercent:"25%",
     pietext2:"of students attending university experience symptoms of orthorexia",
-    bgcolor:"#FFC1C2"
+    bgcolor:"#FFC1C2",
+    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"]
 
   },
   Binge:{
@@ -57,7 +62,8 @@ const data = {
     pietext1:"Up to",
     piepercent:"30%",
     pietext2:"of those looking into weight loss treatments likely show symptoms of BED",
-    bgcolor:"#FFC1C2"
+    bgcolor:"#FFC1C2",
+    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"]
 
   },
   ExcessiveExercise:{
@@ -69,7 +75,8 @@ const data = {
     pietext1:"out of those who suffer from an eating disorder",
     piepercent:"40%",
     pietext2:"also suffer from compulsive exercise",
-    bgcolor:"#FFC1C2"
+    bgcolor:"#FFC1C2",
+    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"]
 
   }
 }
@@ -113,23 +120,7 @@ display:flex;
 
 export default function Resources () {
 
-  // const [causetext, bottomcausetext] = useState ("Thinness culture in media");
-  // const HandleCauseLeft = () => {
-  //   bottomcausetext(" Professions and careers that promote being thin");
-  // }
-  // const HandleCauseRight = () => {
-  //   bottomcausetext(" Family and childhood traumas");
-  // }
 
-  // const [symptomtext, bottomsymptomtext] = useState ("Extremely restrictive eating");
-  // const [symptomimg, symptomiconimg] = useState ("/food.svg");
-  // const HandleSymptomLeft = () => {
-  //   bottomsymptomtext(" Intensive/excessive exercise");
-  //   symptomiconimg("/exercise.svg")
-  // }
-  // const HandleSymptomRight = () => {
-  //   bottomsymptomtext("Extreme thinness");
-  // }
 
 const [key, setKey] = useState("Anorexia")
 const [sub_ind, setSubInd] = useState(0);
@@ -163,6 +154,8 @@ const HandleSymptomCard = (ind2) => {
     
     <JuheeCont bgcolor={data[key].bgcolor} >
       <NavBar 
+
+
       onTxt2Click={()=>HandleExplanation("Bulimia")} 
       
       onTxt1Click={()=>HandleExplanation("Anorexia")} 
@@ -181,7 +174,7 @@ const HandleSymptomCard = (ind2) => {
       <JuheeH3>Potential Causes</JuheeH3>
       <MiddleIcons>
       <LeftArrow onLeftClick ={()=>HandleCauseCard(sub_ind-1)}  />
-      <CauseCard  bottomcausetext={data[key].cause[sub_ind]} />
+      <CauseCard src={data[key].imgsrc[sub_ind]} bottomcausetext={data[key].cause[sub_ind]}  />
       <RightArrow  onRightClick ={()=>HandleCauseCard(sub_ind+1)}   />
       </MiddleIcons>
       </JuheeDiv2>

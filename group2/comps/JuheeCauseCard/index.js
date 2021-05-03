@@ -40,14 +40,15 @@ const CauseCard = ({
   onLeftClick =()=>{},
   onRightClick=()=>{},
   toptext="Potential Causes",
-  bottomcausetext="Stressful transitions or life"
+  bottomcausetext="Stressful transitions or life",
+  imgurl="/causeicon.svg"
 }) => {
  
   return <CauseCardCont> 
 
     <MiddleIcons>
 
-      <CauseCardImg src="/causeicon.svg" />
+      <CauseCardImg src={imgurl} />
     
     </MiddleIcons>
     <BottomText>{bottomcausetext}</BottomText>
