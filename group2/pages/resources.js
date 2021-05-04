@@ -53,7 +53,7 @@ const data = {
     piepercent:"25%",
     pietext2:"of students attending university experience symptoms of orthorexia",
     bgcolor:"#FFC1C2",
-    imgsrc:["/A1.svg","/o3.svg","/A3.svg"],
+    imgsrc:["/A1.svg","/o3.svg","/A3real.svg"],
     imgurl:["/A4.svg","/o6real.svg","/o5reall.svg"]
 
   },
@@ -81,7 +81,7 @@ const data = {
     piepercent:"40%",
     pietext2:"also suffer from compulsive exercise",
     bgcolor:"#FFC1C2",
-    imgsrc:["/Ex2.svg","/A3.svg","/Ex1real.svg"],
+    imgsrc:["/Ex2.svg","/A3real.svg","/Ex1real.svg"],
     imgurl:["/Ex1real.svg","/Ex3.svg","/exerciseeee.svg"]
 
   }

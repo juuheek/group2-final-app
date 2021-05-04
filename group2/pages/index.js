@@ -7,11 +7,12 @@ import NavyButton from '../comps/NavyButton'
 
 
 
+
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
   width:100vw;
-  height:896px;
+  height:100vh;
   background-color: #E8ECF0;
   
 `;
@@ -62,7 +63,9 @@ font-size: 23px;
 font-style: italic;
 text-align: center;
 `;
-
+const Logo = styled.img`
+`
+;
 export default function Glian(){
 
   return (

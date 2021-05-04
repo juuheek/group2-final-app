@@ -27,6 +27,7 @@ flex-direction:row;
 const BackDiv = styled.div`
 display:flex;
 position:relative;
+
 right:150px;
 top:20px;
 `;
