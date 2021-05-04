@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import styled from 'styled-components';
 import Button from '../comps/NavyButton';
 import MinWhitebg from '../comps/WhiteBG';
@@ -10,9 +10,10 @@ import BottomMenu from '../comps/BottomMenu'
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 
+
 const MinChunCont = styled.div`
   
-    background-color: ${props=>props.background};
+    background-color: #F19A97;
     width: 414px;
     height: 896px;
     display:flex;
@@ -40,19 +41,22 @@ const Mindiv2 = styled.div`
 // `;
 
 //Data from quiz1
-var BMIweight = null;
-
-if(process.browser){
-  BMIweight = sessionStorage.getItem("BMI");
-}
-
-export default function Result({
-  bgcolor = "#F19A97"
 
 
-}) {
-  return (
-    <MinChunCont background={bgcolor}>
+
+export default function Result(){
+
+    const [BMIweight, setBMIweight] = useState(null);
+
+  useEffect(()=>{
+    if(process.browser){
+      var o = sessionStorage.getItem("options");
+      setOptions(JSON.parse(o));
+    }
+  }, []);
+
+
+  return <MinChunCont>
       <Mindiv>
           <Back routeTo="/quiz3"/>
         </Mindiv>
@@ -62,5 +66,4 @@ export default function Result({
           </MinWhitebg>
           <BottomMenu/>
     </MinChunCont>
-  )
 }

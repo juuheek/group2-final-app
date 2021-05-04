@@ -31,8 +31,8 @@ font-weight: bold;
 margin: 0;
 `;
 const Button = ({
-    txt1="Underweight",
-    txt2="  ",
+    text1="Underweight",
+    text2="  ",
     bgcolor="white",
     border="1px solid #FFFFFF",
     txtcolor="#E79A74",
@@ -50,8 +50,8 @@ const Button = ({
             // border: "1px solid #26325B",
         }}>1</button> */}
         <ButtonInput bgcolor={bgcolor} border={border} >
-            <Input1 txtcolor={txtcolor} >{txt1} </Input1>
-            <Input2>{txt2}</Input2>
+            <Input1 txtcolor={txtcolor} >{text1} </Input1>
+            <Input2>{text2}</Input2>
         </ButtonInput>
         
     </ButtonCont>
