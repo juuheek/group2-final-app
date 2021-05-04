@@ -101,10 +101,12 @@ const Margin = styled.div`
 
 const Card = () => {
 
+    text1 = "Anor"
+
     return  <CardContainer>
             <FirstCard>
                 <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
-                <Text>Anorexia</Text>
+                <Text>{text1}</Text>
             </FirstCard>
             <IoMdArrowDropleftCircle color="#E67571" />
             <SecondCard>
