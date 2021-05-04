@@ -5,15 +5,15 @@ import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io'
 
 const CardContainer = styled.div`
 margin-top: 17px;
-margin-left: 20px;
-min-width: 318px;
 display: flex;
 flex-direction:row;
 justify-content: center;
 align-items: center;
+width:100vw;
 `;
 
 const FirstCard = styled.div`
+//anorexia
 display:flex;
 flex-direction: row;
 justify-content: center;
@@ -23,17 +23,18 @@ height: 247px;
 width: 216px;
 z-index: 4;
 border-radius: 15px;
-left: 290px;
+left: 220px;
 position: relative;
 `;
 
 
 const SecondCard = styled.div`
+//orthorexia
 display:flex;
 justify-content: center;
 align-items: center;
 background-color: #E67571;
-height: 222px;
+height: 200px;
 width: 131px;
 border-radius: 15px;
 z-index: 2;
@@ -42,43 +43,46 @@ left: 30px;
 `;
 
 const FourthCard = styled.div`
+//bullimia
 display:flex;
 justify-content: center;
 align-items: center;
 background-color: #E67571;
-height: 222px;
+height: 200px;
 width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left:40px;
+left:60px;
 
 `;
 
 const ThirdCard = styled.div`
+//binge
 display:flex;
 justify-content: center;
 align-items: center;
 background-color:#E79A74;
-height: 200px;
+height: 170px;
 width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 250px
+right: 253px
 `;
 
 const FifthCard = styled.div`
+//excessive exercise
 display:flex;
 justify-content: center;
 align-items: center;
 background-color:#E79A74;
-height: 200px;
+height: 170px;
 width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 270px
+right: 85px
 
 `;
 
@@ -91,42 +95,57 @@ margin-left:10px;
 text-align: center;
 `;
 
-const Margin = styled.div`
-    display:flex;
-    position: relative;
-    right: 80px;
+
+const LeftDot = styled.div`
+display:flex;
+position:relative;
+left: -30px;
+`;
+
+const RightDot = styled.div`
+display:flex;
+position:relative;
+right: -40px;
 `;
 
 
+const Card = ({
 
-const Card = () => {
+    text1 = "Anorexia",
+    text2 = "Orthorexia",
+    text3 = "Bullimia",
+    text4 = "Binge",
+    text5= "Excessive Exercise"
 
-    text1 = "Anor"
+}) => {
+    text1= "Anorexia" 
 
     return  <CardContainer>
             <FirstCard>
                 <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
                 <Text>{text1}</Text>
             </FirstCard>
+            <LeftDot>
             <IoMdArrowDropleftCircle color="#E67571" />
+            </LeftDot>
             <SecondCard>
-            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
-                <Text>Orthorexia</Text>
+            <RiStethoscopeLine color="#E79A74"></RiStethoscopeLine>
+                <Text>{text2}</Text>
             </SecondCard>
             <FourthCard>
-            <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
-                <Text>Bulimia</Text>
+            <RiStethoscopeLine color="#E79A74"></RiStethoscopeLine>
+                <Text>{text3}</Text>
             </FourthCard>
             <ThirdCard>
             <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
-                <Text>Binge</Text>
+                <Text>{text4}</Text>
             </ThirdCard>
-            <Margin>
+            <RightDot>
             <IoMdArrowDroprightCircle color="#E67571" />
-            </Margin>
+            </RightDot>
             <FifthCard>
             <RiStethoscopeLine color="#E67571"></RiStethoscopeLine>
-                <Text>Excessive Exercise</Text>
+                <Text>{text5}</Text>
             </FifthCard>
             </CardContainer>
 }

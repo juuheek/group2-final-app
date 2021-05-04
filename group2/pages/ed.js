@@ -14,7 +14,7 @@ const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
   width:100vw;
-  height:896px;
+  min-height:896px;
   background-color: white;
   align-items: center;
 `;

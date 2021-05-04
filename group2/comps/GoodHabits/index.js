@@ -16,6 +16,8 @@ display: flex;
 flex-direction:row;
 justify-content: center;
 align-items: center;
+width:100vw;
+
 `;
 
 const FirstCard = styled.div`
@@ -28,7 +30,7 @@ height: 247px;
 width: 216px;
 z-index: 4;
 border-radius: 15px;
-left: 290px;
+left: 205px;
 position: relative;
 `;
 
@@ -56,7 +58,7 @@ width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left:40px;
+left:50px;
 
 `;
 
@@ -70,7 +72,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 250px
+right: 220px;
 `;
 
 const FifthCard = styled.div`
@@ -83,7 +85,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 270px
+right: 115px
 
 `;
 
@@ -95,10 +97,16 @@ color: #26325B;
 margin-left:10px;
 `;
 
-const Margin = styled.div`
-    display:flex;
-    position: relative;
-    right: 80px;
+const LeftDot = styled.div`
+display:flex;
+position:relative;
+left: -30px;
+`;
+
+const RightDot = styled.div`
+display:flex;
+position:relative;
+right: -5px;
 `;
 
 
@@ -118,7 +126,9 @@ const Card = ({
             <FirstCard first={first}>
                 <BsEggFried size="100" color="#26325B"/>
             </FirstCard>
+            <LeftDot>
             <IoMdArrowDropleftCircle color="#E67571" />
+            </LeftDot>
             <SecondCard second={second}>
                 <GiWaterDrop size="100" color="#26325B"/>
             </SecondCard>
@@ -128,9 +138,9 @@ const Card = ({
             <ThirdCard>
                 <GiForkKnifeSpoon size="100" color="#26235B" />
             </ThirdCard>
-            <Margin>
+            <RightDot>
             <IoMdArrowDroprightCircle color="#E67571" />
-            </Margin>
+            </RightDot>
             <FifthCard>
                 <GiFruitBowl size="100" color="#26325B" />
             </FifthCard>
