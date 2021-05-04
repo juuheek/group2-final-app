@@ -23,7 +23,7 @@ const data = {
     piepercent:"10-15%",
     pietext2:"which is the highest mortality rate of any mental illess",
     bgcolor:"#FFCCB2",
-    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"],
+    imgsrc:["/causeicon.svg","/egg.svg","/exercise.svg"],
 
 
   },
@@ -174,7 +174,7 @@ const HandleSymptomCard = (ind2) => {
       <JuheeH3>Potential Causes</JuheeH3>
       <MiddleIcons>
       <LeftArrow onLeftClick ={()=>HandleCauseCard(sub_ind-1)}  />
-      <CauseCard src={data[key].imgsrc[sub_ind]} bottomcausetext={data[key].cause[sub_ind]}  />
+      <CauseCard imgurl={data[key].imgsrc[sub_ind]} bottomcausetext={data[key].cause[sub_ind]}  />
       <RightArrow  onRightClick ={()=>HandleCauseCard(sub_ind+1)}   />
       </MiddleIcons>
       </JuheeDiv2>

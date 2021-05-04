@@ -53,7 +53,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-margin:50px 0 50px 0;
+margin:50px 0 80px 0;
 `;
 
 //if else shortcut: 1- {condition} ? value1 : value2

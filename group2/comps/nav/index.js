@@ -18,8 +18,8 @@ const NavCont = styled.div`
    align-items: center;
    background-color: white;
    ${'' /* border: 1px solid black; */}
-   width: 414px:
-   height: 60px;
+   width: 100%;
+   height: 130px;
    border-radius: 0 0 15px 15px;
 `;
  
@@ -59,11 +59,8 @@ const Nav = ({
 
 }) => {
  
-   return <NavCont style={{
-       display: "inline-flex",
-       width: 414,
-     
-   }}>
+   return <NavCont
+>
        <BackDiv>
    <Back routeTo="/ed" ></Back>
    </BackDiv>
