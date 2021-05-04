@@ -13,14 +13,9 @@ import BMI from '../comps/BMI';
 import React, {useState} from "react";
 import {useRouter} from 'next/router';
 
-<<<<<<< HEAD
-const QuizPage = styled.div `
-    width: 100vw;
-=======
 const QuizPage1 = styled.div `
     width: 414px;
     height: 887px;
->>>>>>> f60db8acb26c9a697be657a5585deac8a8915d33
     max-height: 887px;
     background-color:#96ABB8;
     display:flex;
