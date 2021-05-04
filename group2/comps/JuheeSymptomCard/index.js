@@ -12,6 +12,7 @@ const CauseCardCont = styled.div`
   align-items:center;
   background-color:#F6F6F6;
   border-radius:10px;
+  padding-top:15px;
 `;
 
 
@@ -33,14 +34,14 @@ const SymptomCard = ({
   onRightClick=()=>{},
 
   bottomsymptomtext="Stressful transitions or life",
-  src="/food.svg"
+  imgsrc="/food.svg"
 }) => {
  
   return <CauseCardCont> 
 
 
 
-      <CauseCardImg src={src} />
+      <CauseCardImg src={imgsrc} />
   
 
     <BottomText>{bottomsymptomtext}</BottomText>

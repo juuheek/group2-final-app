@@ -10,7 +10,8 @@ import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
     width: 100vw;
-    max-height: 887px;
+    height:100vh;
+
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
@@ -47,7 +48,8 @@ const BigDiv = styled.div`
     align-items:center;
     justify-content:center;
     flex-direction:column;
-    margin:50px 0 50px 0;
+    width:414px;
+    height:100vh;
 `;
 
 //building page

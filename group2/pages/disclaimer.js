@@ -7,7 +7,7 @@ const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
   width:100vw;
-  height:896px;
+  height:100vh;
   background-color: #E8ECF0;
   justify-content: center;
   align-items: center;

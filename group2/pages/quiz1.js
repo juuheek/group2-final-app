@@ -14,13 +14,13 @@ import React, {useState} from "react";
 import {useRouter} from 'next/router';
 
 const QuizPage1 = styled.div `
-    width: 414px;
-    height: 887px;
-    max-height: 887px;
+    width: 100vw;
+    height: 100vh;
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
     align-items: center;
+ 
  `;
 
 const QuestionTxt = styled.p`
@@ -50,10 +50,19 @@ const ButtonStyle = styled.div `
 `;
 const BigDiv = styled.div`
 display:flex;
+width:414px;
+height:100vh;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-margin:50px 0 80px 0;
+
+`;
+const BigDiv2 = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+
 `;
 
 //if else shortcut: 1- {condition} ? value1 : value2
@@ -113,7 +122,10 @@ export default function Quiz (){
         </ButtonStyle>
         {/* END BUTTON: <ButtonStyle><Button txtcolor="#FFFFFF" txt1="Submit" bgcolor="#26325B"  border="#26325B" onClick={HandleEnd} /></ButtonStyle> */}
         </BigDiv>
+        <BigDiv2>
+
         <BottomMenu/>
+        </BigDiv2>
 
 
     </QuizPage1>

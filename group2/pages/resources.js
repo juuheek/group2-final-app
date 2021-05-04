@@ -23,7 +23,8 @@ const data = {
     piepercent:"10-15%",
     pietext2:"which is the highest mortality rate of any mental illess",
     bgcolor:"#FFCCB2",
-    imgsrc:["/causeicon.svg","/egg.svg","/exercise.svg"],
+    imgsrc:["/A2.svg","/A3real.svg","/A1.svg"],
+    imgurl:["/foodreal.svg","/exerciseeee.svg","/A4.svg"]
 
 
   },
@@ -37,21 +38,23 @@ const data = {
     piepercent:"33-70%",
     pietext2:"of those who have bulimia also have an addictive disorder",
     bgcolor:"#F8E8AE",
-    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"],
+    imgsrc:["/b3.svg","/b1.svg","/b2.svg"],
+    imgurl:["/b5.svg","/b6.svg","b7.svg"]
 
 
   },
   Orthorexia:{
     explanation:"Orthorexia",
     explanationtext:"a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject.",
-    cause:["Past history of trauma","perfectionism tendencies","current or former eatind disorders"],
+    cause:["Past history of trauma","perfectionism tendencies","current or former eating disorders"],
     symptom:["An increase in concern about the health of ingredients","showing high levels of stress if “safe” or “healthy” food are not available,","inability to eat anything but a narrow group of foods deemed “pure” or “healthy”"],
     piedegree:"conic-gradient(#26325B 90deg, #E67571 0 270deg, #E67571 0)",
     pietext1:"a study has found that",
     piepercent:"25%",
     pietext2:"of students attending university experience symptoms of orthorexia",
     bgcolor:"#FFC1C2",
-    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"]
+    imgsrc:["/A1.svg","/o3.svg","/A3real.svg"],
+    imgurl:["/A4.svg","/o6real.svg","/o5reall.svg"]
 
   },
   Binge:{
@@ -64,40 +67,41 @@ const data = {
     piepercent:"30%",
     pietext2:"of those looking into weight loss treatments likely show symptoms of BED",
     bgcolor:"#FFC1C2",
-    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"]
+    imgsrc:["/A4.svg","/Binge1reall.svg","/Binge1reall.svg"],
+    imgurl:["/b2.svg","/b2.svg","/Binge2.svg"]
 
   },
   ExcessiveExercise:{
     explanation:"Excessive Exercise",
     explanationtext:"Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders.",
     cause:["Physical 'burnout' ","body disphoris/body image disorder","unhealthy obsession/addiction with excercise"],
-    symptom:["Feeling sore muscles or heavy limbs.","reducing other sctivites to make more time for exercising","inabiity to stick to reduced workout routines"],
+    symptom:["Feeling sore muscles or heavy limbs.","reducing other activites to make more time for exercising","inabiity to stick to reduced workout routines"],
     piedegree:"conic-gradient(#26325B 144deg, #E67571 0 216deg, #E67571 0)",
     pietext1:"out of those who suffer from an eating disorder",
     piepercent:"40%",
     pietext2:"also suffer from compulsive exercise",
     bgcolor:"#FFC1C2",
-    imgsrc:["/causeicon.svg","/food.svg","/food2.svg"]
+    imgsrc:["/Ex2.svg","/A3real.svg","/Ex1real.svg"],
+    imgurl:["/Ex1real.svg","/Ex3.svg","/exerciseeee.svg"]
 
   }
 }
 const JuheeComps = styled.div`
-  
-    ${'' /* background-color:#E8ECF0;
-    padding:20px; */}
-   
+  margin:0 
 `;
 const JuheeCont = styled.div`
+    height:1600px;
     width:100vw;
-    max-height:1600px;
+    ${'' /* height:100vh; */}
     background-color:${props=>props.bgcolor};
     display:flex;
     flex-direction:column;
-    ${'' /* justify-content:center; */}
     align-items:center;
+    justify-content:space-between;
 `;
 const JuheeDiv =styled.div`
     margin:30px;
+\
 `;
 const JuheeDiv2 = styled.div`
   margin:15px;
@@ -182,7 +186,7 @@ const HandleSymptomCard = (ind2) => {
       <JuheeH3>Symptoms</JuheeH3>
       <MiddleIcons>
       <LeftArrow onLeftClick ={()=>HandleSymptomCard(sub_ind2-1)}/>
-      <SymptomCard  bottomsymptomtext={data[key].symptom[sub_ind2]} />
+      <SymptomCard  imgsrc={data[key].imgurl[sub_ind2]} bottomsymptomtext={data[key].symptom[sub_ind2]} />
       <RightArrow onRightClick ={()=>HandleSymptomCard(sub_ind2+1)}   />
       </MiddleIcons>
       </JuheeDiv2>
