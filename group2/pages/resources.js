@@ -90,17 +90,18 @@ const JuheeComps = styled.div`
   margin:0 
 `;
 const JuheeCont = styled.div`
+    height:1600px;
     width:100vw;
-    height:100vh;
+    ${'' /* height:100vh; */}
     background-color:${props=>props.bgcolor};
     display:flex;
     flex-direction:column;
-    ${'' /* justify-content:center; */}
     align-items:center;
     justify-content:space-between;
 `;
 const JuheeDiv =styled.div`
     margin:30px;
+\
 `;
 const JuheeDiv2 = styled.div`
   margin:15px;
