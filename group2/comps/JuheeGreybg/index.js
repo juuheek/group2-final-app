@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NavyButton from '../NavyButton'
 
 const GreybgCont = styled.div`
-margin-top: 31px;
+  margin-top: 31px;
   max-width:388px;
   height:466px;
   display:flex;

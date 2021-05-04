@@ -14,15 +14,13 @@ import {useRouter} from 'next/router';
 import { motion } from "framer-motion"
 
 const MinChunCont = styled.div`
-  
+    display:flex;
+    flex-direction: column;
     background-color: ${props=>props.background};
     width: 100vw;
     height: 100vh;
-    display:flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between;  
   
 `;
 
@@ -52,7 +50,7 @@ const Mindiv4 = styled.div`
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: 450px;
+    min-width: 414px;
     justify-content: center;
     
 `;
@@ -83,15 +81,15 @@ export default function Result({
         <Mindiv4>
             <Helplinev2 
               onCardClick = {()=> HandleClick(1)}
-              width={cardstate=== 1 ? 260 : 174}
-              height={cardstate=== 1 ? 250 : 133}
+              width={cardstate=== 1 ? 190 : 120}
+              height={cardstate=== 1 ? 160 : 80}
               display={cardstate=== 1 ? "block" : "none"}
               backgroundcolor={cardstate=== 1 ? "#E79B76" : "white"}
             />
             <Helplinev2
               onCardClick = {()=> HandleClick(2) }
-              width={cardstate === 2 ? 260 : 174}
-              height={cardstate === 2 ? 250 : 133}
+              width={cardstate === 2 ? 190 : 120}
+              height={cardstate === 2 ? 160 : 80}
               display={cardstate === 2 ? "block" : "none"}
               backgroundcolor={cardstate === 2 ? "#E79B76" : "white"}
               doctorname="Renew Eating Disorder"
@@ -100,8 +98,8 @@ export default function Result({
               />
             <Helplinev2 
               onCardClick = {()=> HandleClick(3) }
-              width={cardstate === 3 ? 260 : 174}
-              height={cardstate === 3 ? 250 : 133}
+              width={cardstate === 3 ? 190 : 120}
+              height={cardstate === 3 ? 160 : 80}
               display={cardstate === 3 ? "block" : "none"}
               backgroundcolor={cardstate === 3 ? "#E79B76" : "white"}
               doctorname="North Fraser Eating Disorders"
@@ -111,8 +109,8 @@ export default function Result({
               />
             <Helplinev2 
               onCardClick = {()=> HandleClick(4) }
-              width={cardstate === 4 ? 260 : 174}
-              height={cardstate === 4 ? 250 : 133}
+              width={cardstate === 4 ? 190 : 120}
+              height={cardstate === 4 ? 160 : 80}
               display={cardstate === 4 ? "block" : "none"}
               backgroundcolor={cardstate === 4 ? "#E79B76" : "white"}
               doctorname="Heemang Emotional Wellness"

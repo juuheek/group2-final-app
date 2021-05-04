@@ -9,7 +9,7 @@ import React, {userstate} from 'react';
 import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
-    width: 414px;
+    width: 100vw;
     max-height: 887px;
     background-color:#96ABB8;
     display:flex;

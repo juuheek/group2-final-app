@@ -23,18 +23,18 @@ const MinHelplineCont = styled.div`
 `;
 
 const MinHelplineBody = styled.p`
-  font-size: 25px;
+  font-size: 18px;
   text-align: center;
 `;
 
 const MinHelplineAddress = styled.p`
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
   display: ${props=>props.displayhide}; 
 `;
 
 const MinHelplinePhone = styled.p`
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
   display: ${props=>props.displayhide}; 
 `;
@@ -42,8 +42,8 @@ const MinHelplinePhone = styled.p`
 
 const MinHelpline = ({
   doctorname= "Richmond Eating Disorders",
-  width = 174,
-  height = 133,
+  width = 120,
+  height = 80,
   display = "none",
   address="48100 Granville Ave, Richmond, BC V6Y 3T6",
   phone="604-244-5486",
