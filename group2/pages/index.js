@@ -5,7 +5,7 @@ import Textbox from '../comps/textbox';
 import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
 
-
+    
 
 const GlianCont = styled.div`
   display: flex;
