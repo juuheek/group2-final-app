@@ -16,8 +16,8 @@ import { motion } from "framer-motion"
 const MinChunCont = styled.div`
   
     background-color: ${props=>props.background};
-    width: 414px;
-    height: 896px;
+    width: 100vw;
+    height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +54,6 @@ const Mindiv4 = styled.div`
     flex-wrap: wrap;
     min-width: 450px;
     justify-content: center;
-
     
 `;
 
@@ -65,10 +64,11 @@ export default function Result({
 
 
 }) {
-  const [cardstate, setCardState] = useState(false);
+  const [cardstate, setCardState] = useState(0);
 
-  const HandleClick = () => {
-    setCardState(!cardstate)
+  const HandleClick = (num) => {
+    
+    setCardState(num)
   }
   return (
     <MinChunCont background={bgcolor}>
@@ -81,21 +81,46 @@ export default function Result({
         </Mindiv3>
             
         <Mindiv4>
-            <Helplinev2 onCardClick = {HandleClick}
-            width={cardstate ? 260 : 174}
-            height={cardstate ? 250 : 133}
-            display={cardstate ? "block" : "none"}
-            backgroundcolor={cardstate ? "#E79B76" : "white"}
+            <Helplinev2 
+              onCardClick = {()=> HandleClick(1)}
+              width={cardstate=== 1 ? 260 : 174}
+              height={cardstate=== 1 ? 250 : 133}
+              display={cardstate=== 1 ? "block" : "none"}
+              backgroundcolor={cardstate=== 1 ? "#E79B76" : "white"}
             />
+            <Helplinev2
+              onCardClick = {()=> HandleClick(2) }
+              width={cardstate === 2 ? 260 : 174}
+              height={cardstate === 2 ? 250 : 133}
+              display={cardstate === 2 ? "block" : "none"}
+              backgroundcolor={cardstate === 2 ? "#E79B76" : "white"}
+              doctorname="Renew Eating Disorder"
+              address="2628 Granville St, Vancouver, BC V6H 4B4"
+              phone="604-261-0360"
+              />
             <Helplinev2 
-
-            doctorname="example2"/>
+              onCardClick = {()=> HandleClick(3) }
+              width={cardstate === 3 ? 260 : 174}
+              height={cardstate === 3 ? 250 : 133}
+              display={cardstate === 3 ? "block" : "none"}
+              backgroundcolor={cardstate === 3 ? "#E79B76" : "white"}
+              doctorname="North Fraser Eating Disorders"
+              address="3003 St Johns St, Port Moody, BC V3H 2C4"
+              phone="604-469-7600"
+              
+              />
             <Helplinev2 
-
-            doctorname="example3"/>
-            <Helplinev2 
-
-            doctorname="example4"/>
+              onCardClick = {()=> HandleClick(4) }
+              width={cardstate === 4 ? 260 : 174}
+              height={cardstate === 4 ? 250 : 133}
+              display={cardstate === 4 ? "block" : "none"}
+              backgroundcolor={cardstate === 4 ? "#E79B76" : "white"}
+              doctorname="Heemang Emotional Wellness"
+              address="1030 W Georgia St #1420, Vancouver, BC V6E 3M5"
+              phone="604-469-7600"
+              
+              
+              />
             
         </Mindiv4>
       <BottomMenu />

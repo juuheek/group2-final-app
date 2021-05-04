@@ -18,6 +18,7 @@ const NavCont = styled.div`
    align-items: center;
    background-color: white;
    ${'' /* border: 1px solid black; */}
+   min-width: 100vw;
    width: 100%;
    height: 130px;
    border-radius: 0 0 15px 15px;

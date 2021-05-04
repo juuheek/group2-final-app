@@ -17,9 +17,8 @@ const MinHelplineCont = styled.div`
   background-color: ${props=>props.bg};
   margin: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: s;
+  transition: 1s;
   transition-timing-function: ease;
-
 
 `;
 
@@ -42,12 +41,12 @@ const MinHelplinePhone = styled.p`
 
 
 const MinHelpline = ({
-  doctorname= "Kelty Eating Disorders",
+  doctorname= "Richmond Eating Disorders",
   width = 174,
   height = 133,
   display = "none",
-  address="400 Circle Road, Stony Brook, NY, USA",
-  phone="778-888-0137",
+  address="48100 Granville Ave, Richmond, BC V6Y 3T6",
+  phone="604-244-5486",
   backgroundcolor = "#FFF",
   onCardClick=() => {}
 
@@ -59,4 +58,6 @@ const MinHelpline = ({
 
   </MinHelplineCont>
 }
+
 export default MinHelpline;
+ 
