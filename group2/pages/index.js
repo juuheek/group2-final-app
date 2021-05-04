@@ -10,12 +10,20 @@ import NavyButton from '../comps/NavyButton'
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
-  width:414px;
+  width:100vw;
   height:896px;
   background-color: #E8ECF0;
-
-
   
+`;
+
+const MinCont = styled.div`
+  .logo{
+    height: 150px;
+    height: 150px;
+  }
+
+  display: flex;
+  justify-content: center;
 `;
 
 const TopRight = styled.img`
@@ -38,6 +46,7 @@ font-size: 36px;
 font-style: italic;
 margin-top:0px;
 `;  
+
 const Move = styled.div`
 display:flex;
 justify-content: center;
@@ -45,9 +54,6 @@ align-items: center;
 
 `;
 
-const Logo = styled.img`
-
-`;
 
 const Awareness = styled.p`
 
@@ -63,7 +69,9 @@ export default function Glian(){
     <GlianCont>
         <TopRight src="/Group147.svg"/>
         <Welcome>Welcome To</Welcome>
-        <Logo src="/logo1.svg"/>
+        <MinCont>
+        <Logo class="logo" src="/logo1.svg"/>
+        </MinCont>
         <Awareness>“raising awareness about eating disorders”
 </Awareness>
     <Move>

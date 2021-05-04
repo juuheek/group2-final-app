@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 
 const MenuCont = styled.div`
 
- width:414px;
+  width: 100vw;
   height:75px;
   display:flex;
   flex-direction:row;
