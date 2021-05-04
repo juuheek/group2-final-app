@@ -87,19 +87,17 @@ const data = {
   }
 }
 const JuheeComps = styled.div`
-  
-    ${'' /* background-color:#E8ECF0;
-    padding:20px; */}
-   
+  margin:0 
 `;
 const JuheeCont = styled.div`
     width:100vw;
-    max-height:1600px;
+    height:100vh;
     background-color:${props=>props.bgcolor};
     display:flex;
     flex-direction:column;
     ${'' /* justify-content:center; */}
     align-items:center;
+    justify-content:space-between;
 `;
 const JuheeDiv =styled.div`
     margin:30px;
