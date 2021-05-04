@@ -87,7 +87,7 @@ const JuheeComps = styled.div`
    
 `;
 const JuheeCont = styled.div`
-    width:414px;
+    width:100vw;
     max-height:1600px;
     background-color:${props=>props.bgcolor};
     display:flex;

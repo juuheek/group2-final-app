@@ -18,8 +18,8 @@ const NavCont = styled.div`
    align-items: center;
    background-color: white;
    ${'' /* border: 1px solid black; */}
-   width: 414px:
-   height: 60px;
+   min-width: 100vw;
+   height: 130px;
    border-radius: 0 0 15px 15px;
 `;
  
