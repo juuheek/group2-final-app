@@ -12,6 +12,7 @@ width:315px;
   align-items:center;
   background-color:#F6F6F6;
   border-radius:10px;
+  padding-top:15px;
 `;
 
 const TopText = styled.p`

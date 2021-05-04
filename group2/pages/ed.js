@@ -13,8 +13,8 @@ import BottomMenu from '../comps/BottomMenu'
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
-  width:414px;
-  height:896px;
+  width:100vw;
+  height:100vh;
   background-color: white;
   align-items: center;
 `;
