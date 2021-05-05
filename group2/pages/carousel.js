@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Carousel from '../comps/carousel';
+import GoodCarousel from '../comps/goodcarousel';
+
 
 const GlianCont = styled.div`
   display: flex;
@@ -46,6 +48,7 @@ export default function Glian(){
   return (
     <GlianCont>
         <Carousel></Carousel>
+        <GoodCarousel></GoodCarousel>
     </GlianCont>
   )
 }
