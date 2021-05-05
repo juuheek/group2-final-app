@@ -87,8 +87,14 @@ const Carousel = ({
         </CardWrapper>
         </CardCont>
         <Controls>
-            <CtrlButtons onClick={()=>HandleImageChange(ind-1)}><IoMdArrowDropleftCircle color="#E67571" /></CtrlButtons>
-            <CtrlButtons onClick={()=>HandleImageChange(ind+1)}><IoMdArrowDroprightCircle color="#E67571" /></CtrlButtons>
+            
+            <CtrlButtons onClick={()=>HandleImageChange(ind-1)}>
+                <IoMdArrowDropleftCircle color="#E67571" />
+            </CtrlButtons>
+
+            <CtrlButtons onClick={()=>HandleImageChange(ind+1)}>
+                <IoMdArrowDroprightCircle color="#E67571" />
+            </CtrlButtons>
 
         </Controls>
     </Cont>
