@@ -7,9 +7,29 @@ import Dots from '../comps/imgcarousel';
 import Greybg from '../comps/JuheeGreybg';
 import Titles from '../comps/Titles';
 import BottomMenu from '../comps/BottomMenu'
+import Carousel from '../comps/carousel'
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 
+const data = {
+  Anorexia:{
 
+
+  },
+
+  Bulimia:{
+
+  },
+  Orthorexia:{
+
+  },
+  Binge:{
+    
+  },
+  ExcessiveExercise:{
+    
+  },
+}
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,6 +52,12 @@ right:150px;
 top:20px;
 `;
 
+const CtrlButtons = styled.div`
+        display:flex;
+        padding:20px;
+`;
+
+
 
 export default function Glian(){
   const [textbold, toptextbold] = useState ("Anorexia Nervosa");
@@ -52,6 +78,23 @@ export default function Glian(){
     setColor(titlecolor)
     setColors(titlecolors)
   }
+  const [key, setKey] = useState ("Anorexia")
+  const [sub_ind, setSubInd] = useState(0);
+  const [sub_ind2, setSubInd2] = useState(0);
+
+  const HandleExplanation = (k) =>{
+    setKey(k);
+    }
+    
+    const HandleGreyCard = (ind) => {
+      if(ind < 0){
+        ind=0;
+      }
+      if(ind > 2){
+        ind=2;
+      }
+      setSubInd(ind)
+    }
   
   return (
     <GlianCont>
@@ -60,7 +103,9 @@ export default function Glian(){
     </BackDiv>
         <Titles onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources", "#E67571","26325B")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources", "#26325B", "#E67571")} edcolor={edcolor} ehcolor={ehcolor}></Titles>
         
-        <Cards></Cards>
+        {/* <Cards></Cards> */}
+        
+        <Carousel />
         <Row>
 
         <Dots></Dots>

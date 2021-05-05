@@ -14,7 +14,9 @@ const default_data = [
 
 const Cont = styled.div`
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
 `;
 
 const CardCont = styled.div`
@@ -49,10 +51,12 @@ const Controls = styled.div`
 `;
 
 const CtrlButtons = styled.div`
-
+        display:flex;
+        padding:20px;
 `;
 
 const Carousel = ({
+
     imgdata = default_data
 }) => {
     const [ind, setInd] = useState(0);
@@ -72,13 +76,16 @@ const Carousel = ({
 
     return <Cont>
         {/* <Card src={imgdata[ind]} /> */}
+        <CtrlButtons onClick={()=>HandleImageChange(ind-1)} >
+                <IoMdArrowDropleftCircle color="#E67571" />
+            </CtrlButtons>
         <CardCont>
             
         <CardWrapper left={ind*-10}>
             {imgdata.map((o,i)=><Card 
             dim={i===ind ? 120: 110}
             hdim={i===ind ? 150 : 140}
-            op={i===ind ? 1 : 1}
+            op={i===ind ? 1 : 0.8}
             z={i===ind ? imgdata.length+1 : imgdata.length - 1}
             left={(i*-100)+10}
             src={o} 
@@ -86,17 +93,16 @@ const Carousel = ({
             )}
         </CardWrapper>
         </CardCont>
-        <Controls>
-            
-            <CtrlButtons onClick={()=>HandleImageChange(ind-1)}>
-                <IoMdArrowDropleftCircle color="#E67571" />
-            </CtrlButtons>
-
-            <CtrlButtons onClick={()=>HandleImageChange(ind+1)}>
+        <CtrlButtons onClick={()=>HandleImageChange(ind+1)}>
                 <IoMdArrowDroprightCircle color="#E67571" />
             </CtrlButtons>
+        {/* <Controls>
+            
+         
 
-        </Controls>
+         
+
+        </Controls> */}
     </Cont>
 }
 
