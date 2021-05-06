@@ -49,11 +49,11 @@ const ButtonStyle = styled.div `
     margin:0;
 `;
 const BigDiv = styled.div`
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-margin:50px 0 50px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    margin:50px 0 50px 0;
 `;
 
 //if else shortcut: 1- {condition} ? value1 : value2
@@ -67,9 +67,9 @@ var options = {
     Habits:null,
 };
 var buttontexts = {
-    option1:"",
-    option2:"",
-    option3:"",
+    option1:" ",
+    option2:" ",
+    option3:" ",
 }
 export default function Quiz (){
     
@@ -110,7 +110,7 @@ export default function Quiz (){
             options.Habits = text;
         }
         console.log(options);
-        sessionStorage.setItem("options", JSON.stringify,(options));
+        sessionStorage.setItem("options", JSON.stringify,(text));
     }
 
     //IF WE WANT AND END BUTTON:
@@ -129,6 +129,11 @@ export default function Quiz (){
 
         <QuizNav Title="BMI"></QuizNav>
         <BigDiv>
+        <div>
+            <Button txtcolor="#FFFFFF" text1="BMI" bgcolor="#26325B"  border="#26325B" onClick={()=>router.push("/quiz1/BMI")}/>
+            <Button txtcolor="#FFFFFF" text1="Meals" bgcolor="#26325B"  border="#26325B" onClick={()=>router.push("/quiz1/Meals")}/>
+            <Button txtcolor="#FFFFFF" text1="Habits" bgcolor="#26325B"  border="#26325B" onClick={()=>router.push("/quiz1/Habits")}/>
+        </div>
         <QuestionTxt>Please follow this link that will direct you to a BMI Calculator and come back to select your weight </QuestionTxt>
         {/* <Info onInfoClick={HandleInfo} >
             {BMIdef === "nothing sub" && <BMI></BMI>}
@@ -136,7 +141,6 @@ export default function Quiz (){
         </Info> */}
         <NavyButton  onClick={()=>window.open("https://www.calculator.net/bmi-calculator.html")} target="blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
         <Divider></Divider>
-
         <ButtonStyle><Button text1={buttontexts.option1} text2="less than 18" onClick={()=>HandleClick(buttontexts.option1)} /></ButtonStyle>
         <ButtonStyle><Button text1={buttontexts.option2} text2="18-24" onClick={()=>HandleClick(buttontexts.option2)}/></ButtonStyle>
         <ButtonStyle><Button text1={buttontexts.option3} text2="25-29" onClick={()=>HandleClick(buttontexts.option3)} /></ButtonStyle>

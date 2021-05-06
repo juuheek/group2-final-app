@@ -46,7 +46,7 @@ const Mindiv2 = styled.div`
 
 export default function Result(){
 
-    const [BMIweight, setBMIweight] = useState(null);
+    const [options, setOptions] = useState(null);
 
   useEffect(()=>{
     if(process.browser){

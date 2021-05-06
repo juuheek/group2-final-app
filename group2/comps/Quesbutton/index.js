@@ -30,6 +30,7 @@ font-size: 16px;
 font-weight: bold;
 margin: 0;
 `;
+
 const Button = ({
     text1="Underweight",
     text2="  ",
