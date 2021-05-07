@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import Helpline from '../comps/helpline';
@@ -11,6 +11,8 @@ import Helplinev2 from '../comps/Helplinev2'
 import {FaHandsHelping} from 'react-icons/fa';
 import {useRouter} from 'next/router';
 import { motion } from "framer-motion"
+import { bounce, pulse, rotateInUpLeft } from 'react-animations'
+
 
 const MinChunCont = styled.div`
     display:flex;
@@ -54,6 +56,12 @@ const Mindiv4 = styled.div`
     
 `;
 
+const bounceAnimation = keyframes`${rotateInUpLeft}`;
+ 
+const BouncyDiv = styled.div`
+  animation: 2s ${bounceAnimation};
+`;
+
 
 
 export default function Result({
@@ -72,10 +80,10 @@ export default function Result({
       <Mindiv>
           <Back routeTo="/redresult" />
         </Mindiv>
-        <Mindiv3>
+        <BouncyDiv>
           <HelplineHeader><FaHandsHelping color="#E67571"/>Helpline</HelplineHeader>
 
-        </Mindiv3>
+        </BouncyDiv>
             
         <Mindiv4>
             <Helplinev2 

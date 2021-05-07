@@ -33,8 +33,8 @@ margin-left: -100px;
 `;
 
 const BottomRight = styled.img`
-margin-top: -150px;
-z-index:-100;
+margin-top: -200px;
+z-index:3;
 `;
 
 const Welcome = styled.p`
@@ -51,7 +51,7 @@ const Move = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
-
+z-index: 100;
 `;
 
 
