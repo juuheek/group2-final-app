@@ -13,7 +13,7 @@ const GlianCont = styled.div`
   width:100vw;
   height:100vh;
   background-color: #E8ECF0;
-  
+  justify-content: space-between;
 `;
 
 const MinCont = styled.div`
