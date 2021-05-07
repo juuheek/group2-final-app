@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../comps/NavyButton';
-import MinRedResult from '../comps/Redresult';
+import MinYellowResult from '../comps/Yellowresult';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import NavyButton from '../comps/NavyButton';
@@ -51,9 +51,9 @@ export default function Result({
       <Mindiv>
           <Back routeTo="/quiz3"/>
         </Mindiv>
-          <MinRedResult >
+          <MinYellowResult >
 
-          </MinRedResult>
+          </MinYellowResult>
           <BottomMenu/>
     </MinChunCont>
   )
