@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import MinWhitebg from '../comps/WhiteBG';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import Helpline from '../comps/helpline';

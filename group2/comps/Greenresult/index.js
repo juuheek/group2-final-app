@@ -52,7 +52,7 @@ const MinGreenResult = ({
 
 })=>{ 
   return <MinPageDiv>
-    <CircleImg />
+    <CircleImg imgurl={"/yellowresult.png"}/>
     <MinWhitebgCont height={height} >
     
     <WhitebgHeader>{yourresult}</WhitebgHeader>
