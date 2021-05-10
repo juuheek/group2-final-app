@@ -13,6 +13,7 @@ const GlianCont = styled.div`
   height:100vh;
   background-color: #E8ECF0;
   justify-content: space-between;
+  align-items:center;
 	background: linear-gradient(-45deg, #FFBAB8, #F8E8AE, #E8ECF0);
 	background-size: 400% 400%;
 	animation: gradient 4s ease infinite;
@@ -29,10 +30,11 @@ const GlianCont = styled.div`
 }
 `;
 const Div = styled.div`
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content:center;
   align-items: center;
+
 `;
 
 const MinCont = styled.div`
@@ -52,11 +54,11 @@ const MinCont = styled.div`
 
 // `;
 
-const BottomRight = styled.img`
-margin-top: -200px;
-z-index:3;
-z-index:-100;
-`;
+// const BottomRight = styled.img`
+// margin-top: -200px;
+// z-index:3;
+// z-index:-100;
+// `;
 
 const Welcome = styled.p`
 
@@ -92,6 +94,7 @@ export default function Glian(){
     <GlianCont>
         {/* <TopRight src="/Group147.svg"/> */}
         {/* <Welcome>Welcome To</Welcome> */}
+
         <Div>
 
         <MinCont>
@@ -106,8 +109,9 @@ export default function Glian(){
 
       
       </Move>
+        </Div>
 
-      </Div>
+
         {/* <BottomRight src="/Group146.svg"/> */}
        
     </GlianCont>
