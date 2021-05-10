@@ -9,7 +9,10 @@ import NavyButton from '../comps/NavyButton'
 
 
 const GlianCont = styled.div`
- 
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
   width:100vw;
   height:100vh;
 	background: linear-gradient(-45deg, #FFBAB8, #F8E8AE, #E8ECF0);
@@ -42,13 +45,14 @@ const MinCont = styled.div`
 
   display: flex;
   justify-content: center;
+  align-items:center;
 `;
 
-const TopRight = styled.img`
+// const TopRight = styled.img`
 
-margin-left: -100px;
+// margin-left: -100px;
 
-`;
+// `;
 
 const BottomRight = styled.img`
 
@@ -87,7 +91,7 @@ export default function Glian(){
 
   return (
     <GlianCont>
-        <TopRight src="/Group147.svg"/>
+        {/* <TopRight src="/Group147.svg"/> */}
         {/* <Welcome>Welcome To</Welcome> */}
         <Div>
 
@@ -105,7 +109,7 @@ export default function Glian(){
       </Move>
 
       </Div>
-        <BottomRight src="/Group146.svg"/>
+        {/* <BottomRight src="/Group146.svg"/> */}
        
     </GlianCont>
   )

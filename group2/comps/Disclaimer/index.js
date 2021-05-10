@@ -26,6 +26,10 @@ color:#8A8A8A;
 padding:50px;
 text-align:center;
 `;
+const ButtonCont = styled.div`
+padding:50px;
+
+`;
 const Greybg = ({
   bgcolor="#EAEAEA",
   bold="Anorexia Nervosa",
@@ -33,7 +37,10 @@ const Greybg = ({
 }) =>{
   return <GreybgCont color={bgcolor} > 
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
+    <ButtonCont>
+
     <NavyButton text="Agree & Continue " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/ed" />
+    </ButtonCont>
   </GreybgCont>
 }
 
