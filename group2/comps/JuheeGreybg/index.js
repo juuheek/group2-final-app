@@ -28,6 +28,11 @@ color:#8A8A8A;
 padding:50px;
 
 `;
+const ButtonCont = styled.div`
+
+padding:50px;
+
+`;
 
 const Greybg = ({
 
@@ -41,8 +46,10 @@ const Greybg = ({
 
     <GreybgText><Greybgbold>{bold}</Greybgbold>{text}</GreybgText>
 
+    <ButtonCont>
 
     <NavyButton text="Learn More " bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo={routeTo} bold={bold} />
+    </ButtonCont>
 
   </GreybgCont>
 }
