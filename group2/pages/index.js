@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import MinWhitebg from '../comps/WhiteBG';
 import Textbox from '../comps/textbox';
 import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
@@ -15,6 +14,8 @@ const GlianCont = styled.div`
   align-items: center;
   width:100vw;
   height:100vh;
+  background-color: #E8ECF0;
+  justify-content: space-between;
 	background: linear-gradient(-45deg, #FFBAB8, #F8E8AE, #E8ECF0);
 	background-size: 400% 400%;
 	animation: gradient 4s ease infinite;
@@ -55,7 +56,8 @@ const MinCont = styled.div`
 // `;
 
 const BottomRight = styled.img`
-
+margin-top: -200px;
+z-index:3;
 z-index:-100;
 `;
 
@@ -73,7 +75,7 @@ const Move = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
-
+z-index: 100;
 `;
 
 

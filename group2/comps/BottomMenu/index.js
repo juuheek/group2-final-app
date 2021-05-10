@@ -26,6 +26,8 @@ color:"#F19A97";
 const MenuImg3 = styled.img`
 padding-left 18px;
 `;
+
+
 const BottomMenu = ({
 
 
