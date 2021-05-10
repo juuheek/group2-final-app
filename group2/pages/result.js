@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Button from '../comps/NavyButton';
-import MinWhitebg from '../comps/WhiteBG';
+import MinRedResult from '../comps/Redresult';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import NavyButton from '../comps/NavyButton';
@@ -9,12 +9,13 @@ import CircleImg from '../comps/circleimg';
 import BottomMenu from '../comps/BottomMenu'
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
+import { fadeIn } from 'react-animations'
 
 const MinChunCont = styled.div`
   
     background-color: ${props=>props.background};
-    width: 414px;
-    height: 896px;
+    width: 100vw;
+    height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -39,10 +40,15 @@ const Mindiv2 = styled.div`
 
 // `;
 
+const bounceAnimation = keyframes`${fadeIn}`;
 
+const BouncyDiv = styled.div`
+  animation: 5s ${bounceAnimation};
+`;
 
 export default function Result({
-  bgcolor = "#F19A97"
+  bgcolor = "#FFF",
+  
 
 
 }) {
@@ -51,10 +57,11 @@ export default function Result({
       <Mindiv>
           <Back routeTo="/quiz3"/>
         </Mindiv>
-        <CircleImg />
-          <MinWhitebg >
+        <BouncyDiv>
+          <MinRedResult >
 
-          </MinWhitebg>
+          </MinRedResult>
+        </BouncyDiv>
           <BottomMenu/>
     </MinChunCont>
   )
