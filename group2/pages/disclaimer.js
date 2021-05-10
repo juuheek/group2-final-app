@@ -14,8 +14,9 @@ const GlianCont = styled.div`
 
 
 const TopRight = styled.img`
-margin-bottom:45px;
-margin-left: -130px;
+display:flex;
+justify-content:flex-start
+
 
 `;
 
