@@ -5,8 +5,6 @@ import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
 
 
-
-
 const GlianCont = styled.div`
  
   width:100vw;
