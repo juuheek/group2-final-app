@@ -54,8 +54,8 @@ const BouncyDiv = styled.div`
 
 const UserResult = {
   Underweighgt1Morethanthree: "Red Flag",
-  Normal2Lessthantwo: "Yellow Flag",
-  BMI3Habits3Meals3: "Green Flag",
+  Normal2Lessthantwo: "Yellow Flag"
+
 }
 export default function Result(){
   const [options, setOptions] = useState({
@@ -68,7 +68,6 @@ export default function Result(){
   );
 
 const [text, setText] = useState("Red Flag");
-const [key, setKey] = useState(null);
 
 useEffect (()=>{
   if(process.browser){
@@ -92,9 +91,9 @@ useEffect (()=>{
           <Back routeTo="/quiz3"/>
         </Mindiv>
         <BouncyDiv>
-          <Redresult flagcolor={text}>
+          <Redresult flagcolor={text}/>
 
-          </Redresult>
+       
         </BouncyDiv>
           <BottomMenu/>
     </MinChunCont>
