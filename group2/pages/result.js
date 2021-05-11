@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../comps/NavyButton';
-import MinRedResult from '../comps/Redresult';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import NavyButton from '../comps/NavyButton';
@@ -15,7 +14,7 @@ import { fadeIn } from 'react-animations'
 //import result comps -min ;
 import Redresult from '../comps/Redresult'
 import Yellowresult from '../comps/Yellowresult'
-import Greenresult from '../comps/Redresult'
+import Greenresult from '../comps/Greenresult'
 
 const MinChunCont = styled.div`
   
@@ -47,30 +46,44 @@ const Mindiv2 = styled.div`
 // `;
 
 const bounceAnimation = keyframes`${fadeIn}`;
-
 const BouncyDiv = styled.div`
   animation: 5s ${bounceAnimation};
 `;
 
-const results = {
-  BMI1Meals1Habit1: <Redresult/>
+
+const Userresult = {
+  BMI1Meals1Habits1: <Redresult />,
+
 }
 
 export default function Result({
   bgcolor = "#FFF",
 
-}) {
+}){
+  const [key, setKey] = useState(null);
+useEffect (()=>{
+  if(process.browser){
+    var o = sessionStorage.getItem("options");
+    var obj = JSON.parse(o);
+    var key = obj.BMI+obj.Meals+obj.Habits;
+
+    // setKey(key); 
+    console.log(key);
+  }
+}, []);
+
   return (
     <MinChunCont background={bgcolor}>
       <Mindiv>
           <Back routeTo="/quiz3"/>
         </Mindiv>
         <BouncyDiv>
-          <MinRedResult >
-
-          </MinRedResult>
+        {Userresult[key]}
         </BouncyDiv>
+
           <BottomMenu/>
+          
     </MinChunCont>
+
   )
 }

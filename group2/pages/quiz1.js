@@ -77,6 +77,7 @@ export default function Quiz (){
     //Quiz Data
     const router = useRouter();
     const {type} = router.query;
+    const [key, setKey] = useState(null);
 
     if(type === "BMI" ){
         buttontexts.option1 = "Underweight";
@@ -97,6 +98,8 @@ export default function Quiz (){
         buttontexts.option3 = "None of it";
     }
 
+
+
     const HandleClick = (text) =>{
         //alert(txt1);
         if(type === "BMI" ){
@@ -113,6 +116,15 @@ export default function Quiz (){
         console.log(options);
         sessionStorage.setItem("options", JSON.stringify,(options));
     }
+
+    useEffect(() => {
+        if(process.browser){
+            var o = sessionStorage.getItem("options");
+            var obj = JSON.parse(o);
+            var key = obj.BMI+obj.Meals+obj.Habits;
+            console.log(key);
+        }
+    },[]);
 
     //IF WE WANT AND END BUTTON:
     // const HandleEnd = () =>{

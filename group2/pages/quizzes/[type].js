@@ -11,7 +11,7 @@ import BMI from '../../comps/BMI';
 import BulletPoints from '../../comps/bullet';
 
 // import React, {userstate} from 'react';
-import React, {useState} from "react";
+import React, {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 
 const QuizPage1 = styled.div `
@@ -88,6 +88,7 @@ export default function Quiz (){
         quizdata.question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight ";
         quizdata.option1 = "Underweight";
         quizdata.option2 = "Normal";
+        quizdata.option2 = "Normal";
         quizdata.option3 = "Overweight";
         quizdata.option4 = "Obesity";
         quizdata.subtext1 = "Less than 18.5";
@@ -122,7 +123,7 @@ export default function Quiz (){
         quizdata.subtext1 = null;
         quizdata.subtext2 = null;
         quizdata.subtext3 = null;
-        quizdata.routeTo = "/quizzes/"
+        quizdata.routeTo = "/result/"
         //RESULTS
     }
 
@@ -142,6 +143,12 @@ export default function Quiz (){
         console.log(options);
         sessionStorage.setItem("options", JSON.stringify(options));
         router.push(quizdata.routeTo)
+    
+        //min try
+        // var o = sessionStorage.getItem("options");
+        // var obj = JSON.parse(o);
+        // var key = obj.BMI+obj.Habits+obj.Meals;
+
     }
 
     //IF WE WANT AND END BUTTON:
