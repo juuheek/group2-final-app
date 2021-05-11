@@ -10,25 +10,24 @@ const BulletCont = styled.div`
 `;
 
 const Bullet = styled.div`
-width: 8px;
-height: 8px;
-border-radius: 10px;
-background-color: #E67571;
-margin-right:5px
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #E67571;
+    margin-right:5px
 `;
 
 const Desc = styled.p`
-font-family: DIN alternate;
-color: #26325B;
-margin:0;
+    color: #FFFFFF;
+    margin:5px;
 `;
 
 const Row = styled.div`
-
-display:flex;
-flex-direction: row;
-align-items:center;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
 `;
+
 
 const BulletPoints = ({
     text="Skipping Breakfast",
