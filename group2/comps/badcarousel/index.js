@@ -4,11 +4,11 @@ import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io'
 
 
 const default_data = [
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
 
 ]
 
@@ -52,12 +52,12 @@ const Controls = styled.div`
 `;
 
 const CtrlButtons = styled.div`
-        display:flex;
-        padding:20px;
+display:flex;
+padding:20px;
+
 `;
 
 const Carousel = ({
-
     imgdata = default_data
 }) => {
     const [ind, setInd] = useState(0);
@@ -77,7 +77,8 @@ const Carousel = ({
 
     return <Cont>
         {/* <Card src={imgdata[ind]} /> */}
-        <CtrlButtons onClick={()=>HandleImageChange(ind-1)} >
+
+        <CtrlButtons onClick={()=>HandleImageChange(ind-1)}>
                 <IoMdArrowDropleftCircle color="#E67571" />
             </CtrlButtons>
         <CardCont>
@@ -86,7 +87,7 @@ const Carousel = ({
             {imgdata.map((o,i)=><Card 
             dim={i===ind ? 120: 110}
             hdim={i===ind ? 150 : 130}
-            op={i===ind ? 1 : 0.8}
+            op={i===ind ? 1 : 1}
             z={i===ind ? imgdata.length+1 : imgdata.length - 1}
             left={(i*-100)+10}
             src={o} 
@@ -94,14 +95,12 @@ const Carousel = ({
             )}
         </CardWrapper>
         </CardCont>
-        <CtrlButtons onClick={()=>HandleImageChange(ind+1)}>
+            <CtrlButtons onClick={()=>HandleImageChange(ind+1)}>
                 <IoMdArrowDroprightCircle color="#E67571" />
             </CtrlButtons>
         {/* <Controls>
             
-         
 
-         
 
         </Controls> */}
     </Cont>

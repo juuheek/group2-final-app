@@ -4,17 +4,19 @@ import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io'
 
 
 const default_data = [
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710761/Group_211_zdoz3p.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710812/Group_212_eqeb75.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710534/Group_213_ak9og4.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710855/Group_214_n6uce5.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710879/Group_215_wq04q9.svg"
 
 ]
 
 const Cont = styled.div`
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
 `;
 
 const CardCont = styled.div`
@@ -40,6 +42,7 @@ const Card = styled.img`
     z-index: ${props=>props.z};
     opacity: ${props=>props.op};
     transition: all 0.5s;
+    border-radius: 10px;
 `;
 
 
@@ -49,6 +52,8 @@ const Controls = styled.div`
 `;
 
 const CtrlButtons = styled.div`
+display:flex;
+padding:20px;
 
 `;
 
@@ -72,12 +77,16 @@ const Carousel = ({
 
     return <Cont>
         {/* <Card src={imgdata[ind]} /> */}
+
+        <CtrlButtons onClick={()=>HandleImageChange(ind-1)}>
+                <IoMdArrowDropleftCircle color="#E67571" />
+            </CtrlButtons>
         <CardCont>
             
         <CardWrapper left={ind*-10}>
             {imgdata.map((o,i)=><Card 
             dim={i===ind ? 120: 110}
-            hdim={i===ind ? 150 : 140}
+            hdim={i===ind ? 150 : 130}
             op={i===ind ? 1 : 1}
             z={i===ind ? imgdata.length+1 : imgdata.length - 1}
             left={(i*-100)+10}
@@ -86,17 +95,14 @@ const Carousel = ({
             )}
         </CardWrapper>
         </CardCont>
-        <Controls>
-            
-            <CtrlButtons onClick={()=>HandleImageChange(ind-1)}>
-                <IoMdArrowDropleftCircle color="#E67571" />
-            </CtrlButtons>
-
             <CtrlButtons onClick={()=>HandleImageChange(ind+1)}>
                 <IoMdArrowDroprightCircle color="#E67571" />
             </CtrlButtons>
+        {/* <Controls>
+            
 
-        </Controls>
+
+        </Controls> */}
     </Cont>
 }
 
