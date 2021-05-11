@@ -93,19 +93,7 @@ export default function Glian(){
   const [sub_ind, setSubInd] = useState(0);
   const [sub_ind2, setSubInd2] = useState(0);
 
-  const HandleExplanation = (k) =>{
-    setKey(k);
-    }
-    
-    const HandleGreyCard = (ind) => {
-      if(ind < 0){
-        ind=0;
-      }
-      if(ind > 2){
-        ind=2;
-      }
-      setSubInd(ind)
-    }
+
   
   return (
     <GlianCont>
