@@ -105,7 +105,7 @@ export default function Glian(){
         {/* <Cards></Cards> */}
         <Div>
 
-        <Carousel />
+       <Carousel /> 
         </Div>
         <Row>
 
