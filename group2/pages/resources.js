@@ -120,10 +120,10 @@ const HandleSymptomCard = (ind2) => {
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>
-      <CauseCard onLeftClick ={HandleCauseLeft} onRightClick ={HandleCauseRight} toptext="Potential Causes" bottomcausetext={causetext} bottomcausetext={data[key].cause}/>
+      <CauseCard   bottomcausetext={data[key].cause}/>
       </JuheeDiv2>
       <JuheeDiv2>
-      <SymptomCard onLeftClick ={HandleSymptomLeft} onRightClick ={HandleSymptomRight} toptext="Symptoms" bottomsymptomtext={symptomtext} symptomiconimg={symptomimg} bottomsymptomtext={data[key].symptom}/>
+      <SymptomCard bottomsymptomtext={data[key].symptom}/>
       </JuheeDiv2>
       </JuheeDiv>
       <JuheeDiv>
