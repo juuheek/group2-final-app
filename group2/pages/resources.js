@@ -12,6 +12,9 @@ import LeftArrow from '../comps/JuheeLeftArrow'
 import RightArrow from '../comps/JuheeRightArrow'
 import React, {useState} from 'react';
 
+
+
+
 const data = {
   Anorexia:{
     explanation:"Anorexia",
@@ -193,6 +196,8 @@ const HandleSymptomCard = (ind2) => {
       </JuheeDiv>
       <JuheeDiv>
         <PieChart degree={data[key].piedegree} text1={data[key].pietext1} percentage={data[key].piepercent} text2={data[key].pietext2} />
+
+
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>
