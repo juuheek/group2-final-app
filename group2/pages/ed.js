@@ -10,7 +10,14 @@ import BottomMenu from '../comps/BottomMenu'
 import Carousel from '../comps/carousel'
 import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
+const default_data = [
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
 
+]
 const data = {
   Anorexia:{
 
