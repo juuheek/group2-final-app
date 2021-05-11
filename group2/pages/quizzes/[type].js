@@ -26,12 +26,13 @@ const QuestionTxt = styled.p`
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
     padding: 20px;
     margin-bottom: 0;
+    width:500px;
 `;
 
  const Divider = styled.hr`
