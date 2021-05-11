@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../comps/NavyButton';
 import MinRedResult from '../comps/Redresult';
@@ -10,6 +10,12 @@ import BottomMenu from '../comps/BottomMenu'
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 import { fadeIn } from 'react-animations'
+
+
+//import result comps -min ;
+import Redresult from '../comps/Redresult'
+import Yellowresult from '../comps/Yellowresult'
+import Greenresult from '../comps/Redresult'
 
 const MinChunCont = styled.div`
   
@@ -46,10 +52,12 @@ const BouncyDiv = styled.div`
   animation: 5s ${bounceAnimation};
 `;
 
+const results = {
+  BMI1Meals1Habit1: <Redresult/>
+}
+
 export default function Result({
   bgcolor = "#FFF",
-  
-
 
 }) {
   return (
