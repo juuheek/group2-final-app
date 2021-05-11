@@ -82,7 +82,7 @@ const Carousel = ({
         <CardCont>
             
         <CardWrapper left={ind*-10}>
-            {imgdata.map((o,i)=><Card 
+            {imgdata.map((o,i)=> <Card 
             dim={i===ind ? 120: 110}
             hdim={i===ind ? 150 : 140}
             op={i===ind ? 1 : 0.8}

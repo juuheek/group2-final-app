@@ -11,9 +11,9 @@ const GlianCont = styled.div`
  
   width:100vw;
   height:100vh;
-  background-color: #E8ECF0;
+  ${'' /* background-color: #E8ECF0; */}
 
-	background: linear-gradient(-45deg, #FFBAB8, #F8E8AE, #E8ECF0);
+	background: linear-gradient(-45deg, #E87E7A, #F8E8AE, #96ABB8);
 	background-size: 400% 400%;
 	animation: gradient 4s ease infinite;
   @keyframes gradient {
