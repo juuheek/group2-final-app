@@ -10,7 +10,14 @@ import BottomMenu from '../comps/BottomMenu'
 import Carousel from '../comps/carousel'
 import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
+const default_data = [
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
 
+]
 const data = {
   Anorexia:{
 
@@ -57,6 +64,10 @@ const CtrlButtons = styled.div`
         padding:20px;
 `;
 
+const Div = styled.div`
+margin:20px 0 20px 0;
+`;
+
 
 
 export default function Glian(){
@@ -82,19 +93,7 @@ export default function Glian(){
   const [sub_ind, setSubInd] = useState(0);
   const [sub_ind2, setSubInd2] = useState(0);
 
-  const HandleExplanation = (k) =>{
-    setKey(k);
-    }
-    
-    const HandleGreyCard = (ind) => {
-      if(ind < 0){
-        ind=0;
-      }
-      if(ind > 2){
-        ind=2;
-      }
-      setSubInd(ind)
-    }
+
   
   return (
     <GlianCont>
@@ -104,8 +103,10 @@ export default function Glian(){
         <Titles onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources", "#E67571","26325B")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources", "#26325B", "#E67571")} edcolor={edcolor} ehcolor={ehcolor}></Titles>
         
         {/* <Cards></Cards> */}
-        
-        <Carousel />
+        <Div>
+
+       <Carousel /> 
+        </Div>
         <Row>
 
         <Dots></Dots>

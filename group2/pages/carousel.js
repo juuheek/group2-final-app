@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import Carousel from '../comps/carousel';
 import GoodCarousel from '../comps/goodcarousel';
+import BadCarousel from '../comps/badcarousel';
 
 
 const GlianCont = styled.div`
@@ -49,6 +50,7 @@ export default function Glian(){
     <GlianCont>
         <Carousel></Carousel>
         <GoodCarousel></GoodCarousel>
+        <BadCarousel></BadCarousel>
     </GlianCont>
   )
 }
