@@ -122,7 +122,7 @@ export default function Quiz (){
         quizdata.subtext1 = null;
         quizdata.subtext2 = null;
         quizdata.subtext3 = null;
-        quizdata.routeTo = "/quizzes/"
+        quizdata.routeTo = "/result/"
         //RESULTS
     }
 

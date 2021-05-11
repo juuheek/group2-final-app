@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../comps/NavyButton';
-import MinRedResult from '../comps/Redresult';
+import RedResult from '../comps/Redresult';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import NavyButton from '../comps/NavyButton';
@@ -10,6 +10,12 @@ import BottomMenu from '../comps/BottomMenu'
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 import { fadeIn } from 'react-animations'
+
+
+//import result comps -min ;
+import Redresult from '../comps/Redresult'
+import Yellowresult from '../comps/Yellowresult'
+import Greenresult from '../comps/Greenresult'
 
 const MinChunCont = styled.div`
   
@@ -46,23 +52,52 @@ const BouncyDiv = styled.div`
   animation: 5s ${bounceAnimation};
 `;
 
-export default function Result({
-  bgcolor = "#FFF",
+const UserResult = {
+  Underweighgt1Morethanthree: "Red Flag",
+  Normal2Lessthantwo: "Yellow Flag",
+  BMI3Habits3Meals3: "Green Flag",
+}
+export default function Result(){
+  const [options, setOptions] = useState({
+
+    BMI:null,
+    Meals:null,
+    Habits:null
+}
   
+  );
 
+const [text, setText] = useState("Red Flag");
+const [key, setKey] = useState(null);
 
-}) {
+useEffect (()=>{
+  if(process.browser){
+    var o = sessionStorage.getItem("options");
+    setOptions(JSON.parse(o));
+
+    var obj = JSON.parse(o);
+    var key = obj.BMI+obj.Meals+obj.Habits;
+
+    if(UserResult[key]){
+      setText(UserResult[key])
+    }
+    console.log(key);
+   
+  }
+}, []);
+
   return (
-    <MinChunCont background={bgcolor}>
+    <MinChunCont background="#FFF">
       <Mindiv>
           <Back routeTo="/quiz3"/>
         </Mindiv>
         <BouncyDiv>
-          <MinRedResult >
+          <Redresult flagcolor={text}>
 
-          </MinRedResult>
+          </Redresult>
         </BouncyDiv>
           <BottomMenu/>
     </MinChunCont>
+
   )
 }
