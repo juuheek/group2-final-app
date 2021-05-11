@@ -11,19 +11,16 @@ const CircleImgCont = styled.div`
 `;
 
 const CircleImgSource = styled.img`
-  // max-height: "193px";
-  // max-width: "193px";
-  // border-radius: "100px";
-  // img.src: "/result2.png";
+
 
 `;
 
 const CircleImg = ({
-
+  imgurl="/redresult.png"
 
 }) => {
   return <CircleImgCont>
-    <CircleImgSource src="/result1.png"/>
+    <CircleImgSource src={imgurl} />
   </CircleImgCont>
 }
 

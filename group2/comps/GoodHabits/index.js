@@ -1,19 +1,23 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import {BsEggFried} from 'react-icons/bs';
 import {GiWaterDrop} from 'react-icons/gi';
 import {GiMeat} from 'react-icons/gi';
 import {GiForkKnifeSpoon} from 'react-icons/gi';
 import {GiFruitBowl} from 'react-icons/gi';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
 
 const CardContainer = styled.div`
 margin-top: 17px;
+margin-left: 20px;
 min-width: 318px;
 display: flex;
 flex-direction:row;
 justify-content: center;
 align-items: center;
+width:100vw;
+
 `;
 
 const FirstCard = styled.div`
@@ -21,12 +25,12 @@ display:flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-background-color: #E8ECF0;
+background-color: ${props=>props.first};
 height: 247px;
 width: 216px;
 z-index: 4;
 border-radius: 15px;
-left: 290px;
+left: 205px;
 position: relative;
 `;
 
@@ -35,13 +39,13 @@ const SecondCard = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
-background-color: #E67571;
+background-color: ${props=>props.second};
 height: 222px;
 width: 131px;
 border-radius: 15px;
 z-index: 2;
 position: relative;
-left: 50px;
+left: 30px;
 `;
 
 const FourthCard = styled.div`
@@ -68,7 +72,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 230px
+right: 220px;
 `;
 
 const FifthCard = styled.div`
@@ -81,7 +85,7 @@ width: 159px;
 border-radius: 15px;
 z-index: 1;
 position: relative;
-right: 250px
+right: 115px
 
 `;
 
@@ -93,16 +97,39 @@ color: #26325B;
 margin-left:10px;
 `;
 
+const LeftDot = styled.div`
+display:flex;
+position:relative;
+left: -30px;
+`;
+
+const RightDot = styled.div`
+display:flex;
+position:relative;
+right: -5px;
+`;
 
 
-const Card = () => {
 
-    return <div>
-            <CardContainer>
-            <FirstCard>
+const Card = ({
+
+    // onLeftClick = () => {},
+    // onRightClick = () => {},
+    first="#E8ECF0",
+    second="#E67571"
+
+}) => {
+    // const [color, cardcolor] = useState ("#E8ECF0");
+    // cardcolor(first)
+    
+    return <CardContainer>
+            <FirstCard first={first}>
                 <BsEggFried size="100" color="#26325B"/>
             </FirstCard>
-            <SecondCard>
+            <LeftDot>
+            <IoMdArrowDropleftCircle color="#E67571" />
+            </LeftDot>
+            <SecondCard second={second}>
                 <GiWaterDrop size="100" color="#26325B"/>
             </SecondCard>
             <FourthCard>
@@ -111,11 +138,13 @@ const Card = () => {
             <ThirdCard>
                 <GiForkKnifeSpoon size="100" color="#26235B" />
             </ThirdCard>
+            <RightDot>
+            <IoMdArrowDroprightCircle color="#E67571" />
+            </RightDot>
             <FifthCard>
                 <GiFruitBowl size="100" color="#26325B" />
             </FifthCard>
             </CardContainer>
-    </div>
 }
 
 export default Card;

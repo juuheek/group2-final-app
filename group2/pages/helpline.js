@@ -1,84 +1,135 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '../comps/NavyButton';
-import MinWhitebg from '../comps/WhiteBG';
+import React, {useState} from 'react';
+import styled, { keyframes } from 'styled-components';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import Helpline from '../comps/helpline';
 import NavyButton from '../comps/NavyButton';
-import CircleImg from '../comps/circleimg';
-import {RiStethoscopeLine} from 'react-icons/ri'
+import BottomMenu from '../comps/BottomMenu'
+import ImgCarousel from '../comps/imgcarousel'
+import Card from '../comps/card'
+import Helplinev2 from '../comps/Helplinev2'
+import {FaHandsHelping} from 'react-icons/fa';
 import {useRouter} from 'next/router';
+import { motion } from "framer-motion"
+import { bounce, pulse, rotateInUpLeft } from 'react-animations'
+
 
 const MinChunCont = styled.div`
-  
-    background-color: ${props=>props.background};
-    width: 414px;
-    height: 896px;
     display:flex;
     flex-direction: column;
+    background-color: ${props=>props.background};
+    width: 100vw;
+    height: 100vh;
     align-items: center;
-    
+    justify-content: space-between;  
   
 `;
 
+const HelplineHeader = styled.p`
+    font-size: 30px;
+    color: #26325B;
+    font-weight: bold;
+`;
+
+const Helplinebody = styled.p`
+    font-size: 16px;
+    color: #26325B;
+`;
 
 const Mindiv = styled.div`
     margin-right: 300px;
     margin-top: 30px;
-`;
-
-const Mindiv2 = styled.div`
-  margin-top: 50px;
+    
+    
 `;
 
 const Mindiv3 = styled.div`
-  height: 201px;
-  width: 388px;
-  background-color: white;
-  border-radius: 15px;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 `;
 
-const HelplineHeader = styled.p`
-  font-size: 25px;
-  color: #E67571;
-  text-align: center;
+const Mindiv4 = styled.div`
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 414px;
+    justify-content: center;
+    
 `;
 
-const HelplineBody = styled.p`
-  font-size: 16px;
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  padding: 15px;
+const bounceAnimation = keyframes`${rotateInUpLeft}`;
+ 
+const BouncyDiv = styled.div`
+  animation: 2s ${bounceAnimation};
 `;
 
 
 
 export default function Result({
-  bgcolor = "#96ABB8"
+  bgcolor = "#FFDCDC"
 
 
 }) {
+  const [cardstate, setCardState] = useState(0);
+
+  const HandleClick = (num) => {
+    
+    setCardState(num)
+  }
   return (
     <MinChunCont background={bgcolor}>
       <Mindiv>
           <Back routeTo="/redresult" />
         </Mindiv>
-        <Mindiv2>
-        <CircleImg />
-        </Mindiv2>
-          <Mindiv3>
-            <HelplineHeader>EATING DISORDER</HelplineHeader>
-            <HelplineBody>Need to reach out to someone? Here are some resources  you can use to ask for help.</HelplineBody>
-          
-          </Mindiv3>
-          <Helpline />
+        <BouncyDiv>
+          <HelplineHeader><FaHandsHelping color="#E67571"/>Helpline</HelplineHeader>
 
+        </BouncyDiv>
+            
+        <Mindiv4>
+            <Helplinev2 
+              onCardClick = {()=> HandleClick(1)}
+              width={cardstate=== 1 ? 190 : 120}
+              height={cardstate=== 1 ? 160 : 80}
+              display={cardstate=== 1 ? "block" : "none"}
+              backgroundcolor={cardstate=== 1 ? "#E79B76" : "white"}
+            />
+            <Helplinev2
+              onCardClick = {()=> HandleClick(2) }
+              width={cardstate === 2 ? 190 : 120}
+              height={cardstate === 2 ? 160 : 80}
+              display={cardstate === 2 ? "block" : "none"}
+              backgroundcolor={cardstate === 2 ? "#E79B76" : "white"}
+              doctorname="Renew Eating Disorder"
+              address="2628 Granville St, Vancouver, BC V6H 4B4"
+              phone="604-261-0360"
+              />
+            <Helplinev2 
+              onCardClick = {()=> HandleClick(3) }
+              width={cardstate === 3 ? 190 : 120}
+              height={cardstate === 3 ? 160 : 80}
+              display={cardstate === 3 ? "block" : "none"}
+              backgroundcolor={cardstate === 3 ? "#E79B76" : "white"}
+              doctorname="North Fraser Eating Disorders"
+              address="3003 St Johns St, Port Moody, BC V3H 2C4"
+              phone="604-469-7600"
+              
+              />
+            <Helplinev2 
+              onCardClick = {()=> HandleClick(4) }
+              width={cardstate === 4 ? 190 : 120}
+              height={cardstate === 4 ? 160 : 80}
+              display={cardstate === 4 ? "block" : "none"}
+              backgroundcolor={cardstate === 4 ? "#E79B76" : "white"}
+              doctorname="Heemang Emotional Wellness"
+              address="1030 W Georgia St #1420, Vancouver, BC V6E 3M5"
+              phone="604-469-7600"
+              
+              
+              />
+            
+        </Mindiv4>
+      <BottomMenu />
     </MinChunCont>
+    
   )
 }

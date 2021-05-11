@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 
 const CauseCardCont = styled.div`
-  max-width:315px;
+width:315px;
   height:158px;
   display:flex;
   flex-direction:column;
@@ -12,6 +12,7 @@ const CauseCardCont = styled.div`
   align-items:center;
   background-color:#F6F6F6;
   border-radius:10px;
+  padding-top:15px;
 `;
 
 const TopText = styled.p`
@@ -40,15 +41,16 @@ const CauseCard = ({
   onLeftClick =()=>{},
   onRightClick=()=>{},
   toptext="Potential Causes",
-  bottomcausetext="Stressful transitions or life"
+  bottomcausetext="Stressful transitions or life",
+  imgurl="/causeicon.svg"
 }) => {
  
   return <CauseCardCont> 
-    <TopText>{toptext}</TopText>
+
     <MiddleIcons>
-      <CauseCardImg src="/navyleftarrow.svg" onClick={onLeftClick}/>
-      <CauseCardImg src="/causeicon.svg" />
-      <CauseCardImg src="/navyrightarrow.svg" onClick={onRightClick} />
+
+      <CauseCardImg src={imgurl} />
+    
     </MiddleIcons>
     <BottomText>{bottomcausetext}</BottomText>
   </CauseCardCont>  

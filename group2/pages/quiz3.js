@@ -6,15 +6,15 @@ import NavyButton from '../comps/NavyButton';
 import Button from '../comps/Quesbutton';
 import QuizNav from '../comps/QuizNav';
 import BulletPoints from '../comps/bullet';
+import React, {userstate} from 'react';
+import BottomMenu from '../comps/BottomMenu';
 
 const QuizPage = styled.div `
-    width: 414px;
-    height: 887px;
- 
-    background-color:#E8ECF0;
+    width: 100vw;
+   height: 100vh;
+    background-color:#96ABB8;
     display:flex;
     flex-direction: column;
-
     align-items: center;
  `;
 
@@ -25,12 +25,12 @@ const QuizPage = styled.div `
     font-size: 16px;
     line-height: 22px;
     text-align: center;
-    color: #000000;
+    color: #FFFFFF;
     padding: 20px;
 `;
 
  const Divider = styled.hr`
-    border: 0.5px solid #000000;
+    border: 0.5px solid #FFFFFF;
     margin: 30px;
     width: 298px;
  `;
@@ -47,7 +47,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-        margin-top:100px;
+width:414px;
+height:100vh;
 `;
 
 
@@ -67,14 +68,16 @@ export default function Quiz (){
         <Divider></Divider>
 
         <ButtonStyle>
-        <Button txt="YES"></Button>
+        <Button routeTo="/result" txt1="More than three"></Button>
         </ButtonStyle>
         <ButtonStyle>
-        <Button txt="NO"></Button>
+        <Button routeTo="/result" txt1="Less than two"></Button>
+        </ButtonStyle>
+        <ButtonStyle>
+        <Button routeTo="/result" txt1="None"></Button>
         </ButtonStyle>
 
-        <ButtonStyle><NavyButton routeTo="/redresult"></NavyButton></ButtonStyle>
         </BigDiv>
-
+        <BottomMenu/>
     </QuizPage>
 }

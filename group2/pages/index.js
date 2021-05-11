@@ -1,33 +1,62 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import MinWhitebg from '../comps/WhiteBG';
 import Textbox from '../comps/textbox';
 import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
 
 
 
+
 const GlianCont = styled.div`
-  display: flex;
+ 
+  width:100vw;
+  height:100vh;
+  ${'' /* background-color: #E8ECF0; */}
+
+	background: linear-gradient(-45deg, #E87E7A, #F8E8AE, #96ABB8);
+	background-size: 400% 400%;
+	animation: gradient 4s ease infinite;
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+`;
+const Div = styled.div`
+ display: flex;
   flex-direction: column;
-  width:414px;
-  height:896px;
-  background-color: #E8ECF0;
-
-
-  
+  justify-content:center;
+  align-items: center;
+  padding-top:350px;
 `;
 
-const TopRight = styled.img`
-margin-top: -25px;
-margin-left: -100px;
+const MinCont = styled.div`
+  .logo{
+    height: 150px;
+    height: 150px;
+  }
 
+  display: flex;
+  justify-content: center;
 `;
 
-const BottomRight = styled.img`
-margin-top: -150px;
-z-index:-100;
-`;
+// const TopRight = styled.img`
+
+// margin-left: -100px;
+
+// `;
+
+// const BottomRight = styled.img`
+// margin-top:70px;
+// z-index:3;
+// z-index:-100;
+// `;
 
 const Welcome = styled.p`
 
@@ -38,34 +67,38 @@ font-size: 36px;
 font-style: italic;
 margin-top:0px;
 `;  
+
 const Move = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
-
+z-index: 100;
 `;
 
-const Logo = styled.img`
-
-`;
 
 const Awareness = styled.p`
 
 Font-family: Montserrat;
-font-size: 23px;
+font-size: 18px;
 font-style: italic;
 text-align: center;
 `;
-
+const Logo = styled.img`
+`
+;
 export default function Glian(){
 
   return (
     <GlianCont>
-        <TopRight src="/Group147.svg"/>
-        <Welcome>Welcome To</Welcome>
-        <Logo src="/logo1.svg"/>
-        <Awareness>“raising awareness about eating disorders”
-</Awareness>
+        {/* <TopRight src="/Group147.svg"/> */}
+        {/* <Welcome>Welcome To</Welcome> */}
+        <Div>
+
+        <MinCont>
+        <Logo class="logo" src="/logo1.svg"/>
+        </MinCont>
+        <Awareness>“raising awareness about eating disorders”</Awareness>
+      
     <Move>
 
     <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
@@ -74,8 +107,9 @@ export default function Glian(){
       
       </Move>
 
-
-        <BottomRight src="/Group146.svg"/>
+      </Div>
+        {/* <BottomRight src="/Group146.svg"/> */}
+       
     </GlianCont>
   )
 
