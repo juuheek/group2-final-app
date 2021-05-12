@@ -3,15 +3,25 @@ import styled from 'styled-components';
 import Textbox from '../comps/textbox';
 import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
+import Logo from "../comps/Logo"
+
+//min try framer
+import ReactDOM from "react-dom";
+import { motion } from "framer-motion";
+// import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
+import { Pop } from "../src/pop";
+// import { Gesture } from "../src/gesture";
+// import { Toggle } from "../src/toggle";
+
 
 
 const GlianCont = styled.div`
  
   width:100vw;
   height:100vh;
-  background-color: #E8ECF0;
-  justify-content: space-between;
-	background: linear-gradient(-45deg, #FFBAB8, #F8E8AE, #E8ECF0);
+  ${'' /* background-color: #E8ECF0; */}
+
+	background: linear-gradient(-45deg, #E87E7A, #F8E8AE, #96ABB8);
 	background-size: 400% 400%;
 	animation: gradient 4s ease infinite;
   @keyframes gradient {
@@ -31,6 +41,7 @@ const Div = styled.div`
   flex-direction: column;
   justify-content:center;
   align-items: center;
+  padding-top:350px;
 `;
 
 const MinCont = styled.div`
@@ -43,17 +54,17 @@ const MinCont = styled.div`
   justify-content: center;
 `;
 
-const TopRight = styled.img`
+// const TopRight = styled.img`
 
-margin-left: -100px;
+// margin-left: -100px;
 
-`;
+// `;
 
-const BottomRight = styled.img`
-margin-top: -200px;
-z-index:3;
-z-index:-100;
-`;
+// const BottomRight = styled.img`
+// margin-top:70px;
+// z-index:3;
+// z-index:-100;
+// `;
 
 const Welcome = styled.p`
 
@@ -80,34 +91,41 @@ font-size: 18px;
 font-style: italic;
 text-align: center;
 `;
-const Logo = styled.img`
-`
-;
+
+
+
+
+
+
 export default function Glian(){
 
   return (
     <GlianCont>
-        <TopRight src="/Group147.svg"/>
+        {/* <TopRight src="/Group147.svg"/> */}
         {/* <Welcome>Welcome To</Welcome> */}
         <Div>
-
+      
         <MinCont>
-        <Logo class="logo" src="/logo1.svg"/>
+        <Logo />
         </MinCont>
         <Awareness>“raising awareness about eating disorders”</Awareness>
       
     <Move>
 
-    <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
+
+        <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer">
+        </NavyButton>
 
 
       
       </Move>
 
       </Div>
-        <BottomRight src="/Group146.svg"/>
-       
+        {/* <BottomRight src="/Group146.svg"/> */}
+
     </GlianCont>
   )
 
 }
+
+

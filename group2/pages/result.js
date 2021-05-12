@@ -53,6 +53,7 @@ const BouncyDiv = styled.div`
 
 const Userresult = {
   BMI1Meals1Habits1: <Redresult />,
+  BMI2Meals2Habits2: <Yellowresult />,
 
 }
 
@@ -65,9 +66,9 @@ useEffect (()=>{
   if(process.browser){
     var o = sessionStorage.getItem("options");
     var obj = JSON.parse(o);
-    var key = obj.BMI+obj.Meals+obj.Habits;
+    var key = "BMI"+obj.BMI+"Meals"+obj.Meals+"Habits"+obj.Habits;
 
-    // setKey(key); 
+    setKey(key); 
     console.log(key);
   }
 }, []);
@@ -78,7 +79,7 @@ useEffect (()=>{
           <Back routeTo="/quiz3"/>
         </Mindiv>
         <BouncyDiv>
-        {Userresult[key]}
+        {key !== null && Userresult[key]}
         </BouncyDiv>
 
           <BottomMenu/>
