@@ -12,6 +12,7 @@ import LeftArrow from '../comps/JuheeLeftArrow'
 import RightArrow from '../comps/JuheeRightArrow'
 import React, {useState} from 'react';
 import { motion, useViewportScroll } from "framer-motion"
+import TryPie from '../stories/index'
 
 
 
@@ -201,6 +202,7 @@ const HandleSymptomCard = (ind2) => {
       </JuheeDiv>
       <JuheeDiv>
         <PieChart degree={data[key].piedegree} text1={data[key].pietext1} percentage={data[key].piepercent} text2={data[key].pietext2} />
+        <TryPie/>
 
 
       </JuheeDiv>
