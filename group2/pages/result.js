@@ -57,6 +57,7 @@ const UserResult = {
   Normal2Lessthantwo: "Yellow Flag"
 
 }
+
 export default function Result(){
   const [options, setOptions] = useState({
 

@@ -58,7 +58,9 @@ const CtrlButtons = styled.div`
 
 const Carousel = ({
 
-    imgdata = default_data
+    imgdata = default_data,
+  
+
 }) => {
     const [ind, setInd] = useState(0);
     const [le, setLe] = useState(0);

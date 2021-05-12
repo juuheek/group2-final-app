@@ -10,33 +10,11 @@ import BottomMenu from '../comps/BottomMenu'
 import Carousel from '../comps/carousel'
 import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
-const default_data = [
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
 
-]
-const data = {
-  Anorexia:{
+const EdTitles = ["Anorexia", "Bulimia", "Orthorexia", "Binge Eating", "Excessive Exercise"]
 
+const Desc = [" is a psychological and potentially life-threatening eating disorder."," is a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.", "is a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups.","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. ", "Extreme behaviors can be a red flag indicating unhealthy behaviors."]
 
-  },
-
-  Bulimia:{
-
-  },
-  Orthorexia:{
-
-  },
-  Binge:{
-    
-  },
-  ExcessiveExercise:{
-    
-  },
-}
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -105,7 +83,7 @@ export default function Glian(){
         {/* <Cards></Cards> */}
         <Div>
 
-       <Carousel /> 
+       <Carousel onClick={(ind)=>setSubInd(ind)} /> 
         </Div>
         <Row>
 
@@ -116,7 +94,7 @@ export default function Glian(){
         <Dots></Dots>
 
         </Row>
-        <Greybg bold={textbold} text={textregular} routeTo="/resources" ></Greybg>
+        <Greybg bold={EdTitles[setSubInd]} text={Desc[setSubInd2]} routeTo="/resources" ></Greybg>
         <BottomMenu/>
     </GlianCont>
   )
