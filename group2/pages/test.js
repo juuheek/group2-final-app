@@ -9,6 +9,7 @@ import CircleImg from '../comps/circleimg';
 import BottomMenu from '../comps/BottomMenu'
 import {RiStethoscopeLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
+import { PieChart } from 'react-minimal-pie-chart';
 
 const MinChunCont = styled.div`
   
@@ -39,7 +40,9 @@ const Mindiv2 = styled.div`
 
 // `;
 
-
+const Div = styled.div`
+animation: ease-out;
+`;
 
 export default function Result({
   bgcolor = "#FFF"
@@ -52,9 +55,22 @@ export default function Result({
           <Back routeTo="/quiz3"/>
         </Mindiv>
           <MinYellowResult >
+     
 
           </MinYellowResult>
           <BottomMenu/>
+   
+          <Div>
+
+          <PieChart radius={20} 
+  data={[
+    { title: 'One', value: 85, color: '#E38627' },
+    { title: 'Two', value: 15, color: '#C13C37' },
+
+  ]}
+/>
+          </Div>
+
     </MinChunCont>
   )
 }

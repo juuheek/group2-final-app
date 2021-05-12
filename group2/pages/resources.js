@@ -11,6 +11,9 @@ import BottomMenu from '../comps/BottomMenu'
 import LeftArrow from '../comps/JuheeLeftArrow'
 import RightArrow from '../comps/JuheeRightArrow'
 import React, {useState} from 'react';
+import { motion, useViewportScroll } from "framer-motion"
+import ScrollEffect from "../comps/ScrollEffect";
+
 
 
 
@@ -160,6 +163,7 @@ const HandleSymptomCard = (ind2) => {
   return (
     <JuheeComps >
     
+   
     <JuheeCont bgcolor={data[key].bgcolor} >
       <NavBar 
 
@@ -174,6 +178,7 @@ const HandleSymptomCard = (ind2) => {
       onTxt5Click={()=>HandleExplanation("ExcessiveExercise")}  routeTo="/ed"/>
       
       <JuheeDiv>
+      <ScrollEffect/>
       <Whitebg  bold={data[key].explanation} text={data[key].explanationtext}/>
       </JuheeDiv>
       <JuheeDiv>
