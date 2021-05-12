@@ -11,10 +11,6 @@ import Carousel from '../comps/carousel'
 import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 
-const EdTitles = ["Anorexia", "Bulimia", "Orthorexia", "Binge Eating", "Excessive Exercise"]
-
-const Desc = [" is a psychological and potentially life-threatening eating disorder."," is a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.", "is a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups.","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. ", "Extreme behaviors can be a red flag indicating unhealthy behaviors."]
-
 const GlianCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,9 +42,15 @@ const Div = styled.div`
 margin:20px 0 20px 0;
 `;
 
+// array for grey box text
+const EdTitles = ["Anorexia", "Bulimia", "Orthorexia", "Binge Eating", "Excessive Exercise"]
+
+const Desc = [" is a psychological and potentially life-threatening eating disorder."," is a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.", "is a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups.","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. ", "Extreme behaviors can be a red flag indicating unhealthy behaviors."]
 
 
 export default function Glian(){
+  
+  // State 1 for switching to eating habits 
   const [textbold, toptextbold] = useState ("Anorexia Nervosa");
   const [textregular, bottomtextregular] = useState ("is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.");
   const [title, setTitle] = useState ("Eating Disorder Resources");
@@ -67,7 +69,10 @@ export default function Glian(){
     setColor(titlecolor)
     setColors(titlecolors)
   }
-  const [key, setKey] = useState ("Anorexia")
+
+
+
+  // state for grey box text
   const [sub_ind, setSubInd] = useState(0);
   const [sub_ind2, setSubInd2] = useState(0);
 
