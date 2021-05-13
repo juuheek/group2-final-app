@@ -207,7 +207,7 @@ const HandleSymptomCard = (ind2) => {
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>
-      <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/quiz1" />
+      <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/quizzes/BMI" />
       </JuheeDiv2>
       <JuheeDiv2>
       <NavyButton text="Get Help" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/helpline"/>
