@@ -41,7 +41,7 @@ const BottomMenu = ({
   <motion.div     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}><MenuImg2 onClick={()=>router.push("/ed")} src="/menu3.svg"  /></motion.div>
   <motion.div     whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}><MenuImg3 onClick={()=>router.push("/quiz1")} src="/menu4.svg"/></motion.div>
+    whileTap={{ scale: 0.9 }}><MenuImg3 onClick={()=>router.push("/quizzes/BMI")} src="/menu4.svg"/></motion.div>
   <motion.div     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}><MenuImg onClick={()=>router.push("/helpline")} src="/menu5.svg"/></motion.div>
 

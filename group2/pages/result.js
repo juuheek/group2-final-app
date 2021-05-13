@@ -66,7 +66,6 @@ useEffect (()=>{
     var o = sessionStorage.getItem("options");
     var obj = JSON.parse(o);
     var key = "BMI"+obj.BMI+"Meals"+obj.Meals+"Habits"+obj.Habits;
-
     setKey(key); 
     console.log(key);
   }

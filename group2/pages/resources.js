@@ -11,6 +11,9 @@ import BottomMenu from '../comps/BottomMenu'
 import LeftArrow from '../comps/JuheeLeftArrow'
 import RightArrow from '../comps/JuheeRightArrow'
 import React, {useState} from 'react';
+import { motion, useViewportScroll } from "framer-motion"
+
+
 
 
 
@@ -21,7 +24,7 @@ const data = {
     explanationtext:"a psychological and potentially life-threatening eating disorder. Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.",
     cause:["Thinness culture in media","Professions and careers that promote being thin","Family and childhood traumas"],
     symptom:["Extremely restrictive eating","Intensive/ excessive exercise","Extreme thinness"],
-    piedegree:"conic-gradient(#26325B 40deg, #E67571 0 235deg, #E67571 0)",
+    piedegree:40,
     pietext1:"Eating Disorders mortality rate is ",
     piepercent:"10-15%",
     pietext2:"which is the highest mortality rate of any mental illess",
@@ -36,7 +39,7 @@ const data = {
     explanationtext:"a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.",
     cause:["Stressful transitions or life changes","History of abuse or trauma","Negative body image"],
     symptom:["Chronically inflamed and sore throat ","Swollen salivary glands (by neck and jaw)","Reflux disorder/other gastrointestinal problems"],
-    piedegree:"conic-gradient(#26325B 110deg, #E67571 0 250deg, #E67571 0)",
+    piedegree:220,
     pietext1:"Up to",
     piepercent:"33-70%",
     pietext2:"of those who have bulimia also have an addictive disorder",
@@ -51,7 +54,7 @@ const data = {
     explanationtext:"a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups. Every person suffering with orthorexia has their own food preferences; foods they will eat and foods that they won’t. Orthorexics feel isolated from or superior to people who may consume a food they they themselves reject.",
     cause:["Past history of trauma","perfectionism tendencies","current or former eating disorders"],
     symptom:["An increase in concern about the health of ingredients","showing high levels of stress if “safe” or “healthy” food are not available,","inability to eat anything but a narrow group of foods deemed “pure” or “healthy”"],
-    piedegree:"conic-gradient(#26325B 90deg, #E67571 0 270deg, #E67571 0)",
+    piedegree:90,
     pietext1:"a study has found that",
     piepercent:"25%",
     pietext2:"of students attending university experience symptoms of orthorexia",
@@ -65,7 +68,7 @@ const data = {
     explanationtext:"is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. Binge eating episodes are typically classified as occurring on average a minimum of twice per week for a duration of six months.",
     cause:["Depression","The causes are unknown however genetics, biological factrs, long term dieting and psychological issues increase risk","The causes are unknown however genetics, biological factrs, long term dieting and psychological issues increase risk"],
     symptom:["Feeling that your eating behavior is out of control","out of control eating behavior","eating when full or not hungry"],
-    piedegree:"conic-gradient(#26325B 108deg, #E67571 0 252deg, #E67571 0)",
+    piedegree:108,
     pietext1:"Up to",
     piepercent:"30%",
     pietext2:"of those looking into weight loss treatments likely show symptoms of BED",
@@ -79,7 +82,7 @@ const data = {
     explanationtext:"Exercise and nutrition are foundational to good health, but extreme behaviors can be a red flag indicating unhealthy behaviors. Examples of this include excessive exercise, weight obsessions, bulimia, anorexia and binge eating disorders.",
     cause:["Physical 'burnout' ","body disphoris/body image disorder","unhealthy obsession/addiction with excercise"],
     symptom:["Feeling sore muscles or heavy limbs.","reducing other activites to make more time for exercising","inabiity to stick to reduced workout routines"],
-    piedegree:"conic-gradient(#26325B 144deg, #E67571 0 216deg, #E67571 0)",
+    piedegree:144,
     pietext1:"out of those who suffer from an eating disorder",
     piepercent:"40%",
     pietext2:"also suffer from compulsive exercise",
@@ -160,6 +163,7 @@ const HandleSymptomCard = (ind2) => {
   return (
     <JuheeComps >
     
+   
     <JuheeCont bgcolor={data[key].bgcolor} >
       <NavBar 
 
@@ -174,6 +178,7 @@ const HandleSymptomCard = (ind2) => {
       onTxt5Click={()=>HandleExplanation("ExcessiveExercise")}  routeTo="/ed"/>
       
       <JuheeDiv>
+
       <Whitebg  bold={data[key].explanation} text={data[key].explanationtext}/>
       </JuheeDiv>
       <JuheeDiv>
@@ -198,10 +203,11 @@ const HandleSymptomCard = (ind2) => {
         <PieChart degree={data[key].piedegree} text1={data[key].pietext1} percentage={data[key].piepercent} text2={data[key].pietext2} />
 
 
+
       </JuheeDiv>
       <JuheeDiv>
       <JuheeDiv2>
-      <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/quiz1" />
+      <NavyButton text="Self Diagnose" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/quizzes/BMI" />
       </JuheeDiv2>
       <JuheeDiv2>
       <NavyButton text="Get Help" bgcolor="transparent" color="#26325B" border="1px #26325B solid" routeTo="/helpline"/>
