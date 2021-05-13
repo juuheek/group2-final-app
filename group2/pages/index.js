@@ -5,13 +5,6 @@ import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
 import Logo from "../comps/Logo"
 
-//min try framer
-import ReactDOM from "react-dom";
-import { motion } from "framer-motion";
-// import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
-import { Pop } from "../src/pop";
-// import { Gesture } from "../src/gesture";
-// import { Toggle } from "../src/toggle";
 
 
 
