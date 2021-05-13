@@ -115,13 +115,6 @@ export default function Glian(){
 
       </Div>
         {/* <BottomRight src="/Group146.svg"/> */}
-<<<<<<< HEAD
-       
-    </GlianCont>
-  )
-
-}
-=======
 
     </GlianCont>
   )
@@ -129,4 +122,3 @@ export default function Glian(){
 }
 
 
->>>>>>> Min
