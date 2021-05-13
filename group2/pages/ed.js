@@ -74,7 +74,7 @@ export default function Glian(){
 
   // state for grey box text
   const [sub_ind, setSubInd] = useState(0);
-  const [sub_ind2, setSubInd2] = useState(0);
+  // const [sub_ind2, setSubInd2] = useState(0);
 
 
   
@@ -88,7 +88,7 @@ export default function Glian(){
         {/* <Cards></Cards> */}
         <Div>
 
-       <Carousel onClick={(ind)=>setSubInd(ind)} /> 
+       <Carousel onTitle={(ind)=>setSubInd(ind)} /> 
         </Div>
         <Row>
 
@@ -99,7 +99,7 @@ export default function Glian(){
         <Dots></Dots>
 
         </Row>
-        <Greybg bold={EdTitles[setSubInd]} text={Desc[setSubInd2]} routeTo="/resources" ></Greybg>
+        <Greybg bold={EdTitles[sub_ind]} text={Desc[sub_ind]} routeTo="/resources" ></Greybg>
         <BottomMenu/>
     </GlianCont>
   )

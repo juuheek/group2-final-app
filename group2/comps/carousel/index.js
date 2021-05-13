@@ -59,11 +59,12 @@ const CtrlButtons = styled.div`
 const Carousel = ({
 
     imgdata = default_data,
-  
+    onTitle =() => {},
 
 }) => {
     const [ind, setInd] = useState(0);
     const [le, setLe] = useState(0);
+
 
     const HandleImageChange = (i) => {
         if (i<0){
@@ -74,6 +75,7 @@ const Carousel = ({
             i = imgdata.length-1;
         }
 
+        onTitle(i);
         setInd(i);
     }
 
