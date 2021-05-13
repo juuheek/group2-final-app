@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 import ReactTimeout from 'react-timeout'
@@ -12,7 +12,7 @@ width: 200px;
 transition: width 0.5s, height 0.5s;
 background-color: #E67571;
 border-radius: 50%;
-background-image: ${props => props.degree};
+background-image: conic-gradient(#26325B ${props=>props.degree}deg, #E67571 0 235deg, #E67571 0);
 
 `;
 
@@ -48,7 +48,7 @@ const Pieh3 = styled.h3`
 
 
 const Piechart = ({
-    degree="conic-gradient(#26325B 40deg, #E67571 0 235deg, #E67571 0);",
+    degree=40,
     text1="Eating Disorders mortality rate is ",
     percentage="10-15%",
     text2="also suffer from compulsive exercise"
@@ -56,20 +56,31 @@ const Piechart = ({
 
 
 }) => {
-    const HandleClick = () => {
-        console.log("clicked")
-        var height= 0;
-        var width=0;
+
+    const [deg, setDeg] = useState(0)
+
+    useEffect(() => {
+     function Animate(num){
+        setDeg(num)
         setTimeout(()=>{
-            height=200,
-            width=200
-        },1000)
+            // setDeg(deg+1)
+            if (degree > num){
+                Animate(num+1)
+                
+            }
+        },30)
+     }
+     Animate(0)
+    }, [degree])
+
+    const HandleClick = () => {
+   
     }
 
     return <motion.div whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}>
         <Pieh3 onClick={HandleClick}> Click Me !</Pieh3>
-        <Circle degree={degree}><Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact> </Circle> 
+        <Circle degree={deg}><Fact>{text1}<Percentage>{percentage}</Percentage>{text2}</Fact> </Circle> 
     </motion.div>
 }
 
