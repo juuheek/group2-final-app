@@ -10,17 +10,17 @@ import BottomMenu from '../comps/BottomMenu';
 import BMI from '../comps/BMI';
 
 // import React, {userstate} from 'react';
-import React, {useState} from "react";
+import React, {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 
 const QuizPage1 = styled.div `
-    width: 100vw;
-    height: 100vh;
+    width: 414px;
+    height: 887px;
+    max-height: 887px;
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
     align-items: center;
- 
  `;
 
 const QuestionTxt = styled.p`
@@ -50,19 +50,10 @@ const ButtonStyle = styled.div `
 `;
 const BigDiv = styled.div`
 display:flex;
-width:414px;
-height:100vh;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-
-`;
-const BigDiv2 = styled.div`
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-
+margin:50px 0 50px 0;
 `;
 
 //if else shortcut: 1- {condition} ? value1 : value2
@@ -70,19 +61,70 @@ flex-direction:column;
 //apple=info
 //sub=BMIdef
 
-var BMIweight = null;
+var options ={
+    BMI:null,
+    Meals:null,
+    Habits:null,
+};
 
+var buttontexts = {
+    option1:"",
+    option2:"",
+    option3:"",
+}
 export default function Quiz (){
     
     //Quiz Data
     const router = useRouter();
+    const {type} = router.query;
+    const [key, setKey] = useState(null);
 
-    const HandleClick = (txt1) =>{
-        //alert(txt1);
-        BMIweight = txt1;
-        sessionStorage.setItem("BMI",BMIweight);
-        router.push("/quiz2")
+    if(type === "BMI" ){
+        buttontexts.option1 = "Underweight";
+        buttontexts.option2 = "Normal";
+        buttontexts.option3 = "Overweight";
+        buttontexts.option4 = "Obesity";
     }
+
+    if(type === "Meals" ){
+        buttontexts.option1 = "1";
+        buttontexts.option2 = "2";
+        buttontexts.option3 = "3";
+    }
+
+    if(type === "Habits" ){
+        buttontexts.option1 = "More than three";
+        buttontexts.option2 = "Less than two";
+        buttontexts.option3 = "None of it";
+    }
+
+
+
+    const HandleClick = (text) =>{
+        //alert(txt1);
+        if(type === "BMI" ){
+            options.BMI = text;
+        }
+    
+        if(type === "Meals" ){
+            options.Meals = text;
+        }
+    
+        if(type === "Habits" ){
+            options.Habits = text;
+        }
+        console.log(options);
+        sessionStorage.setItem("options", JSON.stringify,(options));
+    }
+
+    useEffect(() => {
+        if(process.browser){
+            var o = sessionStorage.getItem("options");
+            var obj = JSON.parse(o);
+            var key = obj.BMI+obj.Meals+obj.Habits;
+            console.log(key);
+        }
+    },[]);
 
     //IF WE WANT AND END BUTTON:
     // const HandleEnd = () =>{
@@ -96,6 +138,8 @@ export default function Quiz (){
     //     setBMIdef(BMIdeftexts.info.BMIdef);
     // }
 
+ 
+
     return <QuizPage1>
 
         <QuizNav Title="BMI"></QuizNav>
@@ -108,24 +152,13 @@ export default function Quiz (){
         <NavyButton  onClick={()=>window.open("https://www.calculator.net/bmi-calculator.html")} target="blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
         <Divider></Divider>
 
-        <ButtonStyle>
-        <Button txt1="Underweight" txt2="less than 18" onClick={()=>HandleClick("Underweight")} />
-        </ButtonStyle>
-        <ButtonStyle>
-        <Button txt1="Normal" txt2="18-24" onClick={()=>HandleClick("Normal")}/>
-        </ButtonStyle>
-        <ButtonStyle>
-        <Button txt1="Overweight" txt2="25-29" onClick={()=>HandleClick("Overweight")} />
-        </ButtonStyle>
-        <ButtonStyle>
-        <Button txt1="Obesity" txt2="30 or greater" onClick={()=>HandleClick("Obesity")}/>
-        </ButtonStyle>
+        <ButtonStyle><Button text1={buttontexts.option1} text2="less than 18" onClick={()=>HandleClick(buttontexts.option1)} /></ButtonStyle>
+        <ButtonStyle><Button text1={buttontexts.option2} text2="18-24" onClick={()=>HandleClick(buttontexts.option2)}/></ButtonStyle>
+        <ButtonStyle><Button text1={buttontexts.option3} text2="25-29" onClick={()=>HandleClick(buttontexts.option3)} /></ButtonStyle>
+        <ButtonStyle><Button text1={buttontexts.option4} text2="30 or greater" onClick={()=>HandleClick(buttontexts.option4)}/></ButtonStyle>
         {/* END BUTTON: <ButtonStyle><Button txtcolor="#FFFFFF" txt1="Submit" bgcolor="#26325B"  border="#26325B" onClick={HandleEnd} /></ButtonStyle> */}
         </BigDiv>
-        <BigDiv2>
-
         <BottomMenu/>
-        </BigDiv2>
 
 
     </QuizPage1>

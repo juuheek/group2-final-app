@@ -62,7 +62,9 @@ const NavyButton = ({
 
     <ButtonInput bg={bgcolor} textcolor={color} navyborder={border}>
     {icon} {text}
+    
     </ButtonInput>
+
     </ButtonCont>
     
   </motion.div>

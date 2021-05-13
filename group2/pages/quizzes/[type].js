@@ -11,7 +11,7 @@ import BMI from '../../comps/BMI';
 import BulletPoints from '../../comps/bullet';
 
 // import React, {userstate} from 'react';
-import React, {useState} from "react";
+import React, {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 
 const QuizPage1 = styled.div `
@@ -83,11 +83,13 @@ export default function Quiz (){
     //Quiz Data
     const router = useRouter();
     const {type} = router.query;
+    const [chosen, setChosen] = useState(0);
 
     if(type === "BMI" ){
         
         quizdata.question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight ";
         quizdata.option1 = "Underweight";
+        quizdata.option2 = "Normal";
         quizdata.option2 = "Normal";
         quizdata.option3 = "Overweight";
         quizdata.option4 = "Obesity";
@@ -127,7 +129,71 @@ export default function Quiz (){
         //RESULTS
     }
 
+    ///min - no need on this page. for history only
+    // useEffect(() => {
+    //     if (options[type]){
+    //       if (options[type].BMI === quizdata.option1) {
+    //         setChosen(1);
+    //       }
+    //       if (options[type] === quizdata.option2) {
+    //         setChosen(2);
+    //       }
+    //       if (options[type] === quizdata.option3) {
+    //         setChosen(3);
+    //       }
+    //       if (options[type] === quizdata.option4) {
+    //         setChosen(4);
+    //       }
+    //     } else {
+    //       setChosen(0);
+    //     }
+      
+      
+  
+    //   if (type === "Meals") {
+    //     if (options.coins === quizdata.option1) {
+    //       setChosen(1);
+    //     }
+    //     if (options.coins === quizdata.option2) {
+    //       setChosen(2);
+    //     }
+    //     if (options.coins === quizdata.option3) {
+    //       setChosen(3);
+    //     }
+    //   }
+    
+  
+    // if (type === "Habits") {
+    //   if (options.colors === quizdata.option1) {
+    //     setChosen(1);
+    //   }
+    //   if (options.colors === quizdata.option2) {
+    //     setChosen(2);
+    //   }
+    //   if (options.colors === quizdata.option3) {
+    //     setChosen(3);
+    //   }
+    // }
+    // }, [router.query]);
+///min
+
     const HandleClick = (text) =>{
+        if(quizdata.option1 ===text){
+            setChosen(1);
+          }
+    
+          if(quizdata.option2 ===text){
+            setChosen(2);
+          }
+    
+          if(quizdata.option3 ===text){
+            setChosen(3);
+          }
+
+          if(quizdata.option4 ===text){
+            setChosen(4);
+          }
+
         //alert(txt1);
         if(type === "BMI" ){
             options.BMI = text;
@@ -143,6 +209,13 @@ export default function Quiz (){
         console.log(options);
         sessionStorage.setItem("options", JSON.stringify(options));
         router.push(quizdata.routeTo)
+    
+        //min try
+
+        // var o = sessionStorage.getItem("options");
+        // var obj = JSON.parse(o);
+        // var key = obj.BMI+obj.Habits+obj.Meals;
+
     }
 
     //IF WE WANT AND END BUTTON:
@@ -169,11 +242,11 @@ export default function Quiz (){
         </Info> */}
         {quizdata.content}
         <Divider></Divider>
-        <ButtonStyle><Button text1={quizdata.option1} text2={quizdata.subtext1} onClick={()=>HandleClick(quizdata.option1)}/></ButtonStyle>
-        <ButtonStyle><Button text1={quizdata.option2} text2={quizdata.subtext2} onClick={()=>HandleClick(quizdata.option2)}/></ButtonStyle>
-        <ButtonStyle><Button text1={quizdata.option3} text2={quizdata.subtext3} onClick={()=>HandleClick(quizdata.option3)} /></ButtonStyle>
+        <ButtonStyle><Button text1={quizdata.option1} text2={quizdata.subtext1} onClick={()=>HandleClick(1)}/></ButtonStyle>
+        <ButtonStyle><Button text1={quizdata.option2} text2={quizdata.subtext2} onClick={()=>HandleClick(2)}/></ButtonStyle>
+        <ButtonStyle><Button text1={quizdata.option3} text2={quizdata.subtext3} onClick={()=>HandleClick(3)} /></ButtonStyle>
         {
-            quizdata.option4 !== null && <ButtonStyle><Button text1={quizdata.option4} text2={quizdata.subtext4} onClick={()=>HandleClick(quizdata.option4)}/></ButtonStyle>
+            quizdata.option4 !== null && <ButtonStyle><Button text1={quizdata.option4} text2={quizdata.subtext4} onClick={()=>HandleClick(4)}/></ButtonStyle>
         }
         {/* END BUTTON: <ButtonStyle><Button txtcolor="#FFFFFF" txt1="Submit" bgcolor="#26325B"  border="#26325B" onClick={HandleEnd} /></ButtonStyle> */}
         </BigDiv>

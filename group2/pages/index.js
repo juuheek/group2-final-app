@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Textbox from '../comps/textbox';
 import Start from '../comps/NavyButton';
 import NavyButton from '../comps/NavyButton'
+import Logo from "../comps/Logo"
 
 
 
@@ -83,9 +84,12 @@ font-size: 18px;
 font-style: italic;
 text-align: center;
 `;
-const Logo = styled.img`
-`
-;
+
+
+
+
+
+
 export default function Glian(){
 
   return (
@@ -93,15 +97,17 @@ export default function Glian(){
         {/* <TopRight src="/Group147.svg"/> */}
         {/* <Welcome>Welcome To</Welcome> */}
         <Div>
-
+      
         <MinCont>
-        <Logo class="logo" src="/logo1.svg"/>
+        <Logo />
         </MinCont>
         <Awareness>“raising awareness about eating disorders”</Awareness>
       
     <Move>
 
-    <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer"/>
+
+        <NavyButton onClick={()=>{console.log("click")}} text="Get Started" bgcolor="transparent" color="#26325B" border="1px #26325B solid" icon="" routeTo="/disclaimer">
+        </NavyButton>
 
 
       
@@ -109,8 +115,10 @@ export default function Glian(){
 
       </Div>
         {/* <BottomRight src="/Group146.svg"/> */}
-       
+
     </GlianCont>
   )
 
 }
+
+
