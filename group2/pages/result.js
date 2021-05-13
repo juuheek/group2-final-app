@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../comps/NavyButton';
-import RedResult from '../comps/Redresult';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import NavyButton from '../comps/NavyButton';
@@ -47,56 +46,43 @@ const Mindiv2 = styled.div`
 // `;
 
 const bounceAnimation = keyframes`${fadeIn}`;
-
 const BouncyDiv = styled.div`
   animation: 5s ${bounceAnimation};
 `;
 
-const UserResult = {
-  Underweighgt1Morethanthree: "Red Flag",
-  Normal2Lessthantwo: "Yellow Flag"
+
+const Userresult = {
+  BMI1Meals1Habits1: <Redresult />,
+  BMI2Meals2Habits2: <Yellowresult />,
 
 }
 
-export default function Result(){
-  const [options, setOptions] = useState({
+export default function Result({
+  bgcolor = "#FFF",
 
-    BMI:null,
-    Meals:null,
-    Habits:null
-}
-  
-  );
-
-const [text, setText] = useState("Red Flag");
-
+}){
+  const [key, setKey] = useState(null);
 useEffect (()=>{
   if(process.browser){
     var o = sessionStorage.getItem("options");
-    setOptions(JSON.parse(o));
-
     var obj = JSON.parse(o);
-    var key = obj.BMI+obj.Meals+obj.Habits;
-
-    if(UserResult[key]){
-      setText(UserResult[key])
-    }
+    var key = "BMI"+obj.BMI+"Meals"+obj.Meals+"Habits"+obj.Habits;
+    setKey(key); 
     console.log(key);
-   
   }
 }, []);
 
   return (
-    <MinChunCont background="#FFF">
+    <MinChunCont background={bgcolor}>
       <Mindiv>
           <Back routeTo="/quiz3"/>
         </Mindiv>
         <BouncyDiv>
-          <Redresult flagcolor={text}/>
-
-       
+        {key !== null && Userresult[key]}
         </BouncyDiv>
+
           <BottomMenu/>
+          
     </MinChunCont>
 
   )
