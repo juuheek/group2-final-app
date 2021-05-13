@@ -49,12 +49,63 @@ const BouncyDiv = styled.div`
   animation: 5s ${bounceAnimation};
 `;
 
-
+//result data - min
 const Userresult = {
+  //bmi ~18.5
   BMI1Meals1Habits1: <Redresult />,
-  BMI2Meals2Habits2: <Yellowresult />,
+  BMI1Meals1Habits2: <Redresult />,
+  BMI1Meals1Habits3: <Yellowresult />,
 
+  BMI1Meals2Habits1: <Redresult />,
+  BMI1Meals2Habits2: <Yellowresult />,
+  BMI1Meals2Habits3: <Greenresult />,
+  
+  BMI1Meals3Habits1: <Yellowresult />,
+  BMI1Meals3Habits2: <Yellowresult />,
+  BMI1Meals3Habits3: <Greenresult />,
+
+  //bmi 18.5+
+  BMI2Meals1Habits1: <Redresult />,
+  BMI2Meals1Habits2: <Redresult />,
+  BMI2Meals1Habits3: <Yellowresult />,
+
+  BMI2Meals2Habits1: <Redresult />,
+  BMI2Meals2Habits2: <Yellowresult />,
+  BMI2Meals2Habits3: <Greenresult />,
+  
+  BMI2Meals3Habits1: <Yellowresult />,
+  BMI2Meals3Habits2: <Yellowresult />,
+  BMI2Meals3Habits3: <Greenresult />,
+
+  //bmi 25+
+
+  BMI3Meals1Habits1: <Redresult />,
+  BMI3Meals1Habits2: <Redresult />,
+  BMI3Meals1Habits3: <Yellowresult />,
+
+  BMI3Meals2Habits1: <Redresult />,
+  BMI3Meals2Habits2: <Yellowresult />,
+  BMI3Meals2Habits3: <Greenresult />,
+  
+  BMI3Meals3Habits1: <Redresult />,
+  BMI3Meals3Habits2: <Yellowresult />,
+  BMI3Meals3Habits3: <Greenresult />,
+
+  //bmi 30 + 
+
+  BMI4Meals1Habits1: <Redresult />,
+  BMI4Meals1Habits2: <Redresult />,
+  BMI4Meals1Habits3: <Yellowresult />,
+
+  BMI4Meals2Habits1: <Redresult />,
+  BMI4Meals2Habits2: <Yellowresult />,
+  BMI4Meals2Habits3: <Greenresult />,
+  
+  BMI4Meals3Habits1: <Redresult />,
+  BMI4Meals3Habits2: <Yellowresult />,
+  BMI4Meals3Habits3: <Greenresult />,
 }
+//result data end
 
 export default function Result({
   bgcolor = "#FFF",
