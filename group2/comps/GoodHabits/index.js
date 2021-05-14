@@ -6,7 +6,7 @@ import {GiWaterDrop} from 'react-icons/gi';
 import {GiMeat} from 'react-icons/gi';
 import {GiForkKnifeSpoon} from 'react-icons/gi';
 import {GiFruitBowl} from 'react-icons/gi';
-import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 const CardContainer = styled.div`
 margin-top: 17px;
