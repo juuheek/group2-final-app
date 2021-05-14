@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {FaHandsHelping} from 'react-icons/fa'
-import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 
 const HelplineInput = styled.div`
