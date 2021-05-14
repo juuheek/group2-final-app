@@ -1,6 +1,6 @@
 import React from 'react'; 
 import styled from 'styled-components';
-import {GiPlainCircle} from 'react-icons/Gi';
+import {GiPlainCircle} from 'react-icons/gi';
 
 const CarouselCont = styled.div`
 margin-top: 17px;
