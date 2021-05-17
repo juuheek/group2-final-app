@@ -18,6 +18,7 @@ const GlianCont = styled.div`
   height:100vh;
   background-color: white;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const Row = styled.div`
@@ -28,7 +29,6 @@ flex-direction:row;
 const BackDiv = styled.div`
 display:flex;
 position:relative;
-
 right:150px;
 top:20px;
 `;

@@ -32,6 +32,7 @@ const GlianCont = styled.div`
   height:100vh;
   background-color: white;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const Row = styled.div`
