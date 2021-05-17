@@ -122,14 +122,14 @@ export default function Result({
             <Helplinev2 
               onCardClick = {()=> HandleClick(1)}
               width={cardstate=== 1 ? 190 : 120}
-              height={cardstate=== 1 ? 160 : 80}
+              height={cardstate=== 1 ? 160 : 100}
               display={cardstate=== 1 ? "block" : "none"}
               backgroundcolor={cardstate=== 1 ? "#E79B76" : "white"}
             />
             <Helplinev2
               onCardClick = {()=> HandleClick(2) }
               width={cardstate === 2 ? 190 : 120}
-              height={cardstate === 2 ? 160 : 80}
+              height={cardstate === 2 ? 160 : 100}
               display={cardstate === 2 ? "block" : "none"}
               backgroundcolor={cardstate === 2 ? "#E79B76" : "white"}
               doctorname="Renew Eating Disorder"
@@ -139,7 +139,7 @@ export default function Result({
             <Helplinev2 
               onCardClick = {()=> HandleClick(3) }
               width={cardstate === 3 ? 190 : 120}
-              height={cardstate === 3 ? 160 : 80}
+              height={cardstate === 3 ? 160 : 100}
               display={cardstate === 3 ? "block" : "none"}
               backgroundcolor={cardstate === 3 ? "#E79B76" : "white"}
               doctorname="North Fraser Eating Disorders"
@@ -150,7 +150,7 @@ export default function Result({
             <Helplinev2 
               onCardClick = {()=> HandleClick(4) }
               width={cardstate === 4 ? 190 : 120}
-              height={cardstate === 4 ? 160 : 80}
+              height={cardstate === 4 ? 160 : 100}
               display={cardstate === 4 ? "block" : "none"}
               backgroundcolor={cardstate === 4 ? "#E79B76" : "white"}
               doctorname="Heemang Emotional Wellness"
