@@ -45,7 +45,7 @@ margin:20px 0 20px 0;
 // array for grey box text
 const EdTitles = ["Anorexia", "Bulimia", "Orthorexia", "Binge Eating", "Excessive Exercise"]
 
-const Desc = [" is a psychological and potentially life-threatening eating disorder."," is a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.", "is a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups.","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. ", "Extreme behaviors can be a red flag indicating unhealthy behaviors."]
+const Desc = [" is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type."," is a psychological and severe life-threatening eating disorder described by the ingestion of an abnormally large amount of food in short time period, followed by an attempt to avoid gaining weight by purging what was consumed.", "is a common co-occurring eating disorder. It is characterized by a fixation or desire to eat only “healthy” foods, or to avoid entire food groups.","is commonly known by compulsive overeating or consuming abnormal amounts of food while feeling unable to stop and a loss of control. ", "Extreme behaviors can be a red flag indicating unhealthy behaviors."]
 
 
 export default function Glian(){
@@ -83,12 +83,12 @@ export default function Glian(){
     <BackDiv>
     <Back routeTo="/disclaimer"/>
     </BackDiv>
-        <Titles onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources", "#E67571","26325B")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources", "#26325B", "#E67571")} edcolor={edcolor} ehcolor={ehcolor}></Titles>
+        <Titles first="/ed" second="/goodandbad" edcolor={edcolor} ehcolor={ehcolor}></Titles>
         
         {/* <Cards></Cards> */}
         <Div>
 
-       <Carousel onTitle={(ind)=>setSubInd(ind)} imgdata={Imgs} /> 
+       <Carousel onTitle={(ind)=>setSubInd(ind)}  /> 
         </Div>
         <Row>
 

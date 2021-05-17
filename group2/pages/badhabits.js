@@ -19,27 +19,8 @@ const default_data = [
   "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
 
 ]
-const data = {
-Anorexia:{
 
-
-},
-
-Bulimia:{
-
-},
-Orthorexia:{
-
-},
-Binge:{
-  
-},
-ExcessiveExercise:{
-  
-},
-}
-
-const GoodTitles = ["Eating Too Quickly","Endless Snacking","Distracted Eating", "Exercise on an Empty Stomach", "Not Drinking Enough Fluids"   ]
+const badTitles = ["Eating Too Quickly","Endless Snacking","Distracted Eating", "Exercise on an Empty Stomach", "Not Drinking Enough Fluids"   ]
 
 
 const GlianCont = styled.div`
@@ -75,8 +56,8 @@ margin:20px 0 20px 0;
 export default function Glian(){
   const [textbold, toptextbold] = useState ("Maintaining a Balanced Diet");
   const [title, setTitle] = useState ("Good Eating Habits");
-  const [edcolor, setColor] = useState ("#E67571");
-  const [ehcolor, setColors] = useState ("#26325b");
+  const [edcolor, setColor] = useState ("#26325b");
+  const [ehcolor, setColors] = useState ("#E67571");
 
   const HandleText = (
     boldtxt="Maintaining a Balanced Diet",
@@ -92,14 +73,13 @@ export default function Glian(){
   }
 
   const [sub_ind, setSubInd] = useState(0);
-  const [trub_ind, setSubIImg] = useState(0);
   return (
     <GlianCont>
         <BackDiv>
         <Back routeTo="/disclaimer"></Back>
     </BackDiv>
 
-        <Titles txt1="Good Eating Habits"  txt2="Bad Eating Habits " onLeftClick={()=>HandleText("Maintaining a Balanced Diet","Good Eating Habits","#E67571","#26325B")} onRightClick={()=>HandleText("Emotional Eating","Bad Eating Habits","#26325B","#E67571")} edcolor={edcolor} ehcolor={ehcolor}>
+        <Titles txt1="Good Eating Habits"  txt2="Bad Eating Habits "edcolor={edcolor} ehcolor={ehcolor}>
 
         </Titles>
         
@@ -112,7 +92,7 @@ export default function Glian(){
       
 
         </Row>
-        <Greybg bold={GoodTitles[sub_ind]}></Greybg>
+        <Greybg bold={badTitles[sub_ind]}></Greybg>
         <BottomMenu/>
 
 

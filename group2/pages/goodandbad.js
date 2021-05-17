@@ -1,20 +1,26 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import Whitebg from '../comps/JuheeGreybg';
 import Textbox from '../comps/textbox';
 import Back from '../comps/back';
 import Resources from '../comps/navigationpage';
 import Cards from '../comps/GoodHabits';
 import Dots from '../comps/imgcarousel';
-import Greybg from '../comps/Habits';
 import Titles from '../comps/Titles';
 import BottomMenu from '../comps/BottomMenu';
-import GoodCarousel from '../comps/goodcarousel';
+import GoodBadCarousel from '../comps/GoodBad';
+import Greybg from '../comps/JuheeOtherGreybg';
 
 
-// const ImgsArr= Imgs.split(',');
+const default_data = [
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
 
-const GoodTitles = ["Maintain a Balanced Diet","Have at Least 6-8 Glasses of Water","Have at Least 3 Meals a Day", "Protein on a Daily Basis", "Fruits and Vegetables on a Daily Basis"]
+]
+
+const badTitles = ["Good Habits","Bad Habits"   ]
 
 
 const GlianCont = styled.div`
@@ -50,8 +56,8 @@ margin:20px 0 20px 0;
 export default function Glian(){
   const [textbold, toptextbold] = useState ("Maintaining a Balanced Diet");
   const [title, setTitle] = useState ("Good Eating Habits");
-  const [edcolor, setColor] = useState ("#E67571");
-  const [ehcolor, setColors] = useState ("#26325b");
+  const [edcolor, setColor] = useState ("#26325b");
+  const [ehcolor, setColors] = useState ("#E67571");
 
   const HandleText = (
     boldtxt="Maintaining a Balanced Diet",
@@ -66,30 +72,27 @@ export default function Glian(){
     setColors(titlecolors)
   }
 
-const [sub_ind, setSubInd] = useState(0);
-  // const [newCards, theCards] = useState(0)
-  // const [sub_ind2, setSubInd2] = useState(0);
-
+  const [sub_ind, setSubInd] = useState(0);
   return (
     <GlianCont>
         <BackDiv>
         <Back routeTo="/disclaimer"></Back>
     </BackDiv>
 
-        <Titles  txt1="Good Eating Habits"  txt2="Bad Eating Habits " edcolor={edcolor} ehcolor={ehcolor}>
+        <Titles first="/ed" second="/goodandbad" txt1="Eating Disorders"  txt2="Eating Habits "edcolor={edcolor} ehcolor={ehcolor}>
 
         </Titles>
         
         <Div>
 
-       <GoodCarousel onTitle={(ind)=>setSubInd(ind)}/> 
+       <GoodBadCarousel onTitle={(ind)=>setSubInd(ind)} /> 
         </Div>
         <Row>
 
-        
+      
 
         </Row>
-        <Greybg bold={GoodTitles[sub_ind]}></Greybg>
+        <Greybg bold={badTitles[sub_ind]} text="" routeTo="/habits"></Greybg>
         <BottomMenu/>
 
 

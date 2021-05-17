@@ -4,11 +4,8 @@ import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io'
 
 
 const default_data = [
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1621238713/Group_228_pbxitx.png",
+    "https://res.cloudinary.com/dlzk0payu/image/upload/v1621238730/Group_230_bexlaf.png"
 
 ]
 
@@ -59,7 +56,10 @@ padding:20px;
 
 const Carousel = ({
     imgdata = default_data,
-    onTitle=()=>{},
+    onTitle = () => {},
+    onLeftCards = () =>{},
+    onRightCards = () =>{},
+
 }) => {
     const [ind, setInd] = useState(0);
     const [le, setLe] = useState(0);
@@ -72,7 +72,7 @@ const Carousel = ({
         if (i>imgdata.length-1){
             i = imgdata.length-1;
         }
-        
+
         onTitle(i);
         setInd(i);
     }

@@ -3,31 +3,14 @@ import styled from 'styled-components';
 import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 
-const default_data = {
-
-    badhabit: {
-     badimages: ["https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
-   ],
-   badtext: [
-    "Eating Too Quickly","Endless Snacking","Distracted Eating", "Exercise on an Empty Stomach", "Not Drinking Enough Fluids" 
-  ],
-  
-    },
-  
-  goodhabit: {
-    goodimages:[
+const default_data = [
     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710761/Group_211_zdoz3p.svg",
     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710812/Group_212_eqeb75.svg",
     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710534/Group_213_ak9og4.svg",
     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710855/Group_214_n6uce5.svg",
     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710879/Group_215_wq04q9.svg"
-  ],
-  goodtext: [
-    "Maintain a Balanced Diet","Have at Least 6-8 Glasses of Water","Have at Least 3 Meals a Day", "Protein on a Daily Basis", "Fruits and Vegetables on a Daily Basis"
-  ],
-  },
-  
-  }
+
+]
 
 // const Imgss = "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg";
 
@@ -88,7 +71,7 @@ padding:20px;
 `;
 
 const Carousel = ({
-    imgdata = default_data.goodimages,
+    imgdata = default_data,
     onTitle = () => {},
     onLeftCards = () =>{},
     onRightCards = () =>{},
@@ -106,6 +89,7 @@ const Carousel = ({
             i = imgdata.length-1;
         }
 
+        onTitle(i);
         setInd(i);
     }
 
