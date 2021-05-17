@@ -97,7 +97,9 @@ export default function Quiz (){
         quizdata.subtext2 = "19-25";
         quizdata.subtext3 = "26-30";
         quizdata.subtext4 = "Greater than 30";
-        quizdata.content = <NavyButton  onClick={()=>window.open("https://www.calculator.net/bmi-calculator.html", "_blank")} text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
+        quizdata.content1 = <Info onClick={() => setPopUp(true)}>  </Info>;
+        quizdata.content2 = <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
+        quizdata.content3 = <BMI trigger={popUp} ></BMI>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
     }
@@ -240,7 +242,11 @@ export default function Quiz (){
             {BMIdef === "nothing sub" && <BMI></BMI>}
             popup={BMIdef}
         </Info> */}
-        {quizdata.content}
+        
+        {quizdata.content1}
+        {quizdata.content2}
+        {quizdata.content3}
+
         <Divider></Divider>
         <ButtonStyle><Button text1={quizdata.option1} text2={quizdata.subtext1} onClick={()=>HandleClick(1)}/></ButtonStyle>
         <ButtonStyle><Button text1={quizdata.option2} text2={quizdata.subtext2} onClick={()=>HandleClick(2)}/></ButtonStyle>
