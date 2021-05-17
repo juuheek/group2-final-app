@@ -109,11 +109,7 @@ export default function Glian(){
         </Div>
         <Row>
 
-        <Dots></Dots>
-        <Dots></Dots>
-        <Dots></Dots>
-        <Dots></Dots>
-        <Dots></Dots>
+      
 
         </Row>
         <Greybg bold={GoodTitles[sub_ind]}></Greybg>

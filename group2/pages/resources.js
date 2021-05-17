@@ -148,7 +148,7 @@ const HandleCauseCard = (ind) => {
   if(ind > 2){
     ind=2;
   }
-  setSubInd(ind)
+  setSubInd(ind) 
 }
 const HandleSymptomCard = (ind2) => {
   if(ind2 < 0){

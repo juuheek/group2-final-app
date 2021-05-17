@@ -16,23 +16,29 @@ import GoodCarousel from '../comps/goodcarousel';
 
 const Bad = {
 
-  bad: ["https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
+  badhabit:  ["https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
 ],
-
-good:[
+goodhabit:[
   "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710761/Group_211_zdoz3p.svg",
   "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710812/Group_212_eqeb75.svg",
   "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710534/Group_213_ak9og4.svg",
   "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710855/Group_214_n6uce5.svg",
   "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710879/Group_215_wq04q9.svg"
-]
-  
+],
+goodtext: [
+  "Maintain a Balanced Diet","Have at Least 6-8 Glasses of Water","Have at Least 3 Meals a Day", "Protein on a Daily Basis", "Fruits and Vegetables on a Daily Basis"
+],
+
+badtext: [
+  "Eating Too Quickly","Endless Snacking","Distracted Eating", "Exercise on an Empty Stomach", "Not Drinking Enough Fluids" 
+],
+
 }
 
 
 // const ImgsArr= Imgs.split(',');
 
-const GoodTitles = ["Maintain a Balanced Diet","Have at Least 6-8 Glasses of Water","Have at Least 3 Meals a Day", "Protein on a Daily Basis", "Fruits and Vegetables on a Daily Basis"   ]
+const GoodTitles = ["Maintain a Balanced Diet","Have at Least 6-8 Glasses of Water","Have at Least 3 Meals a Day", "Protein on a Daily Basis", "Fruits and Vegetables on a Daily Basis"]
 
 
 const GlianCont = styled.div`
@@ -100,7 +106,7 @@ export default function Glian(){
 
     setIndd(ind1)
 }
-const [key, setKey] = useState("good")
+const [key, setKey] = useState("goodhabit")
 const [indd, setIndd] = useState(0);
 const [sub_ind, setSubInd] = useState(0);
   // const [newCards, theCards] = useState(0)
@@ -112,13 +118,13 @@ const [sub_ind, setSubInd] = useState(0);
         <Back routeTo="/disclaimer"></Back>
     </BackDiv>
 
-        <Titles onLeftClick={()=>Habits("good")} onRightClick={()=>Habits("bad")}  txt1="Good Eating Habits"  txt2="Bad Eating Habits " edcolor={edcolor} ehcolor={ehcolor}>
+        <Titles onLeftClick={()=>Habits("goodhabit","goodtext")} onRightClick={()=>Habits("badhabit","badtext")}  txt1="Good Eating Habits"  txt2="Bad Eating Habits " edcolor={edcolor} ehcolor={ehcolor}>
 
         </Titles>
         
         <Div>
 
-       <GoodCarousel onTitle={(ind)=>setSubInd(ind)} imgdata={Bad[key]} /> 
+       <GoodCarousel onLeftCards={()=>ImageChange(indd-1)} onRightCards={()=>ImageChange(indd+1)} onTitle={(ind)=>setSubInd(ind)} imgdata={Bad[key]} /> 
         </Div>
         <Row>
 
