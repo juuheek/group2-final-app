@@ -12,7 +12,7 @@ import {FaHandsHelping} from 'react-icons/fa';
 import {useRouter} from 'next/router';
 import { motion } from "framer-motion"
 import { bounce, pulse, rotateInUpLeft } from 'react-animations'
-
+import Whitebg from "../comps/JuheeWhitebg"
 
 const MinChunCont = styled.div`
     display:flex;
@@ -43,23 +43,39 @@ const Mindiv = styled.div`
     
 `;
 
-const Mindiv3 = styled.div`
-
-`;
 
 const Mindiv4 = styled.div`
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-width: 414px;
-    justify-content: center;
-    
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-width: 414px;
+justify-content: center;
+
 `;
 
+const Mindiv3 = styled.div`
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+`;
+
+const Header = styled.p`
+  color: #E67571;
+  font-size: 25px;
+  font-weight: 500;
+`;
+
+const Body = styled.p`
+font-size: 16px;
+`;
 const bounceAnimation = keyframes`${rotateInUpLeft}`;
- 
+
 const BouncyDiv = styled.div`
-  animation: 2s ${bounceAnimation};
+animation: 2s ${bounceAnimation};
 `;
 
 
@@ -84,7 +100,10 @@ export default function Result({
           <HelplineHeader><FaHandsHelping color="#E67571"/>Helpline</HelplineHeader>
 
         </BouncyDiv>
-            
+        <Mindiv3>
+          <Header>Eating Disorder</Header>
+          <Body>Need to reach out to someone? Click on the cards below to seek help.</Body>
+        </Mindiv3>
         <Mindiv4>
             <Helplinev2 
               onCardClick = {()=> HandleClick(1)}
