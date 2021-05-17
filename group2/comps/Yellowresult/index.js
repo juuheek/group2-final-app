@@ -63,7 +63,7 @@ const MinYellowResult = ({
     </MinDiv>
    
     <MinDiv>
-    <NavyButton text="Go Back to Home" routeTo="/helpline" />
+    <NavyButton text="Go Back to Home" routeTo="/ed" />
     </MinDiv>
   </MinWhitebgCont>
   </MinPageDiv>
