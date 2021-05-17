@@ -16,7 +16,7 @@ const GreybgCont = styled.div`
 `;
 
 const Greybgbold = styled.p`
-  font-weight: bold;
+   font-weight: bold;
   font-size:18px;
   color:#000;
 

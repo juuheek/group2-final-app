@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
+import {useState} from 'react';
+
+
 
 const TitleCont = styled.div`
     display: flex;
@@ -26,24 +30,29 @@ const EatingHabits = styled.div`
 `;
 
 const Titles = ({
-
-    onLeftClick = () => {},
-    onRightClick = () => {},
+    
     txt1="Eating Disorder",
     txt2="Eating Habits",
     edcolor="#E67571",
-    ehcolor="#26325B"
+    ehcolor="#26325B",
+    
+    onLeftClick = () => {},
+    onRightClick = () => {}
 
 }) => {
 
+    const router =useRouter();
     return <TitleCont>
 
-        <EatingDisorder edcolor={edcolor} onClick={onLeftClick}>{txt1}</EatingDisorder>
+        <EatingDisorder onClick={onLeftClick} edcolor={edcolor}>{txt1}</EatingDisorder>
 
-        <EatingHabits ehcolor={ehcolor} onClick={onRightClick}>{txt2}</EatingHabits>
+        <EatingHabits onClick={onRightClick} ehcolor={ehcolor}>{txt2}</EatingHabits>
 
     </TitleCont>
 
 }
 
-export default Titles
+export default Titles;
+
+// onClick={()=>router.push("/habits")}
+// onClick={()=>router.push("/badhabits")}

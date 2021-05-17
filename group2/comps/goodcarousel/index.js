@@ -3,14 +3,30 @@ import styled from 'styled-components';
 import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 
-const default_data = [
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710761/Group_211_zdoz3p.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710812/Group_212_eqeb75.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710534/Group_213_ak9og4.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710855/Group_214_n6uce5.svg",
-    "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710879/Group_215_wq04q9.svg"
+const default_data = {
+  
+  imgs:  [
+        "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710761/Group_211_zdoz3p.svg",
+        "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710812/Group_212_eqeb75.svg",
+        "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710534/Group_213_ak9og4.svg",
+        "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710855/Group_214_n6uce5.svg",
+        "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710879/Group_215_wq04q9.svg"
+    ],
+        
+} 
 
-]
+// const Imgss = "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg,https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg";
+
+// const ImgsArrr = Imgss.split(",");
+
+// const Imgs = [
+//     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg",
+//     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg",
+//     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg",
+//     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg",
+//     "https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
+
+// ]
 
 const Cont = styled.div`
     display: inline-flex;
@@ -58,7 +74,9 @@ padding:20px;
 `;
 
 const Carousel = ({
-    imgdata = default_data
+    imgdata = default_data.imgs,
+    onTitle = () => {},
+    onCards = () =>{},
 }) => {
     const [ind, setInd] = useState(0);
     const [le, setLe] = useState(0);
@@ -71,7 +89,8 @@ const Carousel = ({
         if (i>imgdata.length-1){
             i = imgdata.length-1;
         }
-
+        onTitle(i);
+        // onCards(i);
         setInd(i);
     }
 
@@ -87,7 +106,7 @@ const Carousel = ({
             {imgdata.map((o,i)=><Card 
             dim={i===ind ? 120: 110}
             hdim={i===ind ? 150 : 130}
-            op={i===ind ? 1 : 1}
+            op={i===ind ? 1 : 0.8}
             z={i===ind ? imgdata.length+1 : imgdata.length - 1}
             left={(i*-100)+10}
             src={o} 

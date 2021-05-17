@@ -11,33 +11,28 @@ import Titles from '../comps/Titles';
 import BottomMenu from '../comps/BottomMenu';
 import GoodCarousel from '../comps/goodcarousel';
 
-const default_data = [
-  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
-  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
-  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
-  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
-  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
 
+
+
+const Bad = {
+
+  bad: ["https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
+],
+
+good:[
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710761/Group_211_zdoz3p.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710812/Group_212_eqeb75.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710534/Group_213_ak9og4.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710855/Group_214_n6uce5.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620710879/Group_215_wq04q9.svg"
 ]
-const data = {
-Anorexia:{
-
-
-},
-
-Bulimia:{
-
-},
-Orthorexia:{
-
-},
-Binge:{
   
-},
-ExcessiveExercise:{
-  
-},
 }
+
+
+// const ImgsArr= Imgs.split(',');
+
+const GoodTitles = ["Maintain a Balanced Diet","Have at Least 6-8 Glasses of Water","Have at Least 3 Meals a Day", "Protein on a Daily Basis", "Fruits and Vegetables on a Daily Basis"   ]
 
 
 const GlianCont = styled.div`
@@ -87,20 +82,43 @@ export default function Glian(){
     setTitle(titletxt)
     setColor(titlecolor)
     setColors(titlecolors)
+
+
   }
+
+  const Habits = (k) =>{
+    setKey(k);
+    }
+
+  const ImageChange = (ind1) => {
+    if (ind1<0){
+        ind1=0;
+    }
+    if(ind1>2){
+        ind1=2;
+    }
+
+    setIndd(ind1)
+}
+const [key, setKey] = useState("good")
+const [indd, setIndd] = useState(0);
+const [sub_ind, setSubInd] = useState(0);
+  // const [newCards, theCards] = useState(0)
+  // const [sub_ind2, setSubInd2] = useState(0);
+
   return (
     <GlianCont>
         <BackDiv>
         <Back routeTo="/disclaimer"></Back>
     </BackDiv>
 
-        <Titles txt1="Good Eating Habits"  txt2="Bad Eating Habits " onLeftClick={()=>HandleText("Maintaining a Balanced Diet","Good Eating Habits","#E67571","#26325B")} onRightClick={()=>HandleText("Emotional Eating","Bad Eating Habits","#26325B","#E67571")} edcolor={edcolor} ehcolor={ehcolor}>
+        <Titles onLeftClick={()=>Habits("good")} onRightClick={()=>Habits("bad")}  txt1="Good Eating Habits"  txt2="Bad Eating Habits " edcolor={edcolor} ehcolor={ehcolor}>
 
         </Titles>
         
         <Div>
 
-       <GoodCarousel /> 
+       <GoodCarousel onTitle={(ind)=>setSubInd(ind)} imgdata={Bad[key]} /> 
         </Div>
         <Row>
 
@@ -111,7 +129,7 @@ export default function Glian(){
         <Dots></Dots>
 
         </Row>
-        <Greybg bold={textbold}></Greybg>
+        <Greybg bold={GoodTitles[sub_ind]}></Greybg>
         <BottomMenu/>
 
 
@@ -121,3 +139,6 @@ export default function Glian(){
     </GlianCont>
   )
 }
+
+// onRightClick={()=>ImageChange(indd+1)}
+// onLeftClick={()=>ImageChange(indd-1)} 
