@@ -22,6 +22,8 @@ const default_data = [
 
 const badTitles = ["Good Habits","Bad Habits"   ]
 
+const text = ["Healthy eating is more than the foods you eat. It is also about where, when, why and how you eat.","Nighttime snacking, emotional eating, junk-food binges — sound familiar? Break these common bad eating habits"]
+
 
 const GlianCont = styled.div`
   display: flex;
@@ -92,7 +94,7 @@ export default function Glian(){
       
 
         </Row>
-        <Greybg bold={badTitles[sub_ind]} text="" routeTo="/habits"></Greybg>
+        <Greybg bold={badTitles[sub_ind]} text={text[sub_ind]} routeTo="/habits"></Greybg>
         <BottomMenu/>
 
 
