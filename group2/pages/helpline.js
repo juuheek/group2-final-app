@@ -17,7 +17,21 @@ import Whitebg from "../comps/JuheeWhitebg"
 const MinChunCont = styled.div`
     display:flex;
     flex-direction: column;
-    background-color: ${props=>props.background};
+
+    background: linear-gradient(-45deg, #E87E7A, #F8E8AE, #96ABB8);
+	background-size: 400% 400%;
+	animation: gradient 4s ease infinite;
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
     width: 100vw;
     height: 100vh;
     align-items: center;
