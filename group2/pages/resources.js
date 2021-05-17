@@ -55,7 +55,7 @@ const data = {
     cause:["Past history of trauma","perfectionism tendencies","current or former eating disorders"],
     symptom:["An increase in concern about the health of ingredients","showing high levels of stress if “safe” or “healthy” food are not available,","inability to eat anything but a narrow group of foods deemed “pure” or “healthy”"],
     piedegree:90,
-    pietext1:"a study has found that",
+    pietext1:"",
     piepercent:"25%",
     pietext2:"of students attending university experience symptoms of orthorexia",
     bgcolor:"#FFC1C2",
