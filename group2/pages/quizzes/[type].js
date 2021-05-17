@@ -14,12 +14,15 @@ import BulletPoints from '../../comps/bullet';
 import React, {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 
+
 const QuizPage1 = styled.div `
     background-color:#96ABB8;
     display:flex;
     flex-direction: column;
     align-items: center;
-    ${'' /* height:900px; */}
+    width:100vw;
+    min-width:414px;
+    height:100%;
  `;
 
 const QuestionTxt = styled.p`
@@ -32,7 +35,7 @@ const QuestionTxt = styled.p`
     color: #FFFFFF;
     padding: 20px;
     margin-bottom: 0;
-    width:500px;
+    ${'' /* width:500px; */}
 `;
 
  const Divider = styled.hr`
@@ -51,12 +54,14 @@ const ButtonStyle = styled.div `
 const BigDiv = styled.div`
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:center; 
     flex-direction:column;
     margin:50px 0 50px 0;
-    ${'' /* height: 600px; */}
+    height: 600px;
 `;
+const Div = styled.div`
 
+`;
 
 var quizdata = {
     question:"",
@@ -88,7 +93,7 @@ export default function Quiz (){
  
 
     if(type === "BMI" ){
-        
+        quizdata.question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight ";        
         quizdata.question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight ";
         quizdata.option1 = "Underweight";
         quizdata.option2 = "Normal";
@@ -100,7 +105,7 @@ export default function Quiz (){
         quizdata.subtext3 = "26-30";
         quizdata.subtext4 = "Greater than 30";
         quizdata.content1 = <Info onClick={() => setPopUp(true)} >  </Info>;
-        quizdata.content3 = <BMI/>
+        quizdata.content3 = ""
         quizdata.content2 = <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
@@ -117,6 +122,9 @@ export default function Quiz (){
         quizdata.subtext1 = null;
         quizdata.subtext2 = null;
         quizdata.subtext3 = null;
+        quizdata.content1 = null;
+        quizdata.content2 = null;
+        quizdata.content3 = null;
         quizdata.routeTo = "/quizzes/Habits"
     }
 
@@ -130,6 +138,9 @@ export default function Quiz (){
         quizdata.subtext1 = null;
         quizdata.subtext2 = null;
         quizdata.subtext3 = null;
+        quizdata.content1 = null;
+        quizdata.content2 = null;
+        quizdata.content3 = null;
         quizdata.routeTo = "/result/"
         //RESULTS
     }
@@ -259,7 +270,11 @@ export default function Quiz (){
         }
         {/* END BUTTON: <ButtonStyle><Button txtcolor="#FFFFFF" txt1="Submit" bgcolor="#26325B"  border="#26325B" onClick={HandleEnd} /></ButtonStyle> */}
         </BigDiv>
+        <Div>
+
         <BottomMenu/>
+        </Div>
+        
 
 
     </QuizPage1>

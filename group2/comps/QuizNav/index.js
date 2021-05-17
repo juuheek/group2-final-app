@@ -19,6 +19,7 @@ const NavCont = styled.div`
    background-color: white;
    ${'' /* border: 1px solid black; */}
    width: 100vw;
+   min-width:414px;
    height: 117px;
    border-radius: 0 0 15px 15px;
 `;
