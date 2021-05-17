@@ -14,6 +14,7 @@ import BulletPoints from '../../comps/bullet';
 import React, {useState} from "react";
 import {useRouter} from 'next/router';
 
+
 const QuizPage1 = styled.div `
     width: 414px;
     height: 887px;
@@ -78,6 +79,7 @@ var options = {
     Habits:null,
 };
 
+
 export default function Quiz (){
     
     //Quiz Data
@@ -94,7 +96,9 @@ export default function Quiz (){
         quizdata.subtext2 = "19-25";
         quizdata.subtext3 = "26-30";
         quizdata.subtext4 = "Greater than 30";
-        quizdata.content = <NavyButton  onClick={()=>window.open("https://www.calculator.net/bmi-calculator.html")} target="blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
+        quizdata.content = 
+        <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>
+        //<NavyButton  onClick={()=>window.open("https://www.calculator.net/bmi-calculator.html", "_blank")} text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
     }
@@ -144,17 +148,8 @@ export default function Quiz (){
         router.push(quizdata.routeTo)
     }
 
-    //IF WE WANT AND END BUTTON:
-    // const HandleEnd = () =>{
-    //     sessionStorage.setItem("options",BMIweight);
-    // }
 
-
-    //POPUP FUNTION
-    // const [BMIdef, setBMIdef] = useState("more BMI");
-    // const HandleInfo = () =>{
-    //     setBMIdef(BMIdeftexts.info.BMIdef);
-    // }
+    const [popUp, setPopUp] = useState(false);    
 
     return <QuizPage1>
 
@@ -162,11 +157,12 @@ export default function Quiz (){
         <BigDiv>
 
         <QuestionTxt>{quizdata.question}</QuestionTxt>
-        {/* <Info onInfoClick={HandleInfo} >
-            {BMIdef === "nothing sub" && <BMI></BMI>}
-            popup={BMIdef}
-        </Info> */}
+
+        <Info onClick={() => setPopUp(true)}>  </Info>
+        <BMI trigger={popUp} ></BMI>
+
         {quizdata.content}
+        
         <Divider></Divider>
         <ButtonStyle><Button text1={quizdata.option1} text2={quizdata.subtext1} onClick={()=>HandleClick(quizdata.option1)}/></ButtonStyle>
         <ButtonStyle><Button text1={quizdata.option2} text2={quizdata.subtext2} onClick={()=>HandleClick(quizdata.option2)}/></ButtonStyle>
