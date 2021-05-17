@@ -10,7 +10,7 @@ const GreybgCont = styled.div`
   justify-content: space-between;
   align-items:center;
   background-color:${props=>props.color};
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 10px 10px;
 
 `;
 
