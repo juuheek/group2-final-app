@@ -15,7 +15,7 @@ import { motion, useViewportScroll } from "framer-motion"
 
 
 
-//just added for check-
+
 
 
 const data = {

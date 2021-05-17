@@ -42,8 +42,6 @@ const Div = styled.div`
 margin:20px 0 20px 0;
 `;
 
-const Imgs = ["https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
-]
 // array for grey box text
 const EdTitles = ["Anorexia", "Bulimia", "Orthorexia", "Binge Eating", "Excessive Exercise"]
 
@@ -76,7 +74,7 @@ export default function Glian(){
 
   // state for grey box text
   const [sub_ind, setSubInd] = useState(0);
-  const [sub_ind2, setSubInd2] = useState(0);
+  // const [sub_ind2, setSubInd2] = useState(0);
 
 
   
@@ -85,7 +83,7 @@ export default function Glian(){
     <BackDiv>
     <Back routeTo="/disclaimer"/>
     </BackDiv>
-        <Titles onCards={(imgdata)=>setSubInd2(imgdata)} onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources", "#E67571","26325B")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources", "#26325B", "#E67571")} edcolor={edcolor} ehcolor={ehcolor}></Titles>
+        <Titles onLeftClick={()=>HandleText("Anorexia Nervosa","is a psychological and potentially life-threatening eating disorder.Those suffering from this are typically suffering from an extremely low body weight relative to their height and body type.","Eating Disorders Resources", "#E67571","26325B")} onRightClick={()=>HandleText("Good Eating Habits","To maintain a generally healthy lifestyle, eating is important! It provides our body with the nutrients it needs to get through the day. Click below to read more on good eating habits you can start using yourself.","Eating Habits Resources", "#26325B", "#E67571")} edcolor={edcolor} ehcolor={ehcolor}></Titles>
         
         {/* <Cards></Cards> */}
         <Div>

@@ -58,9 +58,7 @@ padding:20px;
 `;
 
 const Carousel = ({
-    imgdata = default_data,
-    onTitle = () => {},
-    onCards = () =>{},
+    imgdata = default_data
 }) => {
     const [ind, setInd] = useState(0);
     const [le, setLe] = useState(0);
@@ -73,7 +71,7 @@ const Carousel = ({
         if (i>imgdata.length-1){
             i = imgdata.length-1;
         }
-        onTitle(i);
+
         setInd(i);
     }
 
@@ -89,7 +87,7 @@ const Carousel = ({
             {imgdata.map((o,i)=><Card 
             dim={i===ind ? 120: 110}
             hdim={i===ind ? 150 : 130}
-            op={i===ind ? 1 : 0.8}
+            op={i===ind ? 1 : 1}
             z={i===ind ? imgdata.length+1 : imgdata.length - 1}
             left={(i*-100)+10}
             src={o} 

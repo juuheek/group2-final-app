@@ -105,8 +105,7 @@ const Carousel = ({
         if (i>imgdata.length-1){
             i = imgdata.length-1;
         }
-        onTitle(i);
-        // onCards(i);
+
         setInd(i);
     }
 
@@ -122,7 +121,7 @@ const Carousel = ({
             {imgdata.map((o,i)=><Card 
             dim={i===ind ? 120: 110}
             hdim={i===ind ? 150 : 130}
-            op={i===ind ? 1 : 0.8}
+            op={i===ind ? 1 : 1}
             z={i===ind ? imgdata.length+1 : imgdata.length - 1}
             left={(i*-100)+10}
             src={o} 

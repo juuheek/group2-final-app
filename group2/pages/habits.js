@@ -11,10 +11,19 @@ import Titles from '../comps/Titles';
 import BottomMenu from '../comps/BottomMenu';
 import GoodCarousel from '../comps/goodcarousel';
 
+const default_data = [
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156416/Anorexia_kepvd8.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156492/Bullimia_t6vxoj.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620156606/Orthorexia_rag0py.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185177/Binge_ntekpv.svg",
+  "https://res.cloudinary.com/dlzk0payu/image/upload/v1620185223/Excessive_qbldkv.svg"
+
+]
+const data = {
+Anorexia:{
 
 
-
-const Bad = {
+},
 
   badhabit:  ["https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_221_haqiwc.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711850/Group_222_z4io5e.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_223_naufel.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_224_m3tqar.svg","https://res.cloudinary.com/dlzk0payu/image/upload/v1620711849/Group_225_xauk1t.svg"
 ],
@@ -88,8 +97,6 @@ export default function Glian(){
     setTitle(titletxt)
     setColor(titlecolor)
     setColors(titlecolors)
-
-
   }
 
   const Habits = (k) =>{
@@ -135,7 +142,7 @@ const [sub_ind, setSubInd] = useState(0);
         <Dots></Dots>
 
         </Row>
-        <Greybg bold={GoodTitles[sub_ind]}></Greybg>
+        <Greybg bold={textbold}></Greybg>
         <BottomMenu/>
 
 
@@ -145,6 +152,3 @@ const [sub_ind, setSubInd] = useState(0);
     </GlianCont>
   )
 }
-
-// onRightClick={()=>ImageChange(indd+1)}
-// onLeftClick={()=>ImageChange(indd-1)} 
