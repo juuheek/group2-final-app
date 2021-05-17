@@ -102,6 +102,7 @@ export default function Quiz (){
         quizdata.content3 = <BMI trigger={popUp} ></BMI>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
+        const [popUp, setPopUp] = useState(false);
     }
 
     if(type === "Meals" ){
