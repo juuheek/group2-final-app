@@ -99,10 +99,10 @@ export default function Quiz (){
         quizdata.subtext4 = "Greater than 30";
         quizdata.content1 = <Info onClick={() => setPopUp(true)}>  </Info>;
         quizdata.content2 = <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
-        quizdata.content3 = <BMI trigger={popUp} ></BMI>;
+        quizdata.content3 = <BMI ></BMI>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
-        const [popUp, setPopUp] = useState(false);
+        // const [popUp, setPopUp] = useState(false);
     }
 
     if(type === "Meals" ){

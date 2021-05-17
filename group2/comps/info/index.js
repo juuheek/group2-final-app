@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {AiOutlineInfoCircle} from 'react-icons/ai';
 
-const BMIinfo = styled.div`
+const BMIinfo = styled.div `
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 `;
 
@@ -10,10 +10,10 @@ const BMIinfo = styled.div`
 //"subtext" and translate it into the app
 
 const Info = ({
-  // popup=''
+  popup=''
 })=>{
     return <BMIinfo>
-        {/* {popup} */}
+        {popup}
         <AiOutlineInfoCircle size={40} style={{fill: '#F8E8AE'}}/>
     </BMIinfo>
   }
