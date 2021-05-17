@@ -1,6 +1,6 @@
 import React from 'react'; 
 import styled from 'styled-components';
-import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/Io';
+import {IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 
 const NavPageCont = styled.div`
   display:flex;
