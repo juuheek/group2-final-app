@@ -22,7 +22,7 @@ const QuizPage1 = styled.div `
     align-items: center;
     width:100vw;
     min-width:414px;
-    height:100%;
+    height:100vh;
  `;
 
 const QuestionTxt = styled.p`
@@ -47,7 +47,7 @@ const QuestionTxt = styled.p`
 const ButtonStyle = styled.div `
     width:144px;
     padding:15px;
-    display:flex;
+    display:flex;   
     justify-content: center;
     align-items: center;
     margin:0;
