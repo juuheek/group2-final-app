@@ -16,7 +16,7 @@ import {useRouter} from 'next/router';
 
 
 const QuizPage1 = styled.div `
-    background-color:#96ABB8;
+    background-color:#FFA579;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -106,7 +106,7 @@ export default function Quiz (){
         quizdata.subtext4 = "Greater than 30";
         quizdata.content1 = <Info onClick={() => setPopUp(true)} >  </Info>;
         quizdata.content3 = ""
-        quizdata.content2 = <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
+        quizdata.content2 = <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B"></NavyButton>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
 
