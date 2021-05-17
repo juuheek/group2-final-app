@@ -12,7 +12,7 @@ width: 200px;
 transition: width 0.5s, height 0.5s;
 background-color: #E67571;
 border-radius: 50%;
-background-image: conic-gradient(#26325B ${props=>props.degree}deg, #E67571 0 235deg, #E67571 0);
+background-image: conic-gradient(#E8ECF0 ${props=>props.degree}deg, #E67571 0 235deg, #E67571 0);
 
 `;
 
@@ -33,7 +33,7 @@ font-weight: normal;
 font-size: 16px;
 line-height: 18px;
 text-align: center;
-color: #FFFFFF;
+color:#26325B 
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 padding: 10px;
 `;
