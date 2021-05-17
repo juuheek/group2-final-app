@@ -88,15 +88,11 @@ export default function Glian(){
         {/* <Cards></Cards> */}
         <Div>
 
-       <Carousel onTitle={(ind)=>setSubInd(ind)} /> 
+       <Carousel onTitle={(ind)=>setSubInd(ind)} imgdata={Imgs} /> 
         </Div>
         <Row>
 
-        <Dots></Dots>
-        <Dots></Dots>
-        <Dots></Dots>
-        <Dots></Dots>
-        <Dots></Dots>
+      
 
         </Row>
         <Greybg bold={EdTitles[sub_ind]} text={Desc[sub_ind]} routeTo="/resources" ></Greybg>
