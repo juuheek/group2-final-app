@@ -6,7 +6,7 @@ const BMIcard = styled.div`
     background-color: #E8ECF0;
     padding: 10px;
     margin: 10px;
-
+    width: 300px;
 `;
 
 const BMIinfo = styled.p`
@@ -24,11 +24,11 @@ const Bold = styled.p`
     display: inline;
 `;
 
-// const BMI = ({
+const BMI = ({
 
-// })=>{
-    function BMI(props){
-    return (props.trigger) ? (<BMIcard>
+})=>{
+   
+    return <BMIcard>
     <BMIinfo>
         <Bold>Body Mass Index (BMI)</Bold> is a person’s weight in kilograms divided by the square of height in meters. 
         A high BMI can be an indicator of high body fatness.
@@ -37,7 +37,8 @@ const Bold = styled.p`
         To calculate BMI, see the Adult BMI Calculator or determine BMI by finding your height and weight by clicking the button below 
     </BMIinfo>
     </BMIcard>
-    ) : "";
-  }
+    
+  
+}
 
 export default BMI;

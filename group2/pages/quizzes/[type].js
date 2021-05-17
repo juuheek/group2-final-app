@@ -19,7 +19,7 @@ const QuizPage1 = styled.div `
     display:flex;
     flex-direction: column;
     align-items: center;
-
+    ${'' /* height:900px; */}
  `;
 
 const QuestionTxt = styled.p`
@@ -54,7 +54,7 @@ const BigDiv = styled.div`
     justify-content:center;
     flex-direction:column;
     margin:50px 0 50px 0;
-    height: 600px;
+    ${'' /* height: 600px; */}
 `;
 
 
@@ -84,6 +84,8 @@ export default function Quiz (){
     const router = useRouter();
     const {type} = router.query;
     const [chosen, setChosen] = useState(0);
+    const [popUp, setPopUp] = useState(false);
+ 
 
     if(type === "BMI" ){
         
@@ -97,12 +99,12 @@ export default function Quiz (){
         quizdata.subtext2 = "19-25";
         quizdata.subtext3 = "26-30";
         quizdata.subtext4 = "Greater than 30";
-        quizdata.content1 = <Info onClick={() => setPopUp(true)}>  </Info>;
+        quizdata.content1 = <Info onClick={() => setPopUp(true)} >  </Info>;
+        quizdata.content3 = <BMI/>
         quizdata.content2 = <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B" border="1px #26325B solid"></NavyButton>;
-        quizdata.content3 = <BMI ></BMI>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
-        // const [popUp, setPopUp] = useState(false);
+
     }
 
     if(type === "Meals" ){
