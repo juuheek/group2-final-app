@@ -34,7 +34,8 @@ const QuestionTxt = styled.p`
     text-align: center;
     color: #FFFFFF;
     padding: 20px;
-    margin-bottom: 0;
+    
+
     ${'' /* width:500px; */}
 `;
 
@@ -56,8 +57,8 @@ const BigDiv = styled.div`
     align-items:center;
     justify-content:center; 
     flex-direction:column;
-    margin:50px 0 50px 0;
-    height: 600px;
+    min-height:900px;
+
 `;
 const Div = styled.div`
 
