@@ -4,8 +4,10 @@ import NavyButton from '../NavyButton'
 
 const GreybgCont = styled.div`
 margin-top: 31px;
-  width:388px;
-  height:466px;
+min-width:388px;
+  width:100vw;
+  height:100vh;
+  min-height:410px;
   display:flex;
   flex-direction:column;
   justify-content: center;
@@ -25,6 +27,7 @@ const GreybgText = styled.p`
 font-size:18px;
 color:#8A8A8A;
 padding:50px;
+width:388px;
 `;
 const GlianDiv = styled.div`
 margin:15px;

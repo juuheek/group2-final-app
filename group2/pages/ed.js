@@ -42,6 +42,9 @@ const Div = styled.div`
 margin:20px 0 20px 0;
 `;
 
+
+
+
 // array for grey box text
 const EdTitles = ["Anorexia", "Bulimia", "Orthorexia", "Binge Eating", "Excessive Exercise"]
 
@@ -80,6 +83,8 @@ export default function Glian(){
   
   return (
     <GlianCont>
+
+
     <BackDiv>
     <Back routeTo="/disclaimer"/>
     </BackDiv>
@@ -90,12 +95,11 @@ export default function Glian(){
 
        <Carousel onTitle={(ind)=>setSubInd(ind)}  /> 
         </Div>
-        <Row>
 
-      
 
-        </Row>
         <Greybg bold={EdTitles[sub_ind]} text={Desc[sub_ind]} routeTo="/resources" ></Greybg>
+
+
         <BottomMenu/>
     </GlianCont>
   )

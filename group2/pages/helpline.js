@@ -64,6 +64,7 @@ flex-direction: row;
 flex-wrap: wrap;
 min-width: 414px;
 justify-content: center;
+width:388px;
 
 `;
 
