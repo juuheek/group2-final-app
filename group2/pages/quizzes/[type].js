@@ -104,8 +104,8 @@ export default function Quiz (){
         quizdata.subtext2 = "19-25";
         quizdata.subtext3 = "26-30";
         quizdata.subtext4 = "Greater than 30";
-        quizdata.content1 = <Info onClick={() => setPopUp(true)} >  </Info>;
-        quizdata.content3 = ""
+        quizdata.content1 = <Info onClick={() => setPopUp(!popUp)} >  </Info>;
+        quizdata.content3 = popUp && <BMI/>
         quizdata.content2 = <NavyButton routeTo="https://www.calculator.net/bmi-calculator.html" target="_blank" text="BMI Calculator" bgcolor="white" color="#26325B"></NavyButton>;
         quizdata.routeTo = "/quizzes/Meals"
         //question = "Please follow this link that will direct you to a BMI Calculator and come back to select your weight";
@@ -138,7 +138,7 @@ export default function Quiz (){
         quizdata.subtext1 = null;
         quizdata.subtext2 = null;
         quizdata.subtext3 = null;
-        quizdata.content1 = null;
+        quizdata.content1 = <BulletPoints></BulletPoints>;
         quizdata.content2 = null;
         quizdata.content3 = null;
         quizdata.routeTo = "/result/"

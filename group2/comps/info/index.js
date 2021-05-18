@@ -11,14 +11,14 @@ const BMIinfo = styled.div `
 //"subtext" and translate it into the app
 
 const Info = ({
-  // onInfoClick = () => {},
+  onClick = () => {},
   popup=''
 })=>{
   // const [popup, setPopUp] = useState (false);
 
   var popup = ""
 
-    return <BMIinfo>
+    return <BMIinfo onClick={onClick}>
         {popup}
         <AiOutlineInfoCircle size={40} style={{fill: '#F8E8AE'}}/>
     </BMIinfo>
