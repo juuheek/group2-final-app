@@ -23,6 +23,7 @@ const QuizPage1 = styled.div `
     width:100vw;
     min-width:414px;
     height:100vh;
+    min-height:1000px;
  `;
 
 const QuestionTxt = styled.p`
@@ -34,6 +35,7 @@ const QuestionTxt = styled.p`
     text-align: center;
     color: #FFFFFF;
     padding: 20px;
+    width:400px;
     
 
     ${'' /* width:500px; */}

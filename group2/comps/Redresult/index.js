@@ -20,7 +20,8 @@ const MinWhitebgCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items:center;
-  width: 388px;
+  width:100vw;
+  min-width: 388px;
   height: ${props=>props.height}px;
   border-radius: 5px;
   background-color: #F19A97;
