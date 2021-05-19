@@ -44,7 +44,7 @@ const Greybg = ({
     </GlianDiv>
     <GlianDiv>
 
-    <NavyButton text="Self Diagnose " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/quiz1" />
+    <NavyButton text="Self Diagnose " bgcolor="transparent" color="#26325B" border="3px #26325B solid" routeTo="/quizzes/BMI" />
     </GlianDiv>
   </GreybgCont>
 }
