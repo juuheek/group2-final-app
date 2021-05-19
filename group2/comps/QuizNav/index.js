@@ -22,6 +22,7 @@ const NavCont = styled.div`
    min-width:414px;
    height: 117px;
    border-radius: 0 0 15px 15px;
+   z-index:1;
 `;
  
 const NavTitle = styled.h2`
