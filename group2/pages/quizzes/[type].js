@@ -23,7 +23,7 @@ const QuizPage1 = styled.div `
     width:100vw;
     min-width:414px;
     height:100vh;
-    min-height:1000px;
+    min-height:100px;
  `;
 
 const QuestionTxt = styled.p`
@@ -60,7 +60,8 @@ const BigDiv = styled.div`
     justify-content:center; 
     flex-direction:column;
     height: 100vh;
-`;
+    min-height:400px;
+    `;
 const Div = styled.div`
 
 `;
